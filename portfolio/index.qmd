@@ -2,12 +2,34 @@
 title: "David González Durán"
 image: "images/profile_pic.jpg"
 about:
-  template: jolla
+  template: solana
   links:
     - icon: envelope
+      text: Email
       href: mailto:davigdondur@proton.me
     - icon: linkedin
+      text: LinkedIn
       href: https://www.linkedin.com/in/davgondur/
+    - icon: github
+      text: Github
+      href: https://github.com/esdavide2910
+    - icon: file-pdf
+      text: CV
+      href: documents/cv.pdf
 ---
 
-¡Bienvenido a mi portfolio!
+Welcome to my portfolio!
+
+## Bio
+
+Hi! I'm David González Durán, graduated in Universidad de Granada. Enthusiast of Machine Learning, specially as applied to **Computer Vision** and **Data Science**. I'm looking to start my career in a environment that allows me to develop challenging projects using **state-of-the-art technology**. I am motivated by the versatility of machine learning, enjoying process of exploring and applying these models in new fields. I am not afraid to dive into other areas of knowledge to make AI not just a promise, but a tool for **solving complex real-world problems**.
+
+## Academic background 
+
+## Work experience
+
+## Interests
+
+## Personal life
+
+Living in València, España.  

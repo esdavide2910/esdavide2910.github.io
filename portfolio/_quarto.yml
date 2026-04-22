@@ -1,8 +1,10 @@
 project:
   type: website
+  resources:
+    - "documents/cv.pdf"
 
 website:
-  title: "portfolio"
+  title: "David González Durán"
   navbar:
     left:
       - href: index.qmd
@@ -11,9 +13,10 @@ website:
 
 format:
   html:
+    highlight-style: a11y
     theme:
       light: cosmo
-      dark: [cosmo, theme_dark_custom.scss]
+      dark: [cosmo, style_dark.scss]
     css: styles.css
     toc: true
 
