@@ -1,7 +1,13 @@
 ---
-title: "portfolio"
+title: "David González Durán"
+image: "images/profile_pic.jpg"
+about:
+  template: jolla
+  links:
+    - icon: envelope
+      href: mailto:davigdondur@proton.me
+    - icon: linkedin
+      href: https://www.linkedin.com/in/davgondur/
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+¡Bienvenido a mi portfolio!

@@ -6,14 +6,14 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: About
+      # - about.qmd
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: cosmo
+      dark: [cosmo, theme_dark_custom.scss]
     css: styles.css
     toc: true
 
