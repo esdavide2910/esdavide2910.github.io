@@ -4,7 +4,42 @@
     "href": "index.html",
     "title": "David González Durán",
     "section": "",
-    "text": "¡Bienvenido a mi portfolio!"
+    "text": "Welcome to my portfolio!"
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "David González Durán",
+    "section": "Bio",
+    "text": "Bio\nHi! I’m David González Durán, graduated in Universidad de Granada. Enthusiast of Machine Learning, specially as applied to Computer Vision and Data Science. I’m looking to start my career in a environment that allows me to develop challenging projects using state-of-the-art technology. I am motivated by the versatility of machine learning, enjoying process of exploring and applying these models in new fields. I am not afraid to dive into other areas of knowledge to make AI not just a promise, but a tool for solving complex real-world problems."
+  },
+  {
+    "objectID": "index.html#academic-background",
+    "href": "index.html#academic-background",
+    "title": "David González Durán",
+    "section": "Academic background",
+    "text": "Academic background"
+  },
+  {
+    "objectID": "index.html#work-experience",
+    "href": "index.html#work-experience",
+    "title": "David González Durán",
+    "section": "Work experience",
+    "text": "Work experience"
+  },
+  {
+    "objectID": "index.html#interests",
+    "href": "index.html#interests",
+    "title": "David González Durán",
+    "section": "Interests",
+    "text": "Interests"
+  },
+  {
+    "objectID": "index.html#personal-life",
+    "href": "index.html#personal-life",
+    "title": "David González Durán",
+    "section": "Personal life",
+    "text": "Personal life\nLiving in València, España."
   },
   {
     "objectID": "about.html",
