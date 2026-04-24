@@ -9,7 +9,10 @@ website:
     left:
       - href: index.qmd
         text: About
-      # - about.qmd
+      - href: presentations
+        text: "Presentations"
+    page-footer:
+      left: "© Copyright 2026 David González Durán. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0."
 
 format:
   html:
