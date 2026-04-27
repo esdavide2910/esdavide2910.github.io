@@ -1,45 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "David González Durán",
+    "objectID": "presentations/index.html",
+    "href": "presentations/index.html",
+    "title": "Presentations",
     "section": "",
-    "text": "Welcome to my portfolio!"
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "David González Durán",
-    "section": "Bio",
-    "text": "Bio\nHi! I’m David González Durán, graduated in Universidad de Granada. Enthusiast of Machine Learning, specially as applied to Computer Vision and Data Science. I’m looking to start my career in a environment that allows me to develop challenging projects using state-of-the-art technology. I am motivated by the versatility of machine learning, enjoying process of exploring and applying these models in new fields. I am not afraid to dive into other areas of knowledge to make AI not just a promise, but a tool for solving complex real-world problems."
-  },
-  {
-    "objectID": "index.html#academic-background",
-    "href": "index.html#academic-background",
-    "title": "David González Durán",
-    "section": "Academic background",
-    "text": "Academic background"
-  },
-  {
-    "objectID": "index.html#work-experience",
-    "href": "index.html#work-experience",
-    "title": "David González Durán",
-    "section": "Work experience",
-    "text": "Work experience"
-  },
-  {
-    "objectID": "index.html#interests",
-    "href": "index.html#interests",
-    "title": "David González Durán",
-    "section": "Interests",
-    "text": "Interests"
-  },
-  {
-    "objectID": "index.html#personal-life",
-    "href": "index.html#personal-life",
-    "title": "David González Durán",
-    "section": "Personal life",
-    "text": "Personal life\nLiving in València, España."
+    "text": "No matching items"
   },
   {
     "objectID": "about.html",
@@ -47,5 +12,54 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "David González Durán",
+    "section": "",
+    "text": "Welcome to my portfolio!\nOn this site I will keep a list of the…"
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "David González Durán",
+    "section": "Bio",
+    "text": "Bio\nI am David González Durán. I have recently graduated in Computer Science and Business Management from the University of Granada.\nDuring my double degree, I discovered my passion for AI, particularly Machine Learning. I realized that AI algorithms go far beyond what we code, acting as a bridge between complex information and strategic decision-making.\nThis passion naturally led me to Data Science. I love diving into datasets to uncover hidden insights and create visualizations that help us understand the reality behind the data.\nApart from that, and thanks to a well-structured subject, I developed a strong interest in Computer Vision. This field allowed me to explore everything from classical image representation and filtering to handcrafted feature extraction. Eventually, I moved into deep learning architectures, focusing primarily on image classification while also exploring the power of transformers for image segmentation.\nHowever, lately, I also found out that AI makes mistakes and inherits biases from data, too. So I have become increasingly committed to the field of Trustworthy AI. I believe that for artificial intelligence to be truly useful in the real world, it must be transparent and robust.\nMy latest focus has been Uncertainty Quantification, a topic explored in my Final Degree Project: Quantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems (see more details below in Projects). This work integrates conformal prediction into biological estimation task, such as age and sex estimation, delivering statiscally guaranteed prediction intervals (at regression) and label sets (at classification), capturing uncertainty across cases.\n\n\n\nDiagram of a regression model using conformal prediction, which, in addition to providing a point estimate of the expected value, yields a prediction interval with a 95% confidence level.\n\n\nAt the moment, I’m reading Interpretable Machine Learning by Cristoph Molnar."
+  },
+  {
+    "objectID": "index.html#academic-background",
+    "href": "index.html#academic-background",
+    "title": "David González Durán",
+    "section": "Academic background",
+    "text": "Academic background\n\nDoble Degree in Computer Science and Business Management, from 2019 to 2026.\nAverage score of 8.01 in Computer Engineering and 8.36 in Business Management."
+  },
+  {
+    "objectID": "index.html#sec-work-experience",
+    "href": "index.html#sec-work-experience",
+    "title": "David González Durán",
+    "section": "Work experience",
+    "text": "Work experience\n\nExtracurricular internship as Data Engineer in Cívica Software from July to October 2024 (3 months)."
+  },
+  {
+    "objectID": "index.html#sec-projects",
+    "href": "index.html#sec-projects",
+    "title": "David González Durán",
+    "section": "Projects",
+    "text": "Projects\n\nQuantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems made in collaboration with Panacea Cooperative Research, and supervised by Pablo Mesejo Santiago and Javier Venema Rodríguez."
+  },
+  {
+    "objectID": "index.html#skills-and-tools",
+    "href": "index.html#skills-and-tools",
+    "title": "David González Durán",
+    "section": "Skills and tools",
+    "text": "Skills and tools"
+  },
+  {
+    "objectID": "index.html#interests",
+    "href": "index.html#interests",
+    "title": "David González Durán",
+    "section": "Interests",
+    "text": "Interests\n\nDataViz: Focused on advanced exploratory data analysis (EDA) and the design of visualisations that help us understanding data.\nTrustworthy AI: Interested in uncertainty quantification and explanaible AI to build trustworthy systems and ensuring robustness in environments where reliability and risk quantification are paramount.\nOpen Source: Convinced that open source is essential to democratize access to AI and accelerate technological progress, in addition to reduce dependence on propietary software."
   }
 ]

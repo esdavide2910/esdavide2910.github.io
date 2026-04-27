@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>David González Durán</title>
+<title>Presentations – David González Durán</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,26 +26,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-cad2a2f8a56dfe71ee895a68e79c9b9a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-70be5ccd51f03de5ce195d75fadf0882.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-cad2a2f8a56dfe71ee895a68e79c9b9a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-82a0c9367b98d5c2d530dac8b797cec4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-1560f5875a3a7053c94830b97b490e38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-82a0c9367b98d5c2d530dac8b797cec4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cad2a2f8a56dfe71ee895a68e79c9b9a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-70be5ccd51f03de5ce195d75fadf0882.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cad2a2f8a56dfe71ee895a68e79c9b9a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-82a0c9367b98d5c2d530dac8b797cec4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1560f5875a3a7053c94830b97b490e38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-82a0c9367b98d5c2d530dac8b797cec4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,10 +76,68 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="styles.css">
-</head>
+    const options = {
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="alternate" type="application/rss+xml" title="David González Durán" href="index.xml" data-external="1"></head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -247,7 +308,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">David González Durán</span>
     </a>
   </div>
@@ -258,11 +319,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./presentations"> 
+    <a class="nav-link" href="../presentations"> 
 <span class="menu-text">Presentations</span></a>
   </li>  
 </ul>
@@ -274,116 +335,246 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-  <ul>
-  <li><a href="#bio" id="toc-bio" class="nav-link active" data-scroll-target="#bio">Bio</a></li>
-  <li><a href="#academic-background" id="toc-academic-background" class="nav-link" data-scroll-target="#academic-background">Academic background</a></li>
-  <li><a href="#sec-work-experience" id="toc-sec-work-experience" class="nav-link" data-scroll-target="#sec-work-experience">Work experience</a></li>
-  <li><a href="#sec-projects" id="toc-sec-projects" class="nav-link" data-scroll-target="#sec-projects">Projects</a></li>
-  <li><a href="#skills-and-tools" id="toc-skills-and-tools" class="nav-link" data-scroll-target="#skills-and-tools">Skills and tools</a></li>
-  <li><a href="#interests" id="toc-interests" class="nav-link" data-scroll-target="#interests">Interests</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<div class="quarto-about-solana column-body">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
+<main class="content column-page" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">David González Durán</h1>
+<h1 class="title">Presentations</h1>
 </div>
-<div class="quarto-title-meta">
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
   </div>
-</header> <div class="about-links">
-  <a href="mailto:davigdondur@proton.me" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Email</span>
-  </a>
-  <a href="https://www.linkedin.com/in/davgondur/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com/esdavide2910" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="/documents/cv.pdf" class="about-link" rel="" target="">
-    <i class="bi bi-file-pdf"></i>
-     <span class="about-link-text">CV</span>
-  </a>
+  
+
+
+</header>
+
+
+<!-- <html>
+<head><title>Presentations</title></head>
+<body>
+    <h2>Presentations</h2>
+    As lead/presenting author:
+    <h3>2023</h3>
+    <p>
+        <div><strong>Creating Data-Driven Interactive Virtual Environments for Communicating Forest Change.</strong></div>
+        <div>With <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a> and <a href = 'https://aidanackerman.com/'>Aidan C. Ackerman</a></div>
+        <div>Regular talk, American Geophysical Union Fall Meeting, San Francisco, CA, December 14 2023.</div>
+        <div>Slides available at <a href="https://mikemahoney218.github.io/2023-12-14-viz/2023-12-14-viz.html">https://mikemahoney218.github.io/2023-12-14-viz/2023-12-14-viz.html</a></div>
+    </p>
+    <p>
+        <div><strong>Consistent Workflows for Assessing Model Performance: Tools and Applications to Natural Climate Solutions.</strong></div>
+        <div>With <a href = "https://www.lucaskjohnson.com/">Lucas K. Johnson</a> and <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a></div>
+        <div>Regular talk, American Geophysical Union Fall Meeting, San Francisco, CA, December 12 2023.</div>
+        <div>Slides available at <a href="https://mikemahoney218.github.io/2023-12-12-waywiser/2023-12-12-waywiser.html">https://mikemahoney218.github.io/2023-12-12-waywiser/2023-12-12-waywiser.html</a></div>
+        <div>Recipient of an Outstanding Student Presentation Award.</div>
+    </p>
+    <p>
+        <div><strong>spatialsample: Infrastructure for spatial cross-validation</strong></div>
+        <div>Invited talk, EcoHealth Alliance, New York, NY (Virtual), December 7th 2023.</div>
+    </p>
+    <p>
+        <div><strong>waywiser: An ergonomic toolbox for assesing spatial models</strong></div>
+        <div>Invited talk, EcoHealth Alliance, New York, NY (Virtual), November 2nd 2023.</div>
+    </p>
+    <p>
+        <div><strong>Making Sausage: How open source scientific software gets made -- and what keeps us from making more.</strong></div>
+        <div>Invited talk, Federation of Earth Science Information Partners (ESIP) Open Science Cluster (Virtual), December 7th 2023.</div>
+        <div>Slides available at <a href="https://mikemahoney218.github.io/open-sci-talk/open-sci-talk.html">https://mikemahoney218.github.io/open-sci-talk/open-sci-talk.html</a></div>
+        <div>Video available at <a href="https://youtu.be/sJhP1Bdib-s?si=vld8KWS7WsGG6ZaQ">https://youtu.be/sJhP1Bdib-s?si=vld8KWS7WsGG6ZaQ</a></div>
+    </p>
+    <p>
+        <div><strong>Mapping shrublands across New York State: Targeted ML for informing management decisions.</strong></div>
+        <div>Invited talk, Federation of Earth Science Information Partners (ESIP) July Meeting, Burlington, VT, July 18 2023.</div>
+        <div>Slides available at <a href="https://mm218.dev/esip2023">https://mm218.dev/esip2023</a></div>
+    </p>
+    <p>
+        <div><strong>Assessing spatial models in scientifically sound ways is hard. New tools for the tidymodels modeling framework can help make it easier.</strong></div>
+        <div>Poster presentation, Federation of Earth Science Information Partners (ESIP) July Meeting, Burlington, VT, July 19 2023.</div>
+        <div>Poster available at <a href="https://mm218.dev/esip2023poster">https://mm218.dev/esip2023poster</a></div>
+    </p>
+    <p>
+        <div><strong>spatialsample: A tidy approach to spatial cross-validation.</strong></div>
+        <div>Regular talk, Greater Boston useR Group, Boston, MA, April 5 2023.</div>
+        <div>Slides available at <a href="https://mm218.dev/boston_useR_2023">https://mm218.dev/boston_useR_2023</a></div>
+    </p>
+    <p>
+        <div><strong>Make reproducibility easy.</strong></div>
+        <div>Invited talk, Federation of Earth Science Information Partners (ESIP) January Meeting, Severna Park, Maryland (Virtual), January 23 2023.</div>
+        <div>Slides available at <a href="https://mm218.dev/esip2023">https://mm218.dev/esip2023</a></div>
+    </p>
+    <h3>2022</h3>
+    <p>
+        <div><strong>Virtual Environments for Communicating Changing Forests.</strong></div>
+        <div>With <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a> and <a href = 'https://aidanackerman.com/'>Aidan C. Ackerman</a></div>
+        <div>Regular talk, Forest Ecosystem Monitoring Cooperative Conference, Burlington, VT, December 15 2022.</div>
+        <div>Slides available at <a href="https://mm218.dev/femc2022">https://mm218.dev/femc2022</a></div>
+    </p>
+    <p>
+        <div><strong>Building trust in AI outputs: Approaches from NY’s forest carbon monitoring program.</strong></div>
+        <div>Invited talk, Federation of Earth Science Information Partners (ESIP) July Meeting, Pittsburgh, PA, July 22 2022.</div>
+        <div>Slides available at <a href="https://mm218.dev/esip2022">https://mm218.dev/esip2022</a></div>
+    </p>
+    <p>
+        <div><strong>Detecting regenerating forestland at a landscape level.</strong></div>
+        <div>With <a href = "https://www.lucaskjohnson.com/">Lucas K. Johnson,</a> and <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a></div>
+        <div>Regular talk, Ecological Society of America and Canadian Society for Ecology and Evolution Joint Annual Meeting, Montreal, Quebec, Canada, August 15 2022.</div>
+    </p>
+      <p>
+        <div><strong>unifir: A Unifying API for Working with Unity in R.</strong></div>
+        <div>With <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a> and <a href = 'https://aidanackerman.com/'>Aidan C. Ackerman</a></div>
+        <div>Regular talk, useR! 2022 (Virtual), June 22 2022.</div>
+    </p>
+      <p>
+        <div><strong>Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass.</strong></div>
+        <div>With <a href = "https://www.lucaskjohnson.com/">Lucas K. Johnson,</a> and <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a></div>
+        <div>Regular talk, North American Forest Ecology Workshop (Virtual), June 20 2022.</div>
+    </p>
+    <p>
+        <div><strong>It's not what it looks like: Learning to question assumptions when debugging ML models.</strong></div>
+        <div>Regular talk, Data Mishaps Night (Virtual), February 24 2022.</div>
+    </p>
+    <p>
+        <div><strong>Using AI/ML to help New York manage lands for net zero carbon.</strong></div>
+        <div>Invited talk, Federation of Earth Science Information Partners (ESIP) January Meeting, Annapolis, MD (Virtual), January 20 2022.</div>
+        <div>Recording available at <a href="https://youtu.be/k8AqtJFpYEk?t=3065">https://youtu.be/k8AqtJFpYEk?t=3065</a></div>
+    </p>
+    <h3>2021</h3>
+    <p>
+        <div><strong>Filtering ground noise from LiDAR returns produces inferior models of forest aboveground biomass.</strong></div>
+        <div>With <a href = "https://www.lucaskjohnson.com/">Lucas K. Johnson,</a> <a href='https://www.esf.edu/faculty/bevilacqua/'>Eddie Bevilacqua</a>, and <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a></div>
+        <div>Poster presentation, American Geophysical Union Fall Meeting, New Orleans LA, December 15 2021.</div>
+        <div>Poster available at <a href="https://www.mm218.dev/papers/ground_filtering/poster.pdf">https://www.mm218.dev/papers/ground_filtering/poster.pdf</a></div>
+    </p>
+    <p>
+        <div><strong>Interactive landscape simulations for visual resource assessment.</strong></div>
+        <div>With <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a> and <a href = 'https://aidanackerman.com/'>Aidan C. Ackerman</a></div>
+        <div>Regular talk, Visual Resources Stewardship Conference, SUNY-ESF, Syracuse, NY, October 21 2021.</div>
+        <div>Slides available at <a href="https://mikemahoney218.github.io/2021-10-21-vrs/vrs#2">https://mikemahoney218.github.io/2021-10-21-vrs/</a></div>
+    </p>
+    <p>
+        <div><strong>Producing Interactive 3D Landscape Visualizations in Unity Using Terrainr R Package.</strong></div>
+        <div>With <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a> and <a href = 'https://aidanackerman.com/'>Aidan C. Ackerman</a></div>
+        <div>Invited workshop, Visual Resources Stewardship Conference, SUNY-ESF, Syracuse, NY, October 19 2021.</div>
+        <div>Materials available at <a href="https://mikemahoney218.github.io/2021-10-19-vrs-workshop/2021-10-19-vrs-workshop.html">https://mikemahoney218.github.io/2021-10-19-vrs-workshop/2021-10-19-vrs-workshop.html</a></div>
+    </p>
+    <p>
+        <div><strong>terrainr: Spatial Data Access and Visualization in R.</strong></div>
+        <div>Invited talk, Earth Science Information Partners, Severna Park MD, September 9 2021.</div>
+        <div>Slides available at <a href = 'https://mm218.dev/esip2021'>https://mm218.dev/esip2021</a>.</div>
+        <div>Video recording available at <a href = 'https://youtu.be/xWZ7QQMr_AQ'>https://youtu.be/xWZ7QQMr_AQ</a></div>
+    </p>
+    <p>
+        <div><strong>Virtual Environments: Using R as a Frontend for 3D Rendering of Digital Landscapes.</strong></div>
+        <div>With <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a> and <a href = 'https://aidanackerman.com/'>Aidan C. Ackerman</a></div>
+        <div>Regular talk, useR! 2021, ETH Zürich, Zürich, Switzerland, July 6 2021.</div>
+        <div>Slides available at <a href = 'https://mm218.dev/user2021'>https://mm218.dev/user2021</a>.</div>
+        <div>Video recording available at <a href = 'https://www.youtube.com/watch?t=2202&v=tbt8ZsHm5eA'>https://www.youtube.com/watch?t=2202&v=tbt8ZsHm5eA</a></div>
+    </p>
+    <p>
+        <div><strong>Accessing the USGS National Map and Making 3D Maps with terrainr.</strong></div>
+        <div>With <a href = 'https://www.collnell.com/'>Colleen Nell</a> (lead author) and <a href = 'https://www.usgs.gov/staff-profiles/lindsay-rc-platt'>Lindsay Platt</a></div>
+        <div>Invited workshop, USGS Center for Data Integration, Lakewood, CO, May 28 2021.</div>
+        <div>Materials available at <a href = 'https://www.mm218.dev/cdi/cdi.html'>https://www.mm218.dev/cdi/cdi.html</a>.</div>
+    </p>
+    <p>
+        <div><strong>terrainr: Landscape Visualizations Using Data from the National Map.</strong></div>
+        <div>Invited talk, USGS National Geospatial Technical Operations Center, Denver, CO, February 5 2021.</div>
+    </p>
+    <h3>2018</h3>
+    <p>
+        <div><strong>Beaver Foraging Preferences and Impacts on Forest Structure in the Adirondack Mountains of New
+York.</strong></div>
+        <div>With <a href = 'https://www.stella-lab.net/'>John C. Stella</a></div>
+        <div>Regular talk, Forest Ecosystem Monitoring Collective Conference, University of Vermont, Burlington, VT, December 2018.</div>
+    </p>
+    <p>
+        <div><strong>Beaver Foraging Preferences and Impacts on Forest Structure in the Adirondack Mountains of New
+York.</strong></div>
+        <div>With <a href = 'https://www.stella-lab.net/'>John C. Stella</a></div>
+        <div>Regular talk, Rochester Academy of Sciences Fall Scientific Paper Session, Geneseo, NY, November 2018.</div>
+    </p>
+    <hr>
+    As co-/non-presenting author:
+    <h3>2023</h3>
+    <p>
+        <div><strong>An integrated carbon monitoring framework for stock-change GHG inventory at parcel to landscape scales: approach, outputs and applications.</strong></div>
+        <div>With <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier (lead author),</a> <a href = "https://www.lucaskjohnson.com/">Lucas K. Johnson</a>, Madeleine Desrochers, and Grant Domke.</div>
+        <div>Regular talk, American Geophysical Union Fall Meeting, San Francisco, CA, December 13 2023.</div>
+    </p>
+    <p>
+        <div><strong>Bridging the Gap Between Pixels and Minimum Estimation Units: Small-Area Uncertainty Estimation with Forest Aboveground Biomass Maps.</strong></div>
+        <div>With <a href = "https://www.lucaskjohnson.com/">Lucas K. Johnson (lead author),</a> Grant Domke, and <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a></div>
+        <div>Poster presentation, American Geophysical Union Fall Meeting, San Francisco, CA, December 11 2023.</div>
+    </p>
+    <h3>2022</h3>
+    <p>
+        <div><strong>A Map‑based Stock Change Approach for Fine‑scale Biomass
+and Carbon Accounting in NYS.</strong></div>
+        <div>With <a href = "https://www.lucaskjohnson.com/">Lucas K. Johnson (lead author),</a> and <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a></div>
+        <div>Regular talk, Forest Ecosystem Monitoring Cooperative Conference, Burlington, VT, December 15 2022.</div>
+    </p>
+    <p>
+        <div><strong>Historical Time Series Biomass Modeling: To Train on Plots
+or Pixels?.</strong></div>
+        <div>With <a href = "https://www.lucaskjohnson.com/">Lucas K. Johnson (lead author),</a> and <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a></div>
+        <div>Regular talk, American Geophysical Union Fall Meeting, Chicago, IL, December 14 2022.</div>
+    </p>
+    <h3>2021</h3>
+    <p>
+        <div><strong>Broad‑scale forest biomass mapping: generating contiguous high‑resolution predictions using a spatio‑temporal patchwork of LiDAR coverages across a mixed‑use landscape.</strong></div>
+        <div>With <a href = "https://www.lucaskjohnson.com/">Lucas K. Johnson (lead author),</a> <a href='https://www.esf.edu/faculty/bevilacqua/'>Eddie Bevilacqua</a>, and <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a></div>
+        <div>Regular talk, American Geophysical Union Fall Meeting, New Orleans LA, December 15 2021.</div>
+    </p>
+    <p>
+        <div><strong>Greening Up Before Growing Up: Challenges in Modeling Forest Biomass Recovery Post‑Harvest Using Satellite Imagery.</strong></div>
+        <div>With <a href = "https://www.lucaskjohnson.com/">Lucas K. Johnson (lead author)</a> and <a href = 'https://www.esf.edu/faculty/beier/'>Colin M. Beier</a></div>
+        <div>Regular talk, Society of American Foresters National Convention, Virtual, November 2021.</div>
+    </p>
+    <h3>2019</h3>
+    <p>
+        <div><strong>Nutritional Impacts on Invasive Beech Scale Quantification in Beech Bark Disease Aftermath Forests.</strong></div>
+        <div>With Gretchen A. Dillion (lead author), Stephanie Chase, and <a href="https://www.esf.edu/faculty/mariann.johnston/"> Mariann Johnston.</a></div>
+        <div>Poster presentation, New York Society of American Foresters Annual Meeting, Syracuse, NY, November 2019.</div>
+    </p>
+    <h3>2017</h3>
+    <p>
+        <div><strong>An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.</strong></div>
+        <div>With Gretchen A. Dillon (lead author), <a href="https://www.esf.edu/faculty/mariann.johnston/"> Mariann Johnston</a>, Vizma Leimanis, and Jason Stoodley</div>
+        <div>Poster presentation, Forest Ecosystem Monitoring Collective Conference, University of Vermont, Burlington, VT, December 2017.</div>
+    </p>
+    <p>
+        <div><strong>An Investigation of Nutritional Effects on Beech Bark Disease Causal Organisms.</strong></div>
+        <div>With Gretchen A. Dillon (lead author), <a href="https://www.esf.edu/faculty/mariann.johnston/"> Mariann Johnston</a>, Vizma Leimanis, and Jason Stoodley</div>
+        <div>Poster presentation, Rochester Academy of Sciences Fall Scientific Paper Session, Geneseo, NY, November 2017.</div>
+    </p>
+    <hr>
+</body>
+</html> -->
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
 </div>
-      <div class="about-contents"><main class="content" id="quarto-document-content">
-
-
-<p>Welcome to my portfolio!</p>
-<p>On this site I will keep a list of the…</p>
-<!------------------------------------------------------------------------------------------------------------------------------->
-<section id="bio" class="level2">
-<h2 data-anchor-id="bio">Bio</h2>
-<p>I am David González Durán. I have recently graduated in Computer Science and Business Management from the University of Granada.</p>
-<p>During my double degree, I discovered my passion for AI, particularly Machine Learning. I realized that AI algorithms go far beyond what we code, acting as a bridge between complex information and strategic decision-making.</p>
-<p>This passion naturally led me to Data Science. I love diving into datasets to uncover hidden insights and create visualizations that help us understand the reality behind the data.</p>
-<p>Apart from that, and thanks to a well-structured subject, I developed a strong interest in Computer Vision. This field allowed me to explore everything from classical image representation and filtering to handcrafted feature extraction. Eventually, I moved into deep learning architectures, focusing primarily on image classification while also exploring the power of transformers for image segmentation.</p>
-<p>However, lately, I also found out that AI makes mistakes and inherits biases from data, too. So I have become increasingly committed to the field of Trustworthy AI. I believe that for artificial intelligence to be truly useful in the real world, it must be transparent and robust.</p>
-<p>My latest focus has been Uncertainty Quantification, a topic explored in my Final Degree Project: <em>Quantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems</em> (see more details below in <a href="#sec-projects">Projects</a>). This work integrates conformal prediction into biological estimation task, such as age and sex estimation, delivering statiscally guaranteed prediction intervals (at regression) and label sets (at classification), capturing uncertainty across cases.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/example_intervalic_estimation.png" class="img-fluid figure-img"></p>
-<figcaption>Diagram of a regression model using conformal prediction, which, in addition to providing a point estimate of the expected value, yields a prediction interval with a 95% confidence level.</figcaption>
-</figure>
-</div>
-<p>At the moment, I’m reading <em>Interpretable Machine Learning</em> by Cristoph Molnar.</p>
-<!------------------------------------------------------------------------------------------------------------------------------->
-</section>
-<section id="academic-background" class="level2">
-<h2 data-anchor-id="academic-background">Academic background</h2>
-<ul>
-<li><strong>Doble Degree in Computer Science and Business Management, from 2019 to 2026.</strong><br>
-Average score of 8.01 in Computer Engineering and 8.36 in Business Management.</li>
-</ul>
-<!------------------------------------------------------------------------------------------------------------------------------->
-</section>
-<section id="sec-work-experience" class="level2">
-<h2 data-anchor-id="sec-work-experience">Work experience</h2>
-<ul>
-<li>Extracurricular internship as <strong>Data Engineer in <a href="https://civica-soft.com/"><strong>Cívica Software</strong></a></strong> from July to October 2024 (3 months).</li>
-</ul>
-<!------------------------------------------------------------------------------------------------------------------------------->
-</section>
-<section id="sec-projects" class="level2">
-<h2 data-anchor-id="sec-projects">Projects</h2>
-<ul>
-<li><a href="https://github.com/esdavide2910/tfg-bioprofile-uncertainty">Quantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems</a> made in collaboration with <a href="https://panacea-coop.com/">Panacea Cooperative Research</a>, and supervised by <a href="https://www.ugr.es/~pmesejo/">Pablo Mesejo Santiago</a> and <a href="https://www.linkedin.com/in/javier-venema/">Javier Venema Rodríguez</a>.</li>
-</ul>
-<!------------------------------------------------------------------------------------------------------------------------------->
-</section>
-<section id="skills-and-tools" class="level2">
-<h2 data-anchor-id="skills-and-tools">Skills and tools</h2>
-<!------------------------------------------------------------------------------------------------------------------------------->
-</section>
-<section id="interests" class="level2">
-<h2 data-anchor-id="interests">Interests</h2>
-<ul>
-<li><p><strong>DataViz</strong>: Focused on advanced exploratory data analysis (EDA) and the design of visualisations that help us understanding data.</p></li>
-<li><p><strong>Trustworthy AI</strong>: Interested in uncertainty quantification and explanaible AI to build trustworthy systems and ensuring robustness in environments where reliability and risk quantification are paramount.</p></li>
-<li><p><strong>Open Source</strong>: Convinced that open source is essential to democratize access to AI and accelerate technological progress, in addition to reduce dependence on propietary software.</p></li>
-</ul>
-
-
-</section>
-</main></div>
-    </div>
-    <img src="images/profile_pic.jpg" class="about-image
-  rounded " style="width: 15em;">
-  </div>
-</div>
- <!-- /main -->
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -399,6 +590,13 @@ Average score of 8.01 in Computer Engineering and 8.36 in Business Management.</
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
