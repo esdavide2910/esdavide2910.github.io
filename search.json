@@ -1,17 +1,150 @@
 [
   {
-    "objectID": "presentations/presentations.html",
-    "href": "presentations/presentations.html",
-    "title": "Presentations",
+    "objectID": "projects/projects.html",
+    "href": "projects/projects.html",
+    "title": "",
     "section": "",
-    "text": "Hola\n\n\n\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Back to top"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n\n\n Back to top"
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#machine-learning",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#machine-learning",
+    "title": "My Final Degree Project",
+    "section": "2.1 Machine Learning",
+    "text": "2.1 Machine Learning\n\n2.1.1 Regression problems\n\n\n2.1.2 Classification problems"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#deep-learning",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#deep-learning",
+    "title": "My Final Degree Project",
+    "section": "2.2 Deep Learning",
+    "text": "2.2 Deep Learning\n\n2.2.1 The multilayer perceptron\n\n\n2.2.2 Network training and validation\n\n\n2.2.3 Convolutional Neural Networks\n\n\n2.2.4 Transfer Learning"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#uncertainty",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#uncertainty",
+    "title": "My Final Degree Project",
+    "section": "2.3 Uncertainty",
+    "text": "2.3 Uncertainty\n\n2.3.1 Uncertainty in machine learning\n\n\n2.3.2 Uncertainty quantification in machine learning"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#conformal-prediction",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#conformal-prediction",
+    "title": "My Final Degree Project",
+    "section": "2.4 Conformal prediction",
+    "text": "2.4 Conformal prediction\n\n2.4.1 Properties of conformal prediction\n\n\n2.4.2 Conformal algorithm"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#age-estimation-in-forensic-anthropology",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#age-estimation-in-forensic-anthropology",
+    "title": "My Final Degree Project",
+    "section": "3.1 Age estimation in forensic anthropology",
+    "text": "3.1 Age estimation in forensic anthropology"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#age-estimation-in-forensic-anthropology-using-machine-learning",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#age-estimation-in-forensic-anthropology-using-machine-learning",
+    "title": "My Final Degree Project",
+    "section": "3.2 Age estimation in forensic anthropology using machine learning",
+    "text": "3.2 Age estimation in forensic anthropology using machine learning"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#uncertainty-quantification-for-age-estimation",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#uncertainty-quantification-for-age-estimation",
+    "title": "My Final Degree Project",
+    "section": "3.3 Uncertainty quantification for age estimation",
+    "text": "3.3 Uncertainty quantification for age estimation"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#available-datasets",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#available-datasets",
+    "title": "My Final Degree Project",
+    "section": "4.1 Available datasets",
+    "text": "4.1 Available datasets"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#proposed-methods",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#proposed-methods",
+    "title": "My Final Degree Project",
+    "section": "4.2 Proposed methods",
+    "text": "4.2 Proposed methods\n\n4.2.1 Architecture used\n\n\n4.2.2 Quantile regression\n\n\n4.2.3 Conformal prediction methods for regression\n\n\n4.2.4 Probability calibration in classification\n\n\n4.2.5 Conformal prediction methods for classification"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#proposed-problems",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#proposed-problems",
+    "title": "My Final Degree Project",
+    "section": "5.1 Proposed problems",
+    "text": "5.1 Proposed problems"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#experimental-validation-protocol",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#experimental-validation-protocol",
+    "title": "My Final Degree Project",
+    "section": "5.2 Experimental validation protocol",
+    "text": "5.2 Experimental validation protocol"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#data-preprocessing",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#data-preprocessing",
+    "title": "My Final Degree Project",
+    "section": "5.3 Data preprocessing",
+    "text": "5.3 Data preprocessing"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#general-scheme-of-the-experiments-performed",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#general-scheme-of-the-experiments-performed",
+    "title": "My Final Degree Project",
+    "section": "5.4 General scheme of the experiments performed",
+    "text": "5.4 General scheme of the experiments performed\n\n5.4.1 Age estimation problem\n\n\n5.4.2 Legal age estimation problem\n\n\n5.4.3 Age classification problem"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#performance-evaluation",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#performance-evaluation",
+    "title": "My Final Degree Project",
+    "section": "5.5 Performance evaluation",
+    "text": "5.5 Performance evaluation\n\n5.5.1 Metrics for regression\n\n\n5.5.2 Metrics for classification\n\n\n5.5.3 Statistical tests"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#experimentation-for-age-estimation",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#experimentation-for-age-estimation",
+    "title": "My Final Degree Project",
+    "section": "5.6 Experimentation for age estimation",
+    "text": "5.6 Experimentation for age estimation\n\n5.6.1 Model training\n\n\n5.6.2 Results"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#experimentation-for-legal-age-estimation",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#experimentation-for-legal-age-estimation",
+    "title": "My Final Degree Project",
+    "section": "5.7 Experimentation for legal age estimation",
+    "text": "5.7 Experimentation for legal age estimation\n\n5.7.1 Model training\n\n\n5.7.2 Results"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#experimentation-for-age-classification",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#experimentation-for-age-classification",
+    "title": "My Final Degree Project",
+    "section": "5.8 Experimentation for age classification",
+    "text": "5.8 Experimentation for age classification\n\n5.8.1 Model training\n\n\n5.8.2 Results"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#conclusions",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#conclusions",
+    "title": "My Final Degree Project",
+    "section": "6.1 Conclusions",
+    "text": "6.1 Conclusions"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#assessment-of-the-work-performed",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#assessment-of-the-work-performed",
+    "title": "My Final Degree Project",
+    "section": "6.2 Assessment of the work performed",
+    "text": "6.2 Assessment of the work performed"
+  },
+  {
+    "objectID": "blog/tfg-uncertainty-bp-estimation.html#future-work",
+    "href": "blog/tfg-uncertainty-bp-estimation.html#future-work",
+    "title": "My Final Degree Project",
+    "section": "6.3 Future work",
+    "text": "6.3 Future work\n\n\n\n\n\n\n6.3.1 Other resources\nAquí tienes las diapositivas detalladas:\n\n Presentation"
   },
   {
     "objectID": "index.html",
@@ -68,5 +201,12 @@
     "title": "David González Durán",
     "section": "References",
     "text": "References\nReferenced by:\n\nPablo Mesejo Santiago, Associate Professor at the Department of Computer Science and Artificial Intelligence of the University of Granada and co-founding partner and Chief AI Officer at Panacea Cooperative Research.\n\n  Download reference"
+  },
+  {
+    "objectID": "blog/blog.html",
+    "href": "blog/blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "No matching items\n Back to top"
   }
 ]

@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://esdavide2910.github.io/presentations/presentations.html</loc>
-    <lastmod>2026-04-30T12:48:54.445Z</lastmod>
+    <loc>https://esdavide2910.github.io/projects/projects.html</loc>
+    <lastmod>2026-04-30T15:50:31.929Z</lastmod>
   </url>
   <url>
-    <loc>https://esdavide2910.github.io/about.html</loc>
-    <lastmod>2026-04-21T19:35:44.677Z</lastmod>
+    <loc>https://esdavide2910.github.io/blog/tfg-uncertainty-bp-estimation.html</loc>
+    <lastmod>2026-04-30T15:22:22.510Z</lastmod>
   </url>
   <url>
     <loc>https://esdavide2910.github.io/index.html</loc>
-    <lastmod>2026-04-30T12:47:16.309Z</lastmod>
+    <lastmod>2026-04-30T16:27:25.019Z</lastmod>
+  </url>
+  <url>
+    <loc>https://esdavide2910.github.io/blog/blog.html</loc>
+    <lastmod>2026-04-30T14:51:47.751Z</lastmod>
   </url>
 </urlset>
