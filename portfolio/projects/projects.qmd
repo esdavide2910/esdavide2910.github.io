@@ -1,0 +1,30 @@
+---
+title: Project
+page-layout: full
+title-block-bannerrR: false
+
+about:
+  template: solana
+  image-width: 32em
+  id: hero-heading
+
+listing:
+  - id: project
+    contents:
+    - /blog/tfg-uncertainty-age-estimation
+    sort: title #date desc
+    type: grid
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    max-items: 3
+    feed: false
+---
+
+
+:::{#hero-heading}
+
+
+
+
+:::

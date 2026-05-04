@@ -4,24 +4,56 @@ project:
     - "documents/cv.pdf"
 
 website:
-  title: "David González Durán"
+  title: ""
+  back-to-top-navigation: true
+  favicon: /images/simplified_signature_white_squared.svg
   navbar:
+    search: true
+    background: primary
+    foreground: light
+    logo:
+      light: /images/simplified_signature_black.svg
+      dark: /images/simplified_signature_white.svg
+    logo-alt: "David González Durán logo"
     left:
       - href: index.qmd
         text: About
-      - href: presentations
-        text: "Presentations"
-    page-footer:
-      left: "© Copyright 2026 David González Durán. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0."
+      - href: blog/blog.qmd
+        text: "Blog"
+      - href: projects/projects.qmd
+        text: "Projects"
+  page-footer: 
+    border: true
+    background: primary
+    foreground: light
+    left: |
+      Powered by [{{< iconify simple-icons:quarto title="Quarto Logo" label="Quarto Logo" >}} Quarto](https://quarto.org){target="_blank" rel="noopener noreferrer"}.
+    center: |
+      &copy; 2026 [David González Durán](https://esdavide2910.github.io/){target="_blank" rel="noopener noreferrer"}.
+    right: |
+      License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0){target="_blank" rel="noopener noreferrer"}.
 
 format:
   html:
     highlight-style: a11y
     theme:
-      light: cosmo
-      dark: [cosmo, style_dark.scss]
+      light: 
+        - cosmo
+        - style.scss
+      dark: 
+        - cosmo
+        - style_dark.scss
+    lang: en-GB
+    syntax-highlighting:
+      light: github-light
+      dark: github-dark
+    fig-align: center
     css: styles.css
     toc: true
+    # code-copy: true
+    # code-link: false
+    # code-overflow: wrap
 
-
+mermaid:
+  theme: neutral
 

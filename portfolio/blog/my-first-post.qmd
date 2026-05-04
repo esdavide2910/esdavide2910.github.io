@@ -1,0 +1,23 @@
+---
+title: "My First Post"
+subtitle: "Test post to explore the possibilities of Quarto "
+date: "27 April 2026"
+date-modified: "2 May 2026"
+format:
+    # pdf: default
+    html: 
+      toc: true
+      toc-location: right
+      # code-links: 
+      #   - text: Presentation Age Estimation
+      #     href: /documents/tfg-uncertainty-age-estimation.pdf
+      grid: 
+        margin-width: 350px
+number-sections: true
+---
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+# 

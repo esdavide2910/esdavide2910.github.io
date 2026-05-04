@@ -1,0 +1,36 @@
+
+# Tell Quarto not to re-execute the code when rendering the site
+freeze: true
+
+# Prevent useless messages from appearing
+execute:
+  warning: false
+  message: false
+
+# 
+authors:
+  - name:
+      given: David
+      family: González Durán
+    email: davidgondur@proton.me
+    url: https://esdavide2910.github.io/
+license: CC BY-NC-SA
+
+
+#
+title-block-banner: true
+
+#
+toc: true
+
+#
+lightbox: true
+
+#
+footnotes-hover: true
+
+# 
+code-annotations: below
+
+#
+back-to-top-navigation: true

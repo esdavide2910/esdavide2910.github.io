@@ -1,0 +1,194 @@
+---
+title: "My Final Degree Project"
+subtitle: "Quantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems"
+date: "30 January 2026"
+date-modified: "30 April 2026"
+format:
+    # pdf: default
+    html: 
+      toc: true
+      toc-location: right
+      toc-depth: 2
+      # code-links: 
+      #   - text: Presentation Age Estimation
+      #     href: /documents/tfg-uncertainty-age-estimation.pdf
+      grid: 
+        margin-width: 350px
+number-sections: true
+---
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+# Introduction
+
+
+## Problem description
+
+
+### Human identification and biological profile estimation
+
+
+## Motivation
+
+
+## Objectives
+
+
+## Time planning
+
+
+## Economic planning
+
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+# Theoretical Background
+
+## Machine Learning
+
+### Regression problems
+
+### Classification problems
+
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+## Deep Learning
+
+### The multilayer perceptron
+
+### Network training and validation
+
+### Convolutional Neural Networks
+
+### Transfer Learning
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+## Uncertainty
+
+### Uncertainty in machine learning
+
+### Uncertainty quantification in machine learning
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+## Conformal prediction
+
+### Properties of conformal prediction
+
+### Conformal algorithm
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+# State of the art
+
+## Age estimation in forensic anthropology
+
+## Age estimation in forensic anthropology using machine learning
+
+## Uncertainty quantification for age estimation
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+# Materials and methods
+
+## Available datasets
+
+## Proposed methods
+
+### Architecture used
+
+### Quantile regression
+
+### Conformal prediction methods for regression
+
+### Probability calibration in classification
+
+### Conformal prediction methods for classification
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+# Experimentation
+
+## Proposed problems
+
+## Experimental validation protocol
+
+## Data preprocessing
+
+## General scheme of the experiments performed
+
+### Age estimation problem
+
+### Legal age estimation problem
+
+### Age classification problem
+
+## Performance evaluation
+
+### Metrics for regression
+
+### Metrics for classification
+
+### Statistical tests
+
+## Experimentation for age estimation
+
+### Model training
+
+### Results
+
+## Experimentation for legal age estimation
+
+### Model training
+
+### Results
+
+## Experimentation for age classification
+
+### Model training
+
+### Results
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+# Conclusions and future work
+
+## Conclusions
+
+## Assessment of the work performed
+
+## Future work
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+### Other resources
+Aquí tienes las diapositivas detalladas:
+
+- [{{< iconify ph:presentation-chart-bold >}} Presentation ](/documents/tfg-uncertainty-age-estimation.pdf)
+
+
+::: {.column-margin}
+Other resources
+
+- [{{< iconify ph:presentation-chart-bold >}} Presentation ](/documents/tfg-uncertainty-age-estimation.pdf)
+
+:::
