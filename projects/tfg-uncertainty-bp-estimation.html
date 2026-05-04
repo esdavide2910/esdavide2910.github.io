@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-01-30">
 
-<title>Blog</title>
+<title>My Final Degree Project</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,21 +35,20 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="..//images/simplified_signature_white_squared.svg" rel="icon" type="image/svg+xml">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c00974fd207ab6335223fc9d934bcbf5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-075f3c06e59ae4c14913e6174033bfe6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-c00974fd207ab6335223fc9d934bcbf5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6e9ceb2c525b49ad9b7a87789aca41a4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-201fc7ae09d4b655446b8f0a7d68e074.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6e9ceb2c525b49ad9b7a87789aca41a4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -77,65 +77,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: [],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog'] = new List('listing-blog', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -305,7 +247,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -325,7 +267,7 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/blog.html" aria-current="page"> 
+    <a class="nav-link" href="../blog/blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -341,53 +283,316 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Blog</h1>
-                      </div>
-  </div>
-  <div class="quarto-title-meta column-page">
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p><a href="https://esdavide2910.github.io/">David González Durán</a> <a href="mailto:davidgondur@proton.me" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-            </div>
-    </div>
-    </div>
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#problem-description" id="toc-problem-description" class="nav-link" data-scroll-target="#problem-description"><span class="header-section-number">1.1</span> Problem description</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation"><span class="header-section-number">1.2</span> Motivation</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">1.3</span> Objectives</a></li>
+  <li><a href="#time-planning" id="toc-time-planning" class="nav-link" data-scroll-target="#time-planning"><span class="header-section-number">1.4</span> Time planning</a></li>
+  <li><a href="#economic-planning" id="toc-economic-planning" class="nav-link" data-scroll-target="#economic-planning"><span class="header-section-number">1.5</span> Economic planning</a></li>
+  </ul></li>
+  <li><a href="#theoretical-background" id="toc-theoretical-background" class="nav-link" data-scroll-target="#theoretical-background"><span class="header-section-number">2</span> Theoretical Background</a>
+  <ul class="collapse">
+  <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link" data-scroll-target="#machine-learning"><span class="header-section-number">2.1</span> Machine Learning</a></li>
+  <li><a href="#deep-learning" id="toc-deep-learning" class="nav-link" data-scroll-target="#deep-learning"><span class="header-section-number">2.2</span> Deep Learning</a></li>
+  <li><a href="#uncertainty" id="toc-uncertainty" class="nav-link" data-scroll-target="#uncertainty"><span class="header-section-number">2.3</span> Uncertainty</a></li>
+  <li><a href="#conformal-prediction" id="toc-conformal-prediction" class="nav-link" data-scroll-target="#conformal-prediction"><span class="header-section-number">2.4</span> Conformal prediction</a></li>
+  </ul></li>
+  <li><a href="#state-of-the-art" id="toc-state-of-the-art" class="nav-link" data-scroll-target="#state-of-the-art"><span class="header-section-number">3</span> State of the art</a>
+  <ul class="collapse">
+  <li><a href="#age-estimation-in-forensic-anthropology" id="toc-age-estimation-in-forensic-anthropology" class="nav-link" data-scroll-target="#age-estimation-in-forensic-anthropology"><span class="header-section-number">3.1</span> Age estimation in forensic anthropology</a></li>
+  <li><a href="#age-estimation-in-forensic-anthropology-using-machine-learning" id="toc-age-estimation-in-forensic-anthropology-using-machine-learning" class="nav-link" data-scroll-target="#age-estimation-in-forensic-anthropology-using-machine-learning"><span class="header-section-number">3.2</span> Age estimation in forensic anthropology using machine learning</a></li>
+  <li><a href="#uncertainty-quantification-for-age-estimation" id="toc-uncertainty-quantification-for-age-estimation" class="nav-link" data-scroll-target="#uncertainty-quantification-for-age-estimation"><span class="header-section-number">3.3</span> Uncertainty quantification for age estimation</a></li>
+  </ul></li>
+  <li><a href="#materials-and-methods" id="toc-materials-and-methods" class="nav-link" data-scroll-target="#materials-and-methods"><span class="header-section-number">4</span> Materials and methods</a>
+  <ul class="collapse">
+  <li><a href="#available-datasets" id="toc-available-datasets" class="nav-link" data-scroll-target="#available-datasets"><span class="header-section-number">4.1</span> Available datasets</a></li>
+  <li><a href="#proposed-methods" id="toc-proposed-methods" class="nav-link" data-scroll-target="#proposed-methods"><span class="header-section-number">4.2</span> Proposed methods</a></li>
+  </ul></li>
+  <li><a href="#experimentation" id="toc-experimentation" class="nav-link" data-scroll-target="#experimentation"><span class="header-section-number">5</span> Experimentation</a>
+  <ul class="collapse">
+  <li><a href="#proposed-problems" id="toc-proposed-problems" class="nav-link" data-scroll-target="#proposed-problems"><span class="header-section-number">5.1</span> Proposed problems</a></li>
+  <li><a href="#experimental-validation-protocol" id="toc-experimental-validation-protocol" class="nav-link" data-scroll-target="#experimental-validation-protocol"><span class="header-section-number">5.2</span> Experimental validation protocol</a></li>
+  <li><a href="#data-preprocessing" id="toc-data-preprocessing" class="nav-link" data-scroll-target="#data-preprocessing"><span class="header-section-number">5.3</span> Data preprocessing</a></li>
+  <li><a href="#general-scheme-of-the-experiments-performed" id="toc-general-scheme-of-the-experiments-performed" class="nav-link" data-scroll-target="#general-scheme-of-the-experiments-performed"><span class="header-section-number">5.4</span> General scheme of the experiments performed</a></li>
+  <li><a href="#performance-evaluation" id="toc-performance-evaluation" class="nav-link" data-scroll-target="#performance-evaluation"><span class="header-section-number">5.5</span> Performance evaluation</a></li>
+  <li><a href="#experimentation-for-age-estimation" id="toc-experimentation-for-age-estimation" class="nav-link" data-scroll-target="#experimentation-for-age-estimation"><span class="header-section-number">5.6</span> Experimentation for age estimation</a></li>
+  <li><a href="#experimentation-for-legal-age-estimation" id="toc-experimentation-for-legal-age-estimation" class="nav-link" data-scroll-target="#experimentation-for-legal-age-estimation"><span class="header-section-number">5.7</span> Experimentation for legal age estimation</a></li>
+  <li><a href="#experimentation-for-age-classification" id="toc-experimentation-for-age-classification" class="nav-link" data-scroll-target="#experimentation-for-age-classification"><span class="header-section-number">5.8</span> Experimentation for age classification</a></li>
+  </ul></li>
+  <li><a href="#conclusions-and-future-work" id="toc-conclusions-and-future-work" class="nav-link" data-scroll-target="#conclusions-and-future-work"><span class="header-section-number">6</span> Conclusions and future work</a>
+  <ul class="collapse">
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">6.1</span> Conclusions</a></li>
+  <li><a href="#assessment-of-the-work-performed" id="toc-assessment-of-the-work-performed" class="nav-link" data-scroll-target="#assessment-of-the-work-performed"><span class="header-section-number">6.2</span> Assessment of the work performed</a></li>
+  <li><a href="#future-work" id="toc-future-work" class="nav-link" data-scroll-target="#future-work"><span class="header-section-number">6.3</span> Future work</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full column-page" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">My Final Degree Project</h1>
+<p class="subtitle lead">Quantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-
-
-<div class="quarto-about-solana column-page">
-  <div class="about-entity">
-    <div class="entity-contents">
-       
-      <div class="about-contents"><div id="hero-heading">
-</div></div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">30 January 2026</p>
     </div>
   </div>
-</div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">30 April 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<section id="problem-description" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="problem-description"><span class="header-section-number">1.1</span> Problem description</h2>
+<section id="human-identification-and-biological-profile-estimation" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="human-identification-and-biological-profile-estimation"><span class="header-section-number">1.1.1</span> Human identification and biological profile estimation</h3>
+</section>
+</section>
+<section id="motivation" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="motivation"><span class="header-section-number">1.2</span> Motivation</h2>
+</section>
+<section id="objectives" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="objectives"><span class="header-section-number">1.3</span> Objectives</h2>
+</section>
+<section id="time-planning" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="time-planning"><span class="header-section-number">1.4</span> Time planning</h2>
+</section>
+<section id="economic-planning" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="economic-planning"><span class="header-section-number">1.5</span> Economic planning</h2>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+</section>
+</section>
+<section id="theoretical-background" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Theoretical Background</h1>
+<section id="machine-learning" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="machine-learning"><span class="header-section-number">2.1</span> Machine Learning</h2>
+<section id="regression-problems" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="regression-problems"><span class="header-section-number">2.1.1</span> Regression problems</h3>
+</section>
+<section id="classification-problems" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="classification-problems"><span class="header-section-number">2.1.2</span> Classification problems</h3>
+<!-------------------------------------------------------------------------------------------------------------------------->
+</section>
+</section>
+<section id="deep-learning" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="deep-learning"><span class="header-section-number">2.2</span> Deep Learning</h2>
+<section id="the-multilayer-perceptron" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="the-multilayer-perceptron"><span class="header-section-number">2.2.1</span> The multilayer perceptron</h3>
+</section>
+<section id="network-training-and-validation" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="network-training-and-validation"><span class="header-section-number">2.2.2</span> Network training and validation</h3>
+</section>
+<section id="convolutional-neural-networks" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="convolutional-neural-networks"><span class="header-section-number">2.2.3</span> Convolutional Neural Networks</h3>
+</section>
+<section id="transfer-learning" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="transfer-learning"><span class="header-section-number">2.2.4</span> Transfer Learning</h3>
+<!-------------------------------------------------------------------------------------------------------------------------->
+</section>
+</section>
+<section id="uncertainty" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="uncertainty"><span class="header-section-number">2.3</span> Uncertainty</h2>
+<section id="uncertainty-in-machine-learning" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="uncertainty-in-machine-learning"><span class="header-section-number">2.3.1</span> Uncertainty in machine learning</h3>
+</section>
+<section id="uncertainty-quantification-in-machine-learning" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="uncertainty-quantification-in-machine-learning"><span class="header-section-number">2.3.2</span> Uncertainty quantification in machine learning</h3>
+<!-------------------------------------------------------------------------------------------------------------------------->
+</section>
+</section>
+<section id="conformal-prediction" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="conformal-prediction"><span class="header-section-number">2.4</span> Conformal prediction</h2>
+<section id="properties-of-conformal-prediction" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="properties-of-conformal-prediction"><span class="header-section-number">2.4.1</span> Properties of conformal prediction</h3>
+</section>
+<section id="conformal-algorithm" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="conformal-algorithm"><span class="header-section-number">2.4.2</span> Conformal algorithm</h3>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+</section>
+</section>
+</section>
+<section id="state-of-the-art" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> State of the art</h1>
+<section id="age-estimation-in-forensic-anthropology" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="age-estimation-in-forensic-anthropology"><span class="header-section-number">3.1</span> Age estimation in forensic anthropology</h2>
+</section>
+<section id="age-estimation-in-forensic-anthropology-using-machine-learning" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="age-estimation-in-forensic-anthropology-using-machine-learning"><span class="header-section-number">3.2</span> Age estimation in forensic anthropology using machine learning</h2>
+</section>
+<section id="uncertainty-quantification-for-age-estimation" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="uncertainty-quantification-for-age-estimation"><span class="header-section-number">3.3</span> Uncertainty quantification for age estimation</h2>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+</section>
+</section>
+<section id="materials-and-methods" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Materials and methods</h1>
+<section id="available-datasets" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="available-datasets"><span class="header-section-number">4.1</span> Available datasets</h2>
+</section>
+<section id="proposed-methods" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="proposed-methods"><span class="header-section-number">4.2</span> Proposed methods</h2>
+<section id="architecture-used" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="architecture-used"><span class="header-section-number">4.2.1</span> Architecture used</h3>
+</section>
+<section id="quantile-regression" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="quantile-regression"><span class="header-section-number">4.2.2</span> Quantile regression</h3>
+</section>
+<section id="conformal-prediction-methods-for-regression" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="conformal-prediction-methods-for-regression"><span class="header-section-number">4.2.3</span> Conformal prediction methods for regression</h3>
+</section>
+<section id="probability-calibration-in-classification" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="probability-calibration-in-classification"><span class="header-section-number">4.2.4</span> Probability calibration in classification</h3>
+</section>
+<section id="conformal-prediction-methods-for-classification" class="level3" data-number="4.2.5">
+<h3 data-number="4.2.5" class="anchored" data-anchor-id="conformal-prediction-methods-for-classification"><span class="header-section-number">4.2.5</span> Conformal prediction methods for classification</h3>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+</section>
+</section>
+</section>
+<section id="experimentation" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Experimentation</h1>
+<section id="proposed-problems" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="proposed-problems"><span class="header-section-number">5.1</span> Proposed problems</h2>
+</section>
+<section id="experimental-validation-protocol" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="experimental-validation-protocol"><span class="header-section-number">5.2</span> Experimental validation protocol</h2>
+</section>
+<section id="data-preprocessing" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="data-preprocessing"><span class="header-section-number">5.3</span> Data preprocessing</h2>
+</section>
+<section id="general-scheme-of-the-experiments-performed" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="general-scheme-of-the-experiments-performed"><span class="header-section-number">5.4</span> General scheme of the experiments performed</h2>
+<section id="age-estimation-problem" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="age-estimation-problem"><span class="header-section-number">5.4.1</span> Age estimation problem</h3>
+</section>
+<section id="legal-age-estimation-problem" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="legal-age-estimation-problem"><span class="header-section-number">5.4.2</span> Legal age estimation problem</h3>
+</section>
+<section id="age-classification-problem" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="age-classification-problem"><span class="header-section-number">5.4.3</span> Age classification problem</h3>
+</section>
+</section>
+<section id="performance-evaluation" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="performance-evaluation"><span class="header-section-number">5.5</span> Performance evaluation</h2>
+<section id="metrics-for-regression" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="metrics-for-regression"><span class="header-section-number">5.5.1</span> Metrics for regression</h3>
+</section>
+<section id="metrics-for-classification" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="metrics-for-classification"><span class="header-section-number">5.5.2</span> Metrics for classification</h3>
+</section>
+<section id="statistical-tests" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="statistical-tests"><span class="header-section-number">5.5.3</span> Statistical tests</h3>
+</section>
+</section>
+<section id="experimentation-for-age-estimation" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="experimentation-for-age-estimation"><span class="header-section-number">5.6</span> Experimentation for age estimation</h2>
+<section id="model-training" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="model-training"><span class="header-section-number">5.6.1</span> Model training</h3>
+</section>
+<section id="results" class="level3" data-number="5.6.2">
+<h3 data-number="5.6.2" class="anchored" data-anchor-id="results"><span class="header-section-number">5.6.2</span> Results</h3>
+</section>
+</section>
+<section id="experimentation-for-legal-age-estimation" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="experimentation-for-legal-age-estimation"><span class="header-section-number">5.7</span> Experimentation for legal age estimation</h2>
+<section id="model-training-1" class="level3" data-number="5.7.1">
+<h3 data-number="5.7.1" class="anchored" data-anchor-id="model-training-1"><span class="header-section-number">5.7.1</span> Model training</h3>
+</section>
+<section id="results-1" class="level3" data-number="5.7.2">
+<h3 data-number="5.7.2" class="anchored" data-anchor-id="results-1"><span class="header-section-number">5.7.2</span> Results</h3>
+</section>
+</section>
+<section id="experimentation-for-age-classification" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="experimentation-for-age-classification"><span class="header-section-number">5.8</span> Experimentation for age classification</h2>
+<section id="model-training-2" class="level3" data-number="5.8.1">
+<h3 data-number="5.8.1" class="anchored" data-anchor-id="model-training-2"><span class="header-section-number">5.8.1</span> Model training</h3>
+</section>
+<section id="results-2" class="level3" data-number="5.8.2">
+<h3 data-number="5.8.2" class="anchored" data-anchor-id="results-2"><span class="header-section-number">5.8.2</span> Results</h3>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+</section>
+</section>
+</section>
+<section id="conclusions-and-future-work" class="level1 page-columns page-full" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Conclusions and future work</h1>
+<section id="conclusions" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="conclusions"><span class="header-section-number">6.1</span> Conclusions</h2>
+</section>
+<section id="assessment-of-the-work-performed" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="assessment-of-the-work-performed"><span class="header-section-number">6.2</span> Assessment of the work performed</h2>
+</section>
+<section id="future-work" class="level2 page-columns page-full" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="future-work"><span class="header-section-number">6.3</span> Future work</h2>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<section id="other-resources" class="level3 page-columns page-full" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="other-resources"><span class="header-section-number">6.3.1</span> Other resources</h3>
+<p>Aquí tienes las diapositivas detalladas:</p>
+<ul>
+<li><a href="../documents/tfg-uncertainty-age-estimation.pdf"><iconify-icon role="img" inline="" icon="ph:presentation-chart-bold" aria-label="Icon presentation-chart-bold from ph Iconify.design set." title="Icon presentation-chart-bold from ph Iconify.design set."></iconify-icon> Presentation</a></li>
+</ul>
 
 
 
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Other resources</p>
+<ul>
+<li><a href="../documents/tfg-uncertainty-age-estimation.pdf"><iconify-icon role="img" inline="" icon="ph:presentation-chart-bold" aria-label="Icon presentation-chart-bold from ph Iconify.design set." title="Icon presentation-chart-bold from ph Iconify.design set."></iconify-icon> Presentation</a></li>
+</ul>
+</div></div></section>
+</section>
+</section>
 
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-blog">
-<div class="list grid quarto-listing-cols-3">
-
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_gb">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -403,6 +608,13 @@ window.Quarto = {
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
