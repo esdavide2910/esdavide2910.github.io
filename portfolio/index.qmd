@@ -2,7 +2,7 @@
 title: "David González Durán"
 image: "images/profile_pic.jpg"
 about:
-  template: trestles
+  template: solana
   # image-width: 15em
   links:
     - icon: envelope
@@ -19,7 +19,7 @@ about:
       href: /documents/cv.pdf
     - icon: file-pdf
       text: CV (Español)
-      href: /documents/cv-es.pdf
+      href: /documents/cv-esp.pdf
 extensions:
   badge:
     - key: stable
@@ -28,99 +28,99 @@ lightbox: true
 ---
 
 
-Welcome to my portfolio!
+¡Bienvenido a mi portfolio!
 
-On this site I will keep a list of my personal technical challenges I've faced in Machine Learning, from training Deep Learning models to architecting robust Data Pipelines. Interested in Trustworthy AI, ensuring that data-driven systems are not just fast, but trustworthy.
+En este sitio mantendré una lista de los desafíos técnicos personales a los que me he enfrentado en Machine Learning, desde el entrenamiento de modelos de Deep Learning hasta el diseño de arquitecturas robustas para Data Pipelines. Me interesa la IA Confiable (Trustworthy AI), asegurándome de que los sistemas basados en datos no sean solo rápidos, sino también dignos de confianza.
 
-<!-- Explore my projects to see how I leverage tools like PyTorch, Snowflake, and Quarto to turn raw data into intelligence. -->
-
-Now, looking for a job 😉. Ready to join a tech team!
+¡Actualmente estoy buscando trabajo! 😉 Listo para unirme a un equipo tecnológico.
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 
 ## Bio
 
-I am David González Durán, a recent graduate in Computer Science and Business Management from the University of Granada. 
+Soy David González Durán, graduado recientemente en el Doble Grado de Ingeniería Informática y Administración y Dirección de Empresas por la Universidad de Granada.
 
-During my Joint Honours Degree, I discovered my passion for AI, particularly Machine Learning. I realized that AI algorithms go far beyond code, acting as a bridge between complex information and strategic decision-making. This passion naturally led me to Data Science. I enjoy diving into datasets to uncover hidden insights and create visualizations that help us understand the reality behind the data. 
+Durante mi formación, descubrí mi pasión por la IA, concretamente por el Machine Learning. Me di cuenta de que los algoritmos de IA van mucho más allá del código: actúan como un puente entre la información compleja y la toma de decisiones estratégicas. Esta pasión me llevó de forma natural hacia la **Ciencia de Datos**. Mi base técnica se consolidó durante mis prácticas extracurriculares en [Cívica Software](https://civica-soft.com/), donde trabajé como **Junior Data Engineer** en un proyecto para una importante entidad financiera. Allí adquirí una experiencia fundamental en el ecosistema de bases de datos, lo que me permitió comprender el ciclo de vida y procesos ETL. Esta formación previa ha sido clave para mi enfoque actual: disfruto profundizando en conjuntos de datos para descubrir ideas ocultas y creando visualizaciones que nos ayuden a comprender la realidad que subyace a los datos.
 
-Apart from that, and thanks to a well-structured subject, I developed a strong interest in Computer Vision. This field allowed me to explore everything from classical image representation and filtering to handcrafted feature extraction. Eventually, I moved into deep learning architectures, focusing primarily on image classification while also exploring the power of transformers for image segmentation.
+Más tarde, y gracias a una asignatura muy bien estructurada, desarrollé un fuerte interés en la **Visión por Computador**. Este campo me permitió explorar desde la representación y el filtrado de imágenes clásicos hasta la extracción de características artesanales (handcrafted features). Finalmente, me adentré en arquitecturas de Deep Learning, centrándome principalmente en la clasificación de imágenes y explorando el potencial de los Transformers para la segmentación.
 
-However, lately, I also found out that AI makes mistakes and inherits biases from human recollected data, too. As a result, I have become increasingly committed to the field of Trustworthy AI. I believe that for artificial intelligence to be truly useful in the real world, it must be transparent and robust.
+Sin embargo, también comprobé que la IA no es infalible, no solo porque comete errores objetivos, sino porque reproduce imprecisiones y sesgos sistémicos derivados de los conjuntos de datos recopilados por humanos. Como resultado, me he acercado cada vez más al campo de la **IA Confiable (_Trustworthy AI_)**. Creo que para que la inteligencia artificial sea realmente útil en el mundo real, debe ser transparente y robusta.
 
-My latest focus is Uncertainty Quantification, the core of my Final Degree Project: _Quantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems_ (see more details below in [Projects](#sec-projects)). My work integrates Conformal Prediction into biological estimation tasks, such as age and sex estimation, delivering statitiscally guaranteed prediction intervals (at regression) and label sets (at classification), capturing uncertainty across cases.
+Mi enfoque más reciente en cuanto a esto es la **Cuantificación de la Incertidumbre**, el núcleo de mi Trabajo de Fin de Grado: _Cuantificación de la incertidumbre en las predicciones de modelos de machine learning para problemas de estimación del perfil biológico_ (ver más detalles abajo en [Proyectos](#sec-projects)). Este trabajo integra **Conformal Prediction** en tareas de estimación biológica, como la estimación de la edad y el sexo a partir de imágenes de imágenes de radiografías maxilofaciales, proporcionando intervalos de predicción (en regresión) y conjuntos de etiquetas (en clasificación) con garantías estadísticas, capturando así la incertidumbre en cada caso.
 
-![Diagram of a regression model using conformal prediction, which, in addition to providing a point estimate of the expected value, yields a prediction interval with a 95% confidence level.](images/example_intervalic_estimation.jpg)
+![Diagrama de un modelo de regresión usando predicción conformal, que, además de devolver una predicción puntual con el valor esperado, obtiene un intervalo de predicción con un 95% de confianza.](images/example_intervalic_estimation-es.jpg)
 
-Currently, I am reading _Interpretable Machine Learning_ by Cristoph Molnar, staying at the forefront of explainability and model transparency. 
+Actualmente, estoy leyendo _Interpretable Machine Learning_ de Christoph Molnar, para tener una visión más completa de cómo abrir la 'caja negra' de los algoritmos.
 
-<!------------------------------------------------------------------------------------------------------------------------------->
-
-## Academic background 
-
-- **Joint Honours Degree in Computer Science and Business Management, from 2019 to 2026.**\
-Average score of 8.01 in Computer Science and 8.36 in Business Management.
+Más allá de lo académico, siempre he creído en la importancia de participar activamente en la comunidad universitaria. Durante mi grado, tuve el honor de servir durante 2 años como **secretario de la Delegación de Estudiantes de Ingenierías Informática y de Telecomunicaciones** (DEIIT). Durante esta etapa asumí la responsabilidad de convocar las sesiones plenarias, redacción y publicación de actas, gestión y actualización del censo de miembros, así como ayuda en la organización de eventos en la escuela (Granabot, Mercadillo de BBAA y Día de la Escuela).
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 
-## Work experience {#sec-work-experience}
+## Formación académica 
 
-- Extracurricular internship as **Data Engineer in [**Cívica Software**](https://civica-soft.com/)** from July to October 2024 (3 months). 
-
-<!------------------------------------------------------------------------------------------------------------------------------->
-
-## Projects {#sec-projects}
-
-- _**Quantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems**_ [(link to repository)](https://github.com/esdavide2910/tfg-bioprofile-uncertainty) made in collaboration with [Panacea Cooperative Research](https://panacea-coop.com/), supervised by [Pablo Mesejo Santiago](https://www.ugr.es/~pmesejo/), and mentored by [Javier Venema Rodríguez](https://www.linkedin.com/in/javier-venema/). 
+- **Doble Grado en Ingeniería Informática y Administración y Dirección de Empresas, por la Universidad de Granada, desde 2019 hasta 2026.**\
+Nota media de 8.01 en Ingeniería Informática y 8.36 en Administración y Dirección de Empresas.
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 
-## Skills and tools 
+## Experiencia laboral {#sec-work-experience}
 
-- 🤖 **Machine Learning & Data Research**: I specialize in the end-to-end Machine Learning lifecycle, from data acquisition to model optimization.
-  - Advance use of **Pandas** and **Polars** for high-performance data manipulation and cleaning.
-  - **Matplotlib**, **Seaborn** and **Plotly** to communicate complex insights through interactive and publication-quality graphics.
-  - Expert use of **Scikit-Learn** for classical ML. Experienced with **PyTorch** and **TensorFlow** for deep learning implementation and familiarity with **ONNX** for model interoperability.
-  - Specialized in uncertainty quantification using **Crepes**, **MAPIE**, and **TorchCP**.
+- Prácticas extracurriculares como **Junior Data Engineer en [**Cívica Software**](https://civica-soft.com/)** de Julio a Octubre de 2024 (3 meses). 
+
+<!------------------------------------------------------------------------------------------------------------------------------->
+
+## Proyectos {#sec-projects}
+
+- _**Cuantificación de la incertidumbre de las predicciones de modelos de aprendizaje automático en problemas de estimación del perfil biológico**_ [(link to repository)](https://github.com/esdavide2910/tfg-bioprofile-uncertainty) hecho en colaboración con [Panacea Cooperative Research](https://panacea-coop.com/), dirigido por [Pablo Mesejo Santiago](https://www.ugr.es/~pmesejo/) y mentorizado por [Javier Venema Rodríguez](https://www.linkedin.com/in/javier-venema/). 
+
+<!------------------------------------------------------------------------------------------------------------------------------->
+
+## Habilidades IT y recursos usados
+
+- 🤖 **Machine Learning and Data Research**: Me especializo en todo el ciclo de vida del aprendizaje automático, desde la adquisición de datos hasta la optimización de modelos.
+  - Uso avanzado de **Pandas** y **Polars** para la manipulación y limpieza de datos de alto rendimiento.
+  - **Matplotlib**, **Seaborn** y **Plotly** para comunicar conocimientos complejos a través de gráficos interactivos y con calidad de publicación.
+  - Uso experto de **Scikit-Learn** para el aprendizaje automático clásico. Experiencia con **PyTorch** y **TensorFlow** para la implementación de aprendizaje profundo y familiaridad con **ONNX** para la interoperabilidad de modelos.
+  - Especializado en la cuantificación de la incertidumbre utilizando **Crepes**, **MAPIE**, and **TorchCP**.
 
 - 📊 **Database Engineering and Analytics**:
-  I hold an intermediate level in **SQL** (CTEs, Window Functions, Procedures...). Practical experience in enterprise environments focusing focusing on monitoring and maintenance of existing data structures:
-  - **Data Warehousing**: Intermediate experience with **Snowflake** and **Teradata**, supervising analytical datasets and executing minor schema modifications. 
-  - **ETL & Integration**: Experience (basic level) with **Informatica PowerCenter**. 
-  - Intermediate expertise in **Power BI**.
+  Tengo un nivel intermedio en **SQL** (CTEs, Window Functions, Procedures...). Experiencia práctica en entornos empresariales centrada en la supervisión y el mantenimiento de estructuras de datos existentes:
+  - **Data Warehousing**: Experiencia intermedia con **Snowflake** y **Teradata**, supervisando conjuntos de datos analíticos y ejecutando modificaciones menores en los esquemas. 
+  - **ETL & Integration**: Experiencia básica con **Informatica PowerCenter**. 
+  - Conocimientos intermedios de **Power BI** para la visualización de datos.
 
-- ✍️ **Technical Communication**:
-  Clarity, order and reproducibility in documents are fundamental pillars of communication. 
-  - **Scientific Typesetting**: Advanced use of **LaTeX** and **typst** for high-quality scientific documents and reports.
-  - **Reproducible Publishing**: Building websites using **Quarto** (like this website page 😄).
-  - **Collaborative Ecosystems**: Overleaf, Google Workspace and **Microsoft 365**.
+- ✍️ **Comunicación técnica**:
+  La claridad, el orden y la reproducibilidad en los documentos son pilares fundamentales de la comunicación. 
+  - Uso avanzado de **LaTeX** y **typst** para la composición de documentos e informes científicos de alta calidad.
+  - Creación de sitios web usando **Quarto** (como esta página web 😄).
+  - **Ecosistemas colaborativos**: Overleaf, Google Workspace y Microsoft 365.
 
 - 🛠️ **Software Engineering**:
-  - **Version Control**: Frequent use of **Git** and **GitHub** for collaborative development and code versioning.
-  - **Containerization**: Basic experience with **Docker** for environment isolation for personal use.
+  - **Version Control**: Uso frecuente de **Git** y **GitHub** para el desarrollo colaborativo y el control de versiones del código.
+  - **Contenedorización**: Experiencia básica con **Docker** para el aislamiento de entornos de uso personal.
 
-- 💻 **Programming Languages**:
-  - **Python**: High level. My primary language for data-intensive applications.
-  - **C++** and **Java**: Intermediate level, used for general...
-  - **R**: Basic level. Learning right now!
+- 💻 **Lenguajes de programación**:
+  - **Python**: Dominio avanzado en el desarrollo de aplicaciones de análisis de datos, visualización y despliegue de modelos de Machine Learning. Experiencia sólida en el ecosistema científico (Pandas, NumPy, Matplotlib/Seaborn) y en el desarrollo de flujos de trabajo eficientes para el procesamiento de información.
+  - **C++** and **Java**: Nivel intermedio, usado durante la carrera para proyectos pequeños y medianos (Object-oriented programming).
+  - **R**: Nivel básico. ¡Aprendiendo ahora mismo!
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 
-## Interests
+## Intereses
  
-- **DataViz**: Focused on advanced exploratory data analysis (EDA) and the design of visualisations that help us understand data.
+- **DataViz**: Centrado en el análisis exploratorio de datos (EDA) y en el diseño de visualizaciones que nos ayuden a comprender los datos.
 
-- **Trustworthy AI**: Interested in uncertainty quantification and explainable AI to build trustworthy systems and ensuring robustness in environments where reliability and risk quantification are paramount.
+- **Trustworthy AI**: Interesados en la cuantificación de la incertidumbre y la IA explicable para crear sistemas fiables y garantizar la solidez en entornos donde la fiabilidad y la cuantificación del riesgo son fundamentales.
 
-- **Open Source**: Convinced that open source is essential to democratize access to AI and accelerate technological progress, in addition to reducing dependence on propietary software.
+- **Open Source**: Convencidos de que el código abierto es esencial para acelerar el progreso tecnológico y reducir la dependencia del software propietario.
 
 <!------------------------------------------------------------------------------------------------------------------------------->
 
-## References
+## Recomendaciones
 
-Referenced by:
+Recomendado por:
 
-- [**Pablo Mesejo Santiago**](https://www.ugr.es/~pmesejo/), Associate Professor at the Department of Computer Science and Artificial Intelligence of the University of Granada and co-founding partner and Chief AI Officer at Panacea Cooperative Research.\
+- [**Pablo Mesejo Santiago**](https://www.ugr.es/~pmesejo/), Profesor asociado del Departamento de Informática e Inteligencia Artificial de la Universidad de Granada y socio cofundador y director de Inteligencia Artificial de Panacea Cooperative Research.\
 
 <div class="text-center">
   <a href="documents/RecommendationLetter.pdf" class="btn btn-outline-primary" target="_blank">

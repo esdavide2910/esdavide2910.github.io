@@ -24,3 +24,21 @@ $code-block-bg-alpha: -.8;
   max-height: 40px;
   padding: 5px;
 }
+
+// Alineación a la izquierda en móviles para template Solana
+@media (max-width: 768px) {
+  .about-entity, 
+  .about-content, 
+  .about-link-text,
+  main, 
+  header {
+    text-align: left !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  
+  // Si quieres que los botones de redes sociales también se alineen
+  .about-links {
+    justify-content: flex-start !important;
+  }
+}

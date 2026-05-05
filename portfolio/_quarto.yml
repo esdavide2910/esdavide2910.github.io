@@ -2,6 +2,7 @@ project:
   type: website
   resources:
     - "documents/cv.pdf"
+    - "documents/cv-es.pdf"
 
 website:
   title: ""
@@ -17,11 +18,11 @@ website:
     logo-alt: "David González Durán logo"
     left:
       - href: index.qmd
-        text: About
+        text: Sobre mí
       - href: blog/blog.qmd
         text: "Blog"
-      - href: projects/projects.qmd
-        text: "Projects"
+      # - href: projects/projects.qmd
+      #   text: "Projects"
   page-footer: 
     border: true
     background: primary
