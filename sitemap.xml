@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://esdavide2910.github.io/index.html</loc>
+    <lastmod>2026-05-05T10:06:56.063Z</lastmod>
+  </url>
+  <url>
     <loc>https://esdavide2910.github.io/projects/tfg-uncertainty-bp-estimation.html</loc>
     <lastmod>2026-05-02T16:12:23.815Z</lastmod>
   </url>
@@ -9,15 +13,15 @@
     <lastmod>2026-05-02T16:12:55.408Z</lastmod>
   </url>
   <url>
-    <loc>https://esdavide2910.github.io/index.html</loc>
-    <lastmod>2026-05-05T09:27:52.346Z</lastmod>
-  </url>
-  <url>
     <loc>https://esdavide2910.github.io/blog/blog.html</loc>
     <lastmod>2026-05-02T16:22:45.194Z</lastmod>
   </url>
   <url>
     <loc>https://esdavide2910.github.io/projects/projects.html</loc>
     <lastmod>2026-04-30T19:52:49.979Z</lastmod>
+  </url>
+  <url>
+    <loc>https://esdavide2910.github.io/index-en.html</loc>
+    <lastmod>2026-05-05T09:29:34.153Z</lastmod>
   </url>
 </urlset>

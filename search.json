@@ -1,5 +1,61 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "David González Durán",
+    "section": "",
+    "text": "¡Bienvenido a mi portfolio!\nEn este sitio mantendré una lista de los desafíos técnicos personales a los que me he enfrentado en Machine Learning, desde el entrenamiento de modelos de Deep Learning hasta el diseño de arquitecturas robustas para Data Pipelines. Me interesa la IA Confiable (Trustworthy AI), asegurándome de que los sistemas basados en datos no sean solo rápidos, sino también dignos de confianza.\n¡Actualmente estoy buscando trabajo! 😉 Listo para unirme a un equipo tecnológico."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "David González Durán",
+    "section": "Bio",
+    "text": "Bio\nSoy David González Durán, graduado recientemente en el Doble Grado de Ingeniería Informática y Administración y Dirección de Empresas por la Universidad de Granada.\nDurante mi formación, descubrí mi pasión por la IA, concretamente por el Machine Learning. Me di cuenta de que los algoritmos de IA van mucho más allá del código: actúan como un puente entre la información compleja y la toma de decisiones estratégicas. Esta pasión me llevó de forma natural hacia la Ciencia de Datos. Mi base técnica se consolidó durante mis prácticas extracurriculares en Cívica Software, donde trabajé como Data Engineer Junior en un proyecto para una importante entidad financiera. Allí adquirí una experiencia fundamental en el ecosistema de bases de datos, lo que me permitió comprender el ciclo de vida y procesos ETL. Esta formación previa ha sido clave para mi enfoque actual: disfruto profundizando en conjuntos de datos para descubrir ideas ocultas y creando visualizaciones que nos ayuden a comprender la realidad que subyace a los datos.\nMás tarde, y gracias a una asignatura muy bien estructurada, desarrollé un fuerte interés en la Visión por Computador. Este campo me permitió explorar desde la representación y el filtrado de imágenes clásicos hasta la extracción de características artesanales (handcrafted features). Finalmente, me adentré en arquitecturas de Deep Learning, centrándome principalmente en la clasificación de imágenes y explorando el potencial de los Transformers para la segmentación.\nSin embargo, también comprobé que la IA no es infalible, no solo porque comete errores objetivos, sino porque reproduce imprecisiones y sesgos sistémicos derivados de los conjuntos de datos recopilados por humanos. Como resultado, me he acercado cada vez más al campo de la IA Confiable (Trustworthy AI). Creo que para que la inteligencia artificial sea realmente útil en el mundo real, debe ser transparente y robusta.\nMi enfoque más reciente en cuanto a esto es la Cuantificación de la Incertidumbre, el núcleo de mi Trabajo de Fin de Grado: Cuantificación de la incertidumbre en las predicciones de modelos de machine learning para problemas de estimación del perfil biológico (ver más detalles abajo en Proyectos). Este trabajo integra Conformal Prediction en tareas de estimación biológica, como la estimación de la edad y el sexo, proporcionando intervalos de predicción (en regresión) y conjuntos de etiquetas (en clasificación) con garantías estadísticas, capturando así la incertidumbre en cada caso.\n\n\n\nDiagram of a regression model using conformal prediction, which, in addition to providing a point estimate of the expected value, yields a prediction interval with a 95% confidence level.\n\n\nActualmente, estoy leyendo Interpretable Machine Learning de Christoph Molnar, para tener una visión más completa de cómo abrir la ‘caja negra’ de los algoritmos."
+  },
+  {
+    "objectID": "index.html#formación-académica",
+    "href": "index.html#formación-académica",
+    "title": "David González Durán",
+    "section": "Formación académica",
+    "text": "Formación académica\n\nDoble Grado en Ingeniería Informática y Administración y Dirección de Empresas, por la Universidad de Granada, desde 2019 hasta 2026.\nNota media de 8.01 en Ingeniería Informática y 8.36 en Administración y Dirección de Empresas."
+  },
+  {
+    "objectID": "index.html#sec-work-experience",
+    "href": "index.html#sec-work-experience",
+    "title": "David González Durán",
+    "section": "Experiencia laboral",
+    "text": "Experiencia laboral\n\nPrácticas extracurriculares como Data Engineer Junior en Cívica Software de Julio a Octubre de 2024 (3 meses)."
+  },
+  {
+    "objectID": "index.html#sec-projects",
+    "href": "index.html#sec-projects",
+    "title": "David González Durán",
+    "section": "Proyectos",
+    "text": "Proyectos\n\nCuantificación de la incertidumbre de las predicciones de modelos de aprendizaje automático en problemas de estimación del perfil biológico (link to repository) hecho en colaboración con Panacea Cooperative Research, dirigido por Pablo Mesejo Santiago y mentorizado por Javier Venema Rodríguez."
+  },
+  {
+    "objectID": "index.html#habilidades-y-herramientas",
+    "href": "index.html#habilidades-y-herramientas",
+    "title": "David González Durán",
+    "section": "Habilidades y herramientas",
+    "text": "Habilidades y herramientas\n\n🤖 Machine Learning and Data Research: Me especializo en todo el ciclo de vida del aprendizaje automático, desde la adquisición de datos hasta la optimización de modelos.\n\nUso avanzado de Pandas y Polars para la manipulación y limpieza de datos de alto rendimiento.\nMatplotlib, Seaborn y Plotly para comunicar conocimientos complejos a través de gráficos interactivos y con calidad de publicación.\nUso experto de Scikit-Learn para el aprendizaje automático clásico. Experiencia con PyTorch y TensorFlow para la implementación de aprendizaje profundo y familiaridad con ONNX para la interoperabilidad de modelos.\nEspecializado en la cuantificación de la incertidumbre utilizando Crepes, MAPIE, and TorchCP.\n\n📊 Database Engineering and Analytics: Tengo un nivel intermedio en SQL (CTEs, Window Functions, Procedures…). Experiencia práctica en entornos empresariales centrada en la supervisión y el mantenimiento de estructuras de datos existentes:\n\nData Warehousing: Experiencia intermedia con Snowflake y Teradata, supervisando conjuntos de datos analíticos y ejecutando modificaciones menores en los esquemas.\nETL & Integration: Experiencia básica con Informatica PowerCenter.\nConocimientos intermedios de Power BI para la visualización de datos.\n\n✍️ Comunicación técnica: La claridad, el orden y la reproducibilidad en los documentos son pilares fundamentales de la comunicación.\n\nComposición de documentos científicos: Uso avanzado de LaTeX y typst para documentos e informes científicos de alta calidad.\nPublicación reproducible: Creación de sitios web usando Quarto (como esta página web 😄).\nEcosistemas colaborativos: Overleaf, Google Workspace y Microsoft 365.\n\n🛠️ Software Engineering:\n\nVersion Control: Uso frecuente de Git y GitHub para el desarrollo colaborativo y el control de versiones del código.\nContenedorización: Experiencia básica con Docker para el aislamiento de entornos de uso personal.\n\n💻 Lenguajes de programación:\n\nPython: Dominio avanzado en el desarrollo de aplicaciones de análisis de datos, visualización y despliegue de modelos de Machine Learning. Experiencia sólida en el ecosistema científico (Pandas, NumPy, Matplotlib/Seaborn) y en el desarrollo de flujos de trabajo eficientes para el procesamiento de información.\nC++ and Java: Nivel intermedio, usado durante la carrera para proyectos pequeños y medianos (Object-oriented programming).\nR: Nivel básico. ¡Aprendiendo ahora mismo!"
+  },
+  {
+    "objectID": "index.html#intereses",
+    "href": "index.html#intereses",
+    "title": "David González Durán",
+    "section": "Intereses",
+    "text": "Intereses\n\nDataViz: Centrado en el análisis exploratorio de datos (EDA) y en el diseño de visualizaciones que nos ayuden a comprender los datos.\nTrustworthy AI: Interesados en la cuantificación de la incertidumbre y la IA explicable para crear sistemas fiables y garantizar la solidez en entornos donde la fiabilidad y la cuantificación del riesgo son fundamentales.\nOpen Source: Convencidos de que el código abierto es esencial para acelerar el progreso tecnológico y reducir la dependencia del software propietario."
+  },
+  {
+    "objectID": "index.html#recomendaciones",
+    "href": "index.html#recomendaciones",
+    "title": "David González Durán",
+    "section": "Recomendaciones",
+    "text": "Recomendaciones\nRecomendado por:\n\nPablo Mesejo Santiago, Profesor asociado del Departamento de Informática e Inteligencia Artificial de la Universidad de Granada y socio cofundador y director de Inteligencia Artificial de Panacea Cooperative Research.\n\n\n\n  Download reference"
+  },
+  {
     "objectID": "projects/tfg-uncertainty-bp-estimation.html#machine-learning",
     "href": "projects/tfg-uncertainty-bp-estimation.html#machine-learning",
     "title": "My Final Degree Project",
@@ -147,62 +203,6 @@
     "text": "1 \n\n\n\n\n Back to topReuseCC BY-NC-SA 4.0"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "David González Durán",
-    "section": "",
-    "text": "Welcome to my portfolio!\nOn this site I will keep a list of my personal technical challenges I’ve faced in Machine Learning, from training Deep Learning models to architecting robust Data Pipelines. Interested in Trustworthy AI, ensuring that data-driven systems are not just fast, but trustworthy.\nNow, looking for a job 😉. Ready to join a tech team!"
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "David González Durán",
-    "section": "Bio",
-    "text": "Bio\nI am David González Durán, a recent graduate in Computer Science and Business Management from the University of Granada.\nDuring my Joint Honours Degree, I discovered my passion for AI, particularly Machine Learning. I realized that AI algorithms go far beyond code, acting as a bridge between complex information and strategic decision-making. This passion naturally led me to Data Science. I enjoy diving into datasets to uncover hidden insights and create visualizations that help us understand the reality behind the data.\nApart from that, and thanks to a well-structured subject, I developed a strong interest in Computer Vision. This field allowed me to explore everything from classical image representation and filtering to handcrafted feature extraction. Eventually, I moved into deep learning architectures, focusing primarily on image classification while also exploring the power of transformers for image segmentation.\nHowever, lately, I also found out that AI makes mistakes and inherits biases from human recollected data, too. As a result, I have become increasingly committed to the field of Trustworthy AI. I believe that for artificial intelligence to be truly useful in the real world, it must be transparent and robust.\nMy latest focus is Uncertainty Quantification, the core of my Final Degree Project: Quantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems (see more details below in Projects). My work integrates Conformal Prediction into biological estimation tasks, such as age and sex estimation, delivering statitiscally guaranteed prediction intervals (at regression) and label sets (at classification), capturing uncertainty across cases.\n\n\n\nDiagram of a regression model using conformal prediction, which, in addition to providing a point estimate of the expected value, yields a prediction interval with a 95% confidence level.\n\n\nCurrently, I am reading Interpretable Machine Learning by Cristoph Molnar, staying at the forefront of explainability and model transparency."
-  },
-  {
-    "objectID": "index.html#academic-background",
-    "href": "index.html#academic-background",
-    "title": "David González Durán",
-    "section": "Academic background",
-    "text": "Academic background\n\nJoint Honours Degree in Computer Science and Business Management, from 2019 to 2026.\nAverage score of 8.01 in Computer Science and 8.36 in Business Management."
-  },
-  {
-    "objectID": "index.html#sec-work-experience",
-    "href": "index.html#sec-work-experience",
-    "title": "David González Durán",
-    "section": "Work experience",
-    "text": "Work experience\n\nExtracurricular internship as Data Engineer in Cívica Software from July to October 2024 (3 months)."
-  },
-  {
-    "objectID": "index.html#sec-projects",
-    "href": "index.html#sec-projects",
-    "title": "David González Durán",
-    "section": "Projects",
-    "text": "Projects\n\nQuantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems (link to repository) made in collaboration with Panacea Cooperative Research, supervised by Pablo Mesejo Santiago, and mentored by Javier Venema Rodríguez."
-  },
-  {
-    "objectID": "index.html#skills-and-tools",
-    "href": "index.html#skills-and-tools",
-    "title": "David González Durán",
-    "section": "Skills and tools",
-    "text": "Skills and tools\n\n🤖 Machine Learning & Data Research: I specialize in the end-to-end Machine Learning lifecycle, from data acquisition to model optimization.\n\nAdvance use of Pandas and Polars for high-performance data manipulation and cleaning.\nMatplotlib, Seaborn and Plotly to communicate complex insights through interactive and publication-quality graphics.\nExpert use of Scikit-Learn for classical ML. Experienced with PyTorch and TensorFlow for deep learning implementation and familiarity with ONNX for model interoperability.\nSpecialized in uncertainty quantification using Crepes, MAPIE, and TorchCP.\n\n📊 Database Engineering and Analytics: I hold an intermediate level in SQL (CTEs, Window Functions, Procedures…). Practical experience in enterprise environments focusing focusing on monitoring and maintenance of existing data structures:\n\nData Warehousing: Intermediate experience with Snowflake and Teradata, supervising analytical datasets and executing minor schema modifications.\nETL & Integration: Experience (basic level) with Informatica PowerCenter.\nIntermediate expertise in Power BI.\n\n✍️ Technical Communication: Clarity, order and reproducibility in documents are fundamental pillars of communication.\n\nScientific Typesetting: Advanced use of LaTeX and typst for high-quality scientific documents and reports.\nReproducible Publishing: Building websites using Quarto (like this website page 😄).\nCollaborative Ecosystems: Overleaf, Google Workspace and Microsoft 365.\n\n🛠️ Software Engineering:\n\nVersion Control: Frequent use of Git and GitHub for collaborative development and code versioning.\nContainerization: Basic experience with Docker for environment isolation for personal use.\n\n💻 Programming Languages:\n\nPython: High level. My primary language for data-intensive applications.\nC++ and Java: Intermediate level, used for general…\nR: Basic level. Learning right now!"
-  },
-  {
-    "objectID": "index.html#interests",
-    "href": "index.html#interests",
-    "title": "David González Durán",
-    "section": "Interests",
-    "text": "Interests\n\nDataViz: Focused on advanced exploratory data analysis (EDA) and the design of visualisations that help us understand data.\nTrustworthy AI: Interested in uncertainty quantification and explainable AI to build trustworthy systems and ensuring robustness in environments where reliability and risk quantification are paramount.\nOpen Source: Convinced that open source is essential to democratize access to AI and accelerate technological progress, in addition to reducing dependence on propietary software."
-  },
-  {
-    "objectID": "index.html#references",
-    "href": "index.html#references",
-    "title": "David González Durán",
-    "section": "References",
-    "text": "References\nReferenced by:\n\nPablo Mesejo Santiago, Associate Professor at the Department of Computer Science and Artificial Intelligence of the University of Granada and co-founding partner and Chief AI Officer at Panacea Cooperative Research.\n\n\n\n  Download reference"
-  },
-  {
     "objectID": "blog/blog.html",
     "href": "blog/blog.html",
     "title": "Blog",
@@ -215,5 +215,61 @@
     "title": "Project",
     "section": "",
     "text": "No matching items\n Back to top"
+  },
+  {
+    "objectID": "index-en.html",
+    "href": "index-en.html",
+    "title": "David González Durán",
+    "section": "",
+    "text": "Welcome to my portfolio!\nOn this site I will keep a list of my personal technical challenges I’ve faced in Machine Learning, from training Deep Learning models to architecting robust Data Pipelines. Interested in Trustworthy AI, ensuring that data-driven systems are not just fast, but trustworthy.\nNow, looking for a job 😉. Ready to join a tech team!"
+  },
+  {
+    "objectID": "index-en.html#bio",
+    "href": "index-en.html#bio",
+    "title": "David González Durán",
+    "section": "Bio",
+    "text": "Bio\nI am David González Durán, a recent graduate in Computer Science and Business Management from the University of Granada.\nDuring my Joint Honours Degree, I discovered my passion for AI, particularly Machine Learning. I realized that AI algorithms go far beyond code, acting as a bridge between complex information and strategic decision-making. This passion naturally led me to Data Science. I enjoy diving into datasets to uncover hidden insights and create visualizations that help us understand the reality behind the data.\nApart from that, and thanks to a well-structured subject, I developed a strong interest in Computer Vision. This field allowed me to explore everything from classical image representation and filtering to handcrafted feature extraction. Eventually, I moved into deep learning architectures, focusing primarily on image classification while also exploring the power of transformers for image segmentation.\nHowever, lately, I also found out that AI makes mistakes and inherits biases from human recollected data, too. As a result, I have become increasingly committed to the field of Trustworthy AI. I believe that for artificial intelligence to be truly useful in the real world, it must be transparent and robust.\nMy latest focus is Uncertainty Quantification, the core of my Final Degree Project: Quantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems (see more details below in Projects). My work integrates Conformal Prediction into biological estimation tasks, such as age and sex estimation, delivering statitiscally guaranteed prediction intervals (at regression) and label sets (at classification), capturing uncertainty across cases.\n\n\n\nDiagram of a regression model using conformal prediction, which, in addition to providing a point estimate of the expected value, yields a prediction interval with a 95% confidence level.\n\n\nCurrently, I am reading Interpretable Machine Learning by Cristoph Molnar, staying at the forefront of explainability and model transparency."
+  },
+  {
+    "objectID": "index-en.html#academic-background",
+    "href": "index-en.html#academic-background",
+    "title": "David González Durán",
+    "section": "Academic background",
+    "text": "Academic background\n\nJoint Honours Degree in Computer Science and Business Management, from 2019 to 2026.\nAverage score of 8.01 in Computer Science and 8.36 in Business Management."
+  },
+  {
+    "objectID": "index-en.html#sec-work-experience",
+    "href": "index-en.html#sec-work-experience",
+    "title": "David González Durán",
+    "section": "Work experience",
+    "text": "Work experience\n\nExtracurricular internship as Data Engineer in Cívica Software from July to October 2024 (3 months)."
+  },
+  {
+    "objectID": "index-en.html#sec-projects",
+    "href": "index-en.html#sec-projects",
+    "title": "David González Durán",
+    "section": "Projects",
+    "text": "Projects\n\nQuantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems (link to repository) made in collaboration with Panacea Cooperative Research, supervised by Pablo Mesejo Santiago, and mentored by Javier Venema Rodríguez."
+  },
+  {
+    "objectID": "index-en.html#skills-and-tools",
+    "href": "index-en.html#skills-and-tools",
+    "title": "David González Durán",
+    "section": "Skills and tools",
+    "text": "Skills and tools\n\n🤖 Machine Learning & Data Research: I specialize in the end-to-end Machine Learning lifecycle, from data acquisition to model optimization.\n\nAdvance use of Pandas and Polars for high-performance data manipulation and cleaning.\nMatplotlib, Seaborn and Plotly to communicate complex insights through interactive and publication-quality graphics.\nExpert use of Scikit-Learn for classical ML. Experienced with PyTorch and TensorFlow for deep learning implementation and familiarity with ONNX for model interoperability.\nSpecialized in uncertainty quantification using Crepes, MAPIE, and TorchCP.\n\n📊 Database Engineering and Analytics: I hold an intermediate level in SQL (CTEs, Window Functions, Procedures…). Practical experience in enterprise environments focusing focusing on monitoring and maintenance of existing data structures:\n\nData Warehousing: Intermediate experience with Snowflake and Teradata, supervising analytical datasets and executing minor schema modifications.\nETL & Integration: Experience (basic level) with Informatica PowerCenter.\nIntermediate expertise in Power BI.\n\n✍️ Technical Communication: Clarity, order and reproducibility in documents are fundamental pillars of communication.\n\nScientific Typesetting: Advanced use of LaTeX and typst for high-quality scientific documents and reports.\nReproducible Publishing: Building websites using Quarto (like this website page 😄).\nCollaborative Ecosystems: Overleaf, Google Workspace and Microsoft 365.\n\n🛠️ Software Engineering:\n\nVersion Control: Frequent use of Git and GitHub for collaborative development and code versioning.\nContainerization: Basic experience with Docker for environment isolation for personal use.\n\n💻 Programming Languages:\n\nPython: High level. My primary language for data-intensive applications.\nC++ and Java: Intermediate level, used for general…\nR: Basic level. Learning right now!"
+  },
+  {
+    "objectID": "index-en.html#interests",
+    "href": "index-en.html#interests",
+    "title": "David González Durán",
+    "section": "Interests",
+    "text": "Interests\n\nDataViz: Focused on advanced exploratory data analysis (EDA) and the design of visualisations that help us understand data.\nTrustworthy AI: Interested in uncertainty quantification and explainable AI to build trustworthy systems and ensuring robustness in environments where reliability and risk quantification are paramount.\nOpen Source: Convinced that open source is essential to democratize access to AI and accelerate technological progress, in addition to reducing dependence on propietary software."
+  },
+  {
+    "objectID": "index-en.html#references",
+    "href": "index-en.html#references",
+    "title": "David González Durán",
+    "section": "References",
+    "text": "References\nReferenced by:\n\nPablo Mesejo Santiago, Associate Professor at the Department of Computer Science and Artificial Intelligence of the University of Granada and co-founding partner and Chief AI Officer at Panacea Cooperative Research.\n\n\n\n  Download reference"
   }
 ]
