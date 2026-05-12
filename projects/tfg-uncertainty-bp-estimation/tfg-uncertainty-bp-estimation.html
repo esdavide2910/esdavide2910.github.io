@@ -340,19 +340,46 @@ window.Quarto = {
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">En esta página</h2>
    
-  <ul class="collapse">
+  <ul>
   <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="header-section-number">1</span> Introducción</a>
   <ul class="collapse">
-  <li><a href="#descripción-del-problema" id="toc-descripción-del-problema" class="nav-link" data-scroll-target="#descripción-del-problema"><span class="header-section-number">1.1</span> Descripción del problema</a></li>
+  <li><a href="#descripción-del-problema" id="toc-descripción-del-problema" class="nav-link" data-scroll-target="#descripción-del-problema"><span class="header-section-number">1.1</span> Descripción del problema</a>
+  <ul class="collapse">
+  <li><a href="#identificación-humana-y-estimación-del-perfil-biológico" id="toc-identificación-humana-y-estimación-del-perfil-biológico" class="nav-link" data-scroll-target="#identificación-humana-y-estimación-del-perfil-biológico"><span class="header-section-number">1.1.1</span> Identificación humana y estimación del perfil biológico</a></li>
+  </ul></li>
   <li><a href="#motivación" id="toc-motivación" class="nav-link" data-scroll-target="#motivación"><span class="header-section-number">1.2</span> Motivación</a></li>
   <li><a href="#objetivos" id="toc-objetivos" class="nav-link" data-scroll-target="#objetivos"><span class="header-section-number">1.3</span> Objetivos</a></li>
   </ul></li>
   <li><a href="#fundamentos-teóricos" id="toc-fundamentos-teóricos" class="nav-link" data-scroll-target="#fundamentos-teóricos"><span class="header-section-number">2</span> Fundamentos teóricos</a>
   <ul class="collapse">
-  <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link" data-scroll-target="#machine-learning"><span class="header-section-number">2.1</span> Machine Learning</a></li>
-  <li><a href="#deep-learning" id="toc-deep-learning" class="nav-link" data-scroll-target="#deep-learning"><span class="header-section-number">2.2</span> Deep Learning</a></li>
-  <li><a href="#incertidumbre" id="toc-incertidumbre" class="nav-link" data-scroll-target="#incertidumbre"><span class="header-section-number">2.3</span> Incertidumbre</a></li>
-  <li><a href="#predicción-conformal" id="toc-predicción-conformal" class="nav-link" data-scroll-target="#predicción-conformal"><span class="header-section-number">2.4</span> Predicción conformal</a></li>
+  <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link" data-scroll-target="#machine-learning"><span class="header-section-number">2.1</span> Machine Learning</a>
+  <ul class="collapse">
+  <li><a href="#problemas-de-regresión" id="toc-problemas-de-regresión" class="nav-link" data-scroll-target="#problemas-de-regresión"><span class="header-section-number">2.1.1</span> Problemas de regresión</a></li>
+  <li><a href="#problemas-de-clasificación" id="toc-problemas-de-clasificación" class="nav-link" data-scroll-target="#problemas-de-clasificación"><span class="header-section-number">2.1.2</span> Problemas de clasificación</a></li>
+  </ul></li>
+  <li><a href="#deep-learning" id="toc-deep-learning" class="nav-link" data-scroll-target="#deep-learning"><span class="header-section-number">2.2</span> Deep Learning</a>
+  <ul class="collapse">
+  <li><a href="#el-perceptrón-multicapa" id="toc-el-perceptrón-multicapa" class="nav-link" data-scroll-target="#el-perceptrón-multicapa"><span class="header-section-number">2.2.1</span> El perceptrón multicapa</a></li>
+  <li><a href="#entrenamiento-y-validación-de-la-red" id="toc-entrenamiento-y-validación-de-la-red" class="nav-link" data-scroll-target="#entrenamiento-y-validación-de-la-red"><span class="header-section-number">2.2.2</span> Entrenamiento y validación de la red</a></li>
+  <li><a href="#redes-neuronales-convolucionales" id="toc-redes-neuronales-convolucionales" class="nav-link" data-scroll-target="#redes-neuronales-convolucionales"><span class="header-section-number">2.2.3</span> Redes Neuronales Convolucionales</a></li>
+  <li><a href="#transfer-learning" id="toc-transfer-learning" class="nav-link" data-scroll-target="#transfer-learning"><span class="header-section-number">2.2.4</span> Transfer Learning</a></li>
+  </ul></li>
+  <li><a href="#incertidumbre" id="toc-incertidumbre" class="nav-link" data-scroll-target="#incertidumbre"><span class="header-section-number">2.3</span> Incertidumbre</a>
+  <ul class="collapse">
+  <li><a href="#incertidumbre-en-machine-learning" id="toc-incertidumbre-en-machine-learning" class="nav-link" data-scroll-target="#incertidumbre-en-machine-learning"><span class="header-section-number">2.3.1</span> Incertidumbre en <em>machine learning</em></a></li>
+  <li><a href="#cuantificación-de-incertidumbre-en-machine-learning" id="toc-cuantificación-de-incertidumbre-en-machine-learning" class="nav-link" data-scroll-target="#cuantificación-de-incertidumbre-en-machine-learning"><span class="header-section-number">2.3.2</span> Cuantificación de incertidumbre en machine learning</a></li>
+  </ul></li>
+  <li><a href="#predicción-conformal" id="toc-predicción-conformal" class="nav-link" data-scroll-target="#predicción-conformal"><span class="header-section-number">2.4</span> Predicción conformal</a>
+  <ul class="collapse">
+  <li><a href="#propiedades-de-la-predicción-conformal" id="toc-propiedades-de-la-predicción-conformal" class="nav-link" data-scroll-target="#propiedades-de-la-predicción-conformal"><span class="header-section-number">2.4.1</span> Propiedades de la predicción conformal</a></li>
+  <li><a href="#algoritmo-conformal" id="toc-algoritmo-conformal" class="nav-link" data-scroll-target="#algoritmo-conformal"><span class="header-section-number">2.4.2</span> Algoritmo conformal</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#estado-del-arte" id="toc-estado-del-arte" class="nav-link" data-scroll-target="#estado-del-arte"><span class="header-section-number">3</span> Estado del arte</a>
+  <ul class="collapse">
+  <li><a href="#estimación-de-la-edad-en-antropología-forense" id="toc-estimación-de-la-edad-en-antropología-forense" class="nav-link" data-scroll-target="#estimación-de-la-edad-en-antropología-forense"><span class="header-section-number">3.1</span> Estimación de la edad en antropología forense</a></li>
+  <li><a href="#estimación-de-la-edad-en-antropología-forense-usando-machine-learning" id="toc-estimación-de-la-edad-en-antropología-forense-usando-machine-learning" class="nav-link" data-scroll-target="#estimación-de-la-edad-en-antropología-forense-usando-machine-learning"><span class="header-section-number">3.2</span> Estimación de la edad en antropología forense usando <em>machine learning</em></a></li>
+  <li><a href="#cuantificación-de-la-incertidumbre-para-la-estimación-de-la-edad" id="toc-cuantificación-de-la-incertidumbre-para-la-estimación-de-la-edad" class="nav-link" data-scroll-target="#cuantificación-de-la-incertidumbre-para-la-estimación-de-la-edad"><span class="header-section-number">3.3</span> Cuantificación de la incertidumbre para la estimación de la edad</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="tfg-uncertainty-bp-estimation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -386,7 +413,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Fecha de última modificación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">30 de abril de 2026</p>
+      <p class="date-modified">12 de mayo de 2026</p>
     </div>
   </div>
     
@@ -989,13 +1016,20 @@ y_{n+1} \in \left[ 34.7 - 3.3 , 34.7 + 3.3  \right] = \left[ 31.4 , 38.0 \right]
 <!-------------------------------------------------------------------------------------------------------------------------->
 <!-------------------------------------------------------------------------------------------------------------------------->
 <!-------------------------------------------------------------------------------------------------------------------------->
-<!-- # Estado del arte
+</section>
+</section>
+</section>
+<section id="estado-del-arte" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Estado del arte</h1>
+<p>UNDER CONSTRUCTION</p>
+<section id="estimación-de-la-edad-en-antropología-forense" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="estimación-de-la-edad-en-antropología-forense"><span class="header-section-number">3.1</span> Estimación de la edad en antropología forense</h2>
+</section>
+<section id="estimación-de-la-edad-en-antropología-forense-usando-machine-learning" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="estimación-de-la-edad-en-antropología-forense-usando-machine-learning"><span class="header-section-number">3.2</span> Estimación de la edad en antropología forense usando <em>machine learning</em></h2>
+</section>
+<section id="cuantificación-de-la-incertidumbre-para-la-estimación-de-la-edad" class="level2" data-number="3.3">
 
-## Estimación de la edad en antropología forense
-
-## Estimación de la edad en antropología forense usando _machine learning_
-
-## Cuantificación de la incertidumbre para la estimación de la edad -->
 <!-------------------------------------------------------------------------------------------------------------------------->
 <!-------------------------------------------------------------------------------------------------------------------------->
 <!-------------------------------------------------------------------------------------------------------------------------->
@@ -1097,10 +1131,9 @@ Other resources
 
 </section>
 </section>
-</section>
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referencias</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">3.3 Cuantificación de la incertidumbre para la estimación de la edad</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-AAA2022AnthropologyDefinition" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">American Anthropological Association. What is Anthropology? 2022. <a href="https://americananthro.org/learn-teach/what-is-anthropology/">https://americananthro.org/learn-teach/what-is-anthropology/</a>.</div>
 </div>
