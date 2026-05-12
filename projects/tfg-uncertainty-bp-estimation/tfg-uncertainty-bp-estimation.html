@@ -352,6 +352,7 @@ window.Quarto = {
   <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link" data-scroll-target="#machine-learning"><span class="header-section-number">2.1</span> Machine Learning</a></li>
   <li><a href="#deep-learning" id="toc-deep-learning" class="nav-link" data-scroll-target="#deep-learning"><span class="header-section-number">2.2</span> Deep Learning</a></li>
   <li><a href="#incertidumbre" id="toc-incertidumbre" class="nav-link" data-scroll-target="#incertidumbre"><span class="header-section-number">2.3</span> Incertidumbre</a></li>
+  <li><a href="#predicción-conformal" id="toc-predicción-conformal" class="nav-link" data-scroll-target="#predicción-conformal"><span class="header-section-number">2.4</span> Predicción conformal</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="tfg-uncertainty-bp-estimation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -844,148 +845,147 @@ Figura&nbsp;13: Diagrama del proceso de <em>fine-tuning</em> de un modelo de red
 </ul>
 <p>En este trabajo exploraremos la predicción el método determinista de predicción conformal, de los métodos más flexibles que hay: mayormente <em>model-agnostic</em> y aplicable sobre cualquier distribución de datos, si bien sí asume intercambiabilidad entre observaciones. Esta es una técnica fácil de implementar y proporciona intervalos de predicción válidos para un nivel de confianza, permitiendo cuantificar la incertidumbre de manera robusta con conjuntos de datos limitados.</p>
 <!-------------------------------------------------------------------------------------------------------------------------->
-<!-- ## Predicción conformal
-
-La **predicción conformal (_conformal prediction_, CP)** [@vovk2005;@angelopoulos2021] es un marco teórico para la UQ en modelos de ML, que proporciona intervalos o conjuntos de predicción con garantías estadísticas de cobertura, esto es, para una entrada dada $x$, el marco de CP genera un conjunto de posibles salidas $\hat{C}(x) \subseteq Y$ que garantiza, con una probabilidad predefinida $1-\alpha$, que la verdadera etiqueta o valor $y$ esté contenida en $\hat{C}(x)$ (véanse los ejemplos de la @fig-educational_visual).
-
-
-![Ejemplo de predicción conformal en problemas de regresión (arriba) y clasificación (abajo). Recuperado de [@mapie-docs2023]. MAPIE es una biblioteca de Python para la cuantificación de incertidumbre, principalmente con técnicas de CP.](resources/cap2/educational_visual.png){#fig-educational_visual fig-align="center" width="100%"}
-
-
-Para construir los conjuntos de predicción conformal, se requiere dividir el conjunto de datos disponible en al menos dos partes: un conjunto de entrenamiento, usado para ajustar el modelo base, y un **conjunto de calibración**, usado para calibrar la predicción conformal, tal y como veremos en los siguiente apartados.Con esto también se busca reducir la variabilidad de las predicciones puntuales, que pueden ser sensibles a pequeños cambios en los datos de entrada, como el ejemplo de la @fig-adversarial_example. Estas garantías son válidas bajo el supuesto mínimo de intercambiabilidad de los datos, sin requerir hipótesis sobre la distribución subyacente de los mismos. La intercambiabilidad de los datos se refiere a que el orden de las observaciones no aporta información adicional, es decir, la distribución conjunta es invariante ante cualquier permutación de los índices. 
-
-
-![Ejemplo adversario mal clasificado por un modelo de ML entrenado con datos textuales. Adaptado de la Figura 2 de [@hullermeier2021], original de [@sato2018]. Se observa que el cambio de una sola palabra ---y aparentemente sin mucha relevancia--- (destacada en negrita) basta para cambiar la predicción de "sentimiento negativo" a "sentimiento positivo". Con la CP se busca que predicciones no solo proporcionen una etiqueta puntual, sino un conjunto de posibles etiquetas que capture de manera robusta la incertidumbre asociada al ejemplo de entrada.](resources/cap2/adversarial_example.png){#fig-adversarial_example fig-align="center" width="100%"}
-
-
-### Propiedades de la predicción conformal
-
-La cp garantiza que las predicciones contengan el valor verdadero con al menor una probabilidad $1-\alpha$, donde $\alpha$ es el nivel de significación:
-
-$$
+</section>
+</section>
+<section id="predicción-conformal" class="level2 page-columns page-full" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="predicción-conformal"><span class="header-section-number">2.4</span> Predicción conformal</h2>
+<p>La <strong>predicción conformal (<em>conformal prediction</em>, CP)</strong> <span class="citation" data-cites="vovk2005 angelopoulos2021">[<a href="#ref-angelopoulos2021" role="doc-biblioref">95</a>,<a href="#ref-vovk2005" role="doc-biblioref">96</a>]</span> es un marco teórico para la UQ en modelos de ML, que proporciona intervalos o conjuntos de predicción con garantías estadísticas de cobertura, esto es, para una entrada dada <span class="math inline">\(x\)</span>, el marco de CP genera un conjunto de posibles salidas <span class="math inline">\(\hat{C}(x) \subseteq Y\)</span> que garantiza, con una probabilidad predefinida <span class="math inline">\(1-\alpha\)</span>, que la verdadera etiqueta o valor <span class="math inline">\(y\)</span> esté contenida en <span class="math inline">\(\hat{C}(x)\)</span> (véanse los ejemplos de la <a href="#fig-educational_visual" class="quarto-xref">Figura&nbsp;14</a>).</p>
+<div id="fig-educational_visual" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-educational_visual-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="resources/cap2/educational_visual.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figura&nbsp;14: Ejemplo de predicción conformal en problemas de regresión (arriba) y clasificación (abajo). Recuperado de [@mapie-docs2023]. MAPIE es una biblioteca de Python para la cuantificación de incertidumbre, principalmente con técnicas de CP."><img src="resources/cap2/educational_visual.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-educational_visual-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;14: Ejemplo de predicción conformal en problemas de regresión (arriba) y clasificación (abajo). Recuperado de <span class="citation" data-cites="mapie-docs2023">[<a href="#ref-mapie-docs2023" role="doc-biblioref">97</a>]</span>. MAPIE es una biblioteca de Python para la cuantificación de incertidumbre, principalmente con técnicas de CP.
+</figcaption>
+</figure>
+</div>
+<p>Para construir los conjuntos de predicción conformal, se requiere dividir el conjunto de datos disponible en al menos dos partes: un conjunto de entrenamiento, usado para ajustar el modelo base, y un <strong>conjunto de calibración</strong>, usado para calibrar la predicción conformal, tal y como veremos en los siguiente apartados.Con esto también se busca reducir la variabilidad de las predicciones puntuales, que pueden ser sensibles a pequeños cambios en los datos de entrada, como el ejemplo de la <a href="#fig-adversarial_example" class="quarto-xref">Figura&nbsp;15</a>. Estas garantías son válidas bajo el supuesto mínimo de intercambiabilidad de los datos, sin requerir hipótesis sobre la distribución subyacente de los mismos. La intercambiabilidad de los datos se refiere a que el orden de las observaciones no aporta información adicional, es decir, la distribución conjunta es invariante ante cualquier permutación de los índices.</p>
+<div id="fig-adversarial_example" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-adversarial_example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="resources/cap2/adversarial_example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figura&nbsp;15: Ejemplo adversario mal clasificado por un modelo de ML entrenado con datos textuales. Adaptado de la Figura 2 de [@hullermeier2021], original de [@sato2018]. Se observa que el cambio de una sola palabra —y aparentemente sin mucha relevancia— (destacada en negrita) basta para cambiar la predicción de “sentimiento negativo” a “sentimiento positivo”. Con la CP se busca que predicciones no solo proporcionen una etiqueta puntual, sino un conjunto de posibles etiquetas que capture de manera robusta la incertidumbre asociada al ejemplo de entrada."><img src="resources/cap2/adversarial_example.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-adversarial_example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;15: Ejemplo adversario mal clasificado por un modelo de ML entrenado con datos textuales. Adaptado de la Figura 2 de <span class="citation" data-cites="hullermeier2021">[<a href="#ref-hullermeier2021" role="doc-biblioref">77</a>]</span>, original de <span class="citation" data-cites="sato2018">[<a href="#ref-sato2018" role="doc-biblioref">98</a>]</span>. Se observa que el cambio de una sola palabra —y aparentemente sin mucha relevancia— (destacada en negrita) basta para cambiar la predicción de “sentimiento negativo” a “sentimiento positivo”. Con la CP se busca que predicciones no solo proporcionen una etiqueta puntual, sino un conjunto de posibles etiquetas que capture de manera robusta la incertidumbre asociada al ejemplo de entrada.
+</figcaption>
+</figure>
+</div>
+<section id="propiedades-de-la-predicción-conformal" class="level3 page-columns page-full" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="propiedades-de-la-predicción-conformal"><span class="header-section-number">2.4.1</span> Propiedades de la predicción conformal</h3>
+<p>La cp garantiza que las predicciones contengan el valor verdadero con al menor una probabilidad <span class="math inline">\(1-\alpha\)</span>, donde <span class="math inline">\(\alpha\)</span> es el nivel de significación:</p>
+<p><span class="math display">\[
 P(Y_{n+1} \in \hat{C_\alpha}(X_{n+1})) \ge 1 - \alpha
-$$
-
-Esta propiedad se denomina **cobertura marginal válida** [@prinster2024], y se cumple para todas las entrada $X$, siempre y cuando los datos sean intercambiables (_interexchangeable_). Esta intercambiabilidad en imágenes implicaría que todas fueran tomadas en condiciones similares: mismo dominio, distribución de valores de salida, iluminación, resolución, estilo, etc. Sin embargo, la CP **no asegura cobertura condicional válida** [@foygel2021]; es decir, no es posible garantizar cobertura para todos los subgrupos de datos sin hacer suposiciones fuertes o sacrificar utilidad práctica, en concordancia con el conocido _No Free Lunch Theorem_ [@wolpert1997]. En la Figura [@fig-coverage] se presenta una noción de la diferencia entre cobertura marginal y condicional. 
-
-![Esquema gráfico de conjuntos de predicción bajo distintas nociones de cobertura: sin cobertura garantizada, con cobertura marginal y con cobertura condicional. Recuperado de [@angelopoulos2021]. En la parte inferior de la figura se muestra la amplitud de los intervalos de predicción (en línea amarilla) generados en un problema de regresión. En la parte superior, las instancias se dividen en dos grupos; los valores reales contenidos en los intervalos se representan en verde, mientras que los no contenidos aparecen en rojo. La primera columna ilustra un caso con intervalos de predicción demasiado estrechos, lo que resulta en una baja cobertura: la mayoría de los valores reales quedan fuera del intervalo. En la segunda columna, los intervalos son más amplios y permiten capturar una mayor proporción de los valores reales, alcanzando una cobertura marginal del 90\% en el conjunto total. Sin embargo, esta cobertura no se distribuye equitativamente: el error se concentra en una región específica dentro de uno de los grupos, lo que indica ausencia de cobertura condicional. Finalmente, en la tercera columna, los intervalos se ajustan a la distribución de las predicciones, logrando cobertura marginal como condicional del 90\%, con un error repartido de manera uniforme entre regiones y grupos, reflejando una calibración más precisa y equitativa del modelo.](resources/cap2/coverage_types.png){#fig-coverage fig-align="center" width="100%"}
-
-
-Además, el conjunto de calibración debe ser estadísticamente representativo de la distribución completa de los datos. Esto crea un compromiso fundamental: asignar más ejemplos a la calibración mejora la precisión de los intervalos predictivos, pero a costa de reducir el tamaño del conjunto de entrenamiento, lo que potencialmente puede empeorar el rendimiento del modelo base.
-
-Algunas características deseables en las técnicas de CP son:
-
-- **Independencia del modelo (_model-agnostic_)**: que no requiera reentrenar el modelo ni modificar su arquitectura, permitiendo su aplicación \textit{post-hoc} a modelos preentrenados.
-
-- **Independencia del dominio (_domain-agnostic_)**: que pueda manejar entradas de cualquier tipo sin restricciones, tantos datos estructurado como no estructurados. En este trabajos todos los métodos estudiados presentan esta característica.
-     
-- **Predicción adaptativa (_adaptive prediction_)**: se refiere a que el intervalo o conjunto de predicción varía su tamaño en función de la incertidumbre asociada a cada predicción individual. En general, cuanto más rica y específica sea la información que la técnica utiliza sobre las predicciones y su incertidumbre, más adaptativa será la predicción conformal. Esta adaptatividad aproxima a la cobertura condicional.
-
-- **Ser eficiente computacionalmente**: es deseable que tanto la fase de calibración como la inferencia sean rápidas y no introduzcan una sobrecarga significativa en comparación con la predicción puntual.
-
-  Aunque la mayoría de los métodos de predicción conformal presentan una sobrecarga computacional moderada, esta puede variar dependiendo del enfoque utilizado. Por ejemplo, las técnicas basadas en _split conformal_ ---las únicas que exploraremos en este trabajo--- suelen ser más eficientes que aquellas que requieren reentrenamiento múltiple, como en algunos métodos _Cross conformal prediction_ o _Jackkife+_^[_Cross conformal prediction_ [@vovk2015] y _Jacknife+_ [@barber2021] son métodos de CP que mejoran las garantías de cobertura de técnicas de CP mediante el uso más eficiente de los datos disponibles para calibración y entrenamiento, de forma análoga a la validación cruzada (_cross-validation_) o el \textit{_leave-one-out_}, respectivamente.].
-
-
-### Algoritmo conformal
-
-Existen multitud de técnicas de CP. Generalmente, estas dependen del tipo de problema a resolver: regresión [@papadopoulos2002; @romano2019;@bethell2024], clasificación [@sadinle2019;@romano2020;@angelopoulos2020], series temporales [@xu2021;@zaffran2022;@stankeviciute2021][^conf_alg1], o detección de anomalías [@laxhammar2015], entre otros. A pesar de su diversidad, todos los algoritmos conformales comparten un elemento clave: la definición de una **función de no conformidad** $NC(x_i,y_i)$, una heurística que mide la incertidumbre asociada a cada predicción. Intuitivamente, esta función actúa como una medida de discrepancia entre el valor predicho y el valor observado, y permite determinar cuán "extraña" o "no conforme" es una nueva observación respecto al comportamiento esperado del modelo.
-
-[^conf_alg1]: El marco de CP clásico asume que los datos son intercambiables, una propiedad que no se cumple en las series temporales debido a la dependencia secuencial entre observaciones. A pesar de ello, se han desarrollado diversas extensiones del enfoque conformal para adaptarse a estos datos.
-
-La implementación de la predicción conformal consta de los siguientes pasos:
-
-- Se divide el conjunto de datos disponible en dos subconjuntos: un conjunto de entrenamiento, utilizado para ajustar el modelo predictivo ---es decir, para entrenar el modelo de forma habitual---, y un conjunto de calibración, que se reserva exclusivamente para estimar la incertidumbre mediante el cálculo de las puntuaciones de no conformidad. Esta separación permite que la estimación del intervalo de predicción sea independiente del proceso de entrenamiento, lo cual es crucial para garantizar la validez estadística del método.
-
-- Se entrena el modelo predictivo con los ejemplos del conjunto de entrenamiento. 
-
-- **Calibración conformal**: En este, se calculan las **puntuaciones de no conformidad (_nonconformity scores_) $R$**[^conf_alg2]:
-
-  [^conf_alg2]: En la literatura, a este vector de puntuaciones se le suele denotar como $R$ por _residual_ o $E$ por _error_. 
-
-  $$
-  R = \left\{ NC(x_i,y_i) \right\}_{i=1}^n
-  $$
-
-  donde $n$ es el número de ejemplos del conjunto de calibración.
-
-  Estas puntuaciones se derivan a partir de una heurística que combina al menos el valor real y el predicho del problema con otras posibles fuentes de información, como las propias entradas o incluso representaciones internas del modelo[^conf_alg3]. 
-  Bajo las garantías estadísticas que ofrece el marco teórico de la CP, esta flexibilidad muestra un gran potencial para ser integrada con otras técnicas de UQ, ampliando así sus aplicaciones y mejorando la robustez de las estimaciones de incertidumbre.
-
-  [^conf_alg3]: Cabe señalar que una técnica será independiente del modelo y del dominio cuando solo tenga en cuenta las salidas del modelo y los valores reales del problema para realizar la CP.
-
-  Independientemente del diseño específico de la función de no conformidad, esta debe cumplir una condición esencial: las puntuaciones deben ser intercambiables entre el conjunto de calibración y las nuevas instancias. En otras palabras, deben ser idénticamente distribuidas. Esta propiedad es crucial para que CP garantice cobertura marginal válida a un nivel de confianza determinado. Por tanto, aunque existe flexibilidad en el diseño de la función de no conformidad, su elección debe considerar tanto la capacidad para capturar incertidumbre útil como el cumplimiento del supuesto de intercambiabilidad. 
-
-  A continuación, se calcula el **umbral de no conformidad**. Para un nivel de significación$\alpha$, se selecciona el $(1 - \alpha)(1 + 1/n)$-ésimo cuantil[^conf_alg4] de las puntuaciones de no conformidad obtenidas en el conjunto de calibración (véase la @fig-nonconformity_quantile_comparison).
-
-  [^conf_alg4]: La corrección $(1 + 1/n)$ asegura validez estadística para conjuntos de tamaño finito.
-
-  $$
-  \delta_\alpha = Quantile_{ \lceil  (1-\alpha) (1 + 1/n)  \rceil } ( \left\{ NC(x_i,y_i) \right\}_{i=1}^n )
-  $$
-
-  ::: {#fig-nonconformity_quantile_comparison layout="[0.435,0.565]"}
-
-  ![Intervalos simétricos](resources/cap2/nonconformity_quantile_threshold_simetric.png){#fig-nonconformity_quantile_threshold_simetric}
-
-  ![Intervalos asimétricos](resources/cap2/nonconformity_quantile_threshold_asimetric.png){#fig-nonconformity_quantile_threshold_asimetric}
-
-  Determinación del umbral de no conformidad para intervalos simétricos y asimétricos. En [(a)](@fig-nonconformity_quantile_threshold_simetric), el error es absoluto, y el umbral se calcula como se ha especificado anteriormente. En [(b)](@fig-nonconformity_quantile_threshold_asimetric), el error tiene signo, y hay dos umbrales de incertidumbre, uno por cada cola, calculado como el cuantil con significación $\alpha/2$ de los errores negativos y de los errores positivos, respectivamente para el umbral inferior y el umbral superior.
-  :::
-
-
-- **Inferencia conformal**: Para cada nueva instancia $x_{n+1}$ se genera una predicción puntual $y_{n+1}$ utilizando el modelo entrenado. Luego, se construye un conjunto o intervalo de predicción $\Gamma(x_{n+1})$ a partir de la predicción puntual y el umbral de no conformidad $\hat{q}_{1-\alpha}$, tal que se garantiza con nivel de confianza $1-\alpha$ que el verdadero valor $y_{n+1}$ pertenezca al conjunto:
-    
-  $$
-  y_{n+1} \in \Gamma_{1-\alpha}(x_{n+1})
-  $$
-
-  La forma de construir $\Gamma(x_{n+1})$ depende de cómo se haya definido la función de no conformidad durante la fase de calibración.
-
-
-
-Por ejemplo, en la técnica _Inductive Conformal Prediction_ [@papadopoulos2002] para problemas de regresión, ---que describiremos en mayor profundidad en el Capítulo 4---, se utiliza el error absoluto como función de no conformidad:
-
-$$
-NC(x_i, y_i) = | y_i - \hat{f}(x_i) |
-$$
-
-El umbral de no conformidad se obtiene como el $(1 - \alpha)(1 + 1/n)$-ésimo cuantil de las puntuaciones de no conformidad (véase la @fig-nonconformity_quantile_threshold_simetric):
-
-$$
+\]</span></p>
+<p>Esta propiedad se denomina <strong>cobertura marginal válida</strong> <span class="citation" data-cites="prinster2024">[<a href="#ref-prinster2024" role="doc-biblioref">99</a>]</span>, y se cumple para todas las entrada <span class="math inline">\(X\)</span>, siempre y cuando los datos sean intercambiables (<em>interexchangeable</em>). Esta intercambiabilidad en imágenes implicaría que todas fueran tomadas en condiciones similares: mismo dominio, distribución de valores de salida, iluminación, resolución, estilo, etc. Sin embargo, la CP <strong>no asegura cobertura condicional válida</strong> <span class="citation" data-cites="foygel2021">[<a href="#ref-foygel2021" role="doc-biblioref">100</a>]</span>; es decir, no es posible garantizar cobertura para todos los subgrupos de datos sin hacer suposiciones fuertes o sacrificar utilidad práctica, en concordancia con el conocido <em>No Free Lunch Theorem</em> <span class="citation" data-cites="wolpert1997">[<a href="#ref-wolpert1997" role="doc-biblioref">101</a>]</span>. En la Figura <a href="#fig-coverage" class="quarto-xref">Figura&nbsp;16</a> se presenta una noción de la diferencia entre cobertura marginal y condicional.</p>
+<div id="fig-coverage" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-coverage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="resources/cap2/coverage_types.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figura&nbsp;16: Esquema gráfico de conjuntos de predicción bajo distintas nociones de cobertura: sin cobertura garantizada, con cobertura marginal y con cobertura condicional. Recuperado de [@angelopoulos2021]. En la parte inferior de la figura se muestra la amplitud de los intervalos de predicción (en línea amarilla) generados en un problema de regresión. En la parte superior, las instancias se dividen en dos grupos; los valores reales contenidos en los intervalos se representan en verde, mientras que los no contenidos aparecen en rojo. La primera columna ilustra un caso con intervalos de predicción demasiado estrechos, lo que resulta en una baja cobertura: la mayoría de los valores reales quedan fuera del intervalo. En la segunda columna, los intervalos son más amplios y permiten capturar una mayor proporción de los valores reales, alcanzando una cobertura marginal del 90% en el conjunto total. Sin embargo, esta cobertura no se distribuye equitativamente: el error se concentra en una región específica dentro de uno de los grupos, lo que indica ausencia de cobertura condicional. Finalmente, en la tercera columna, los intervalos se ajustan a la distribución de las predicciones, logrando cobertura marginal como condicional del 90%, con un error repartido de manera uniforme entre regiones y grupos, reflejando una calibración más precisa y equitativa del modelo."><img src="resources/cap2/coverage_types.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-coverage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;16: Esquema gráfico de conjuntos de predicción bajo distintas nociones de cobertura: sin cobertura garantizada, con cobertura marginal y con cobertura condicional. Recuperado de <span class="citation" data-cites="angelopoulos2021">[<a href="#ref-angelopoulos2021" role="doc-biblioref">95</a>]</span>. En la parte inferior de la figura se muestra la amplitud de los intervalos de predicción (en línea amarilla) generados en un problema de regresión. En la parte superior, las instancias se dividen en dos grupos; los valores reales contenidos en los intervalos se representan en verde, mientras que los no contenidos aparecen en rojo. La primera columna ilustra un caso con intervalos de predicción demasiado estrechos, lo que resulta en una baja cobertura: la mayoría de los valores reales quedan fuera del intervalo. En la segunda columna, los intervalos son más amplios y permiten capturar una mayor proporción de los valores reales, alcanzando una cobertura marginal del 90% en el conjunto total. Sin embargo, esta cobertura no se distribuye equitativamente: el error se concentra en una región específica dentro de uno de los grupos, lo que indica ausencia de cobertura condicional. Finalmente, en la tercera columna, los intervalos se ajustan a la distribución de las predicciones, logrando cobertura marginal como condicional del 90%, con un error repartido de manera uniforme entre regiones y grupos, reflejando una calibración más precisa y equitativa del modelo.
+</figcaption>
+</figure>
+</div>
+<p>Además, el conjunto de calibración debe ser estadísticamente representativo de la distribución completa de los datos. Esto crea un compromiso fundamental: asignar más ejemplos a la calibración mejora la precisión de los intervalos predictivos, pero a costa de reducir el tamaño del conjunto de entrenamiento, lo que potencialmente puede empeorar el rendimiento del modelo base.</p>
+<p>Algunas características deseables en las técnicas de CP son:</p>
+<ul>
+<li><p><strong>Independencia del modelo (<em>model-agnostic</em>)</strong>: que no requiera reentrenar el modelo ni modificar su arquitectura, permitiendo su aplicación a modelos preentrenados.</p></li>
+<li><p><strong>Independencia del dominio (<em>domain-agnostic</em>)</strong>: que pueda manejar entradas de cualquier tipo sin restricciones, tantos datos estructurado como no estructurados. En este trabajos todos los métodos estudiados presentan esta característica.</p></li>
+<li><p><strong>Predicción adaptativa (<em>adaptive prediction</em>)</strong>: se refiere a que el intervalo o conjunto de predicción varía su tamaño en función de la incertidumbre asociada a cada predicción individual. En general, cuanto más rica y específica sea la información que la técnica utiliza sobre las predicciones y su incertidumbre, más adaptativa será la predicción conformal. Esta adaptatividad aproxima a la cobertura condicional.</p></li>
+<li><p><strong>Ser eficiente computacionalmente</strong>: es deseable que tanto la fase de calibración como la inferencia sean rápidas y no introduzcan una sobrecarga significativa en comparación con la predicción puntual.</p>
+<p>Aunque la mayoría de los métodos de predicción conformal presentan una sobrecarga computacional moderada, esta puede variar dependiendo del enfoque utilizado. Por ejemplo, las técnicas basadas en <em>split conformal</em> —las únicas que exploraremos en este trabajo— suelen ser más eficientes que aquellas que requieren reentrenamiento múltiple, como en algunos métodos <em>Cross conformal prediction</em> o <em>Jackkife+</em><a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>.</p></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn18"><p><sup>18</sup>&nbsp;<em>Cross conformal prediction</em> <span class="citation" data-cites="vovk2015">[<a href="#ref-vovk2015" role="doc-biblioref">102</a>]</span> y <em>Jacknife+</em> <span class="citation" data-cites="barber2021">[<a href="#ref-barber2021" role="doc-biblioref">103</a>]</span> son métodos de CP que mejoran las garantías de cobertura de técnicas de CP mediante el uso más eficiente de los datos disponibles para calibración y entrenamiento, de forma análoga a la validación cruzada (<em>cross-validation</em>) o el <em>leave-one-out</em>, respectivamente.</p></div></div></section>
+<section id="algoritmo-conformal" class="level3 page-columns page-full" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="algoritmo-conformal"><span class="header-section-number">2.4.2</span> Algoritmo conformal</h3>
+<p>Existen multitud de técnicas de CP. Generalmente, estas dependen del tipo de problema a resolver: regresión <span class="citation" data-cites="papadopoulos2002 romano2019 bethell2024">[<a href="#ref-papadopoulos2002" role="doc-biblioref">93</a>,<a href="#ref-romano2019" role="doc-biblioref">104</a>,<a href="#ref-bethell2024" role="doc-biblioref">105</a>]</span>, clasificación <span class="citation" data-cites="sadinle2019 romano2020 angelopoulos2020">[<a href="#ref-sadinle2019" role="doc-biblioref">94</a>,<a href="#ref-romano2020" role="doc-biblioref">106</a>,<a href="#ref-angelopoulos2020" role="doc-biblioref">107</a>]</span>, series temporales <span class="citation" data-cites="xu2021 zaffran2022 stankeviciute2021">[<a href="#ref-xu2021" role="doc-biblioref">108</a>–<a href="#ref-stankeviciute2021" role="doc-biblioref">110</a>]</span><a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>, o detección de anomalías <span class="citation" data-cites="laxhammar2015">[<a href="#ref-laxhammar2015" role="doc-biblioref">111</a>]</span>, entre otros. A pesar de su diversidad, todos los algoritmos conformales comparten un elemento clave: la definición de una <strong>función de no conformidad</strong> <span class="math inline">\(NC(x_i,y_i)\)</span>, una heurística que mide la incertidumbre asociada a cada predicción. Intuitivamente, esta función actúa como una medida de discrepancia entre el valor predicho y el valor observado, y permite determinar cuán “extraña” o “no conforme” es una nueva observación respecto al comportamiento esperado del modelo.</p>
+<div class="no-row-height column-margin column-container"><div id="fn19"><p><sup>19</sup>&nbsp;El marco de CP clásico asume que los datos son intercambiables, una propiedad que no se cumple en las series temporales debido a la dependencia secuencial entre observaciones. A pesar de ello, se han desarrollado diversas extensiones del enfoque conformal para adaptarse a estos datos.</p></div></div><p>La implementación de la predicción conformal consta de los siguientes pasos:</p>
+<ul>
+<li><p>Se divide el conjunto de datos disponible en dos subconjuntos: un conjunto de entrenamiento, utilizado para ajustar el modelo predictivo —es decir, para entrenar el modelo de forma habitual—, y un conjunto de calibración, que se reserva exclusivamente para estimar la incertidumbre mediante el cálculo de las puntuaciones de no conformidad. Esta separación permite que la estimación del intervalo de predicción sea independiente del proceso de entrenamiento, lo cual es crucial para garantizar la validez estadística del método.</p></li>
+<li><p>Se entrena el modelo predictivo con los ejemplos del conjunto de entrenamiento.</p></li>
+<li><p><strong>Calibración conformal</strong>: En este, se calculan las <strong>puntuaciones de no conformidad (<em>nonconformity scores</em>) <span class="math inline">\(R\)</span></strong><a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a>:</p>
+<p><span class="math display">\[
+R = \left\{ NC(x_i,y_i) \right\}_{i=1}^n
+\]</span></p>
+<p>donde <span class="math inline">\(n\)</span> es el número de ejemplos del conjunto de calibración.</p>
+<p>Estas puntuaciones se derivan a partir de una heurística que combina al menos el valor real y el predicho del problema con otras posibles fuentes de información, como las propias entradas o incluso representaciones internas del modelo<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>. Bajo las garantías estadísticas que ofrece el marco teórico de la CP, esta flexibilidad muestra un gran potencial para ser integrada con otras técnicas de UQ, ampliando así sus aplicaciones y mejorando la robustez de las estimaciones de incertidumbre.</p>
+<p>Independientemente del diseño específico de la función de no conformidad, esta debe cumplir una condición esencial: las puntuaciones deben ser intercambiables entre el conjunto de calibración y las nuevas instancias. En otras palabras, deben ser idénticamente distribuidas. Esta propiedad es crucial para que CP garantice cobertura marginal válida a un nivel de confianza determinado. Por tanto, aunque existe flexibilidad en el diseño de la función de no conformidad, su elección debe considerar tanto la capacidad para capturar incertidumbre útil como el cumplimiento del supuesto de intercambiabilidad.</p>
+<p>A continuación, se calcula el <strong>umbral de no conformidad</strong>. Para un nivel de significación<span class="math inline">\(\alpha\)</span>, se selecciona el <span class="math inline">\((1 - \alpha)(1 + 1/n)\)</span>-ésimo cuantil<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a> de las puntuaciones de no conformidad obtenidas en el conjunto de calibración (véase la <a href="#fig-nonconformity_quantile_comparison" class="quarto-xref">Figura&nbsp;17</a>).</p>
+<p><span class="math display">\[
 \delta_\alpha = Quantile_{ \lceil  (1-\alpha) (1 + 1/n)  \rceil } ( \left\{ NC(x_i,y_i) \right\}_{i=1}^n )
-$$
-
-La construcción del intervalo de predicción surge directamente de despejar el valor real $y_{n+1}$ en la expresión que iguala la función de no conformidad, evaluada sobre la nueva instancia, con el umbral de no conformidad. En este caso en el que se emplea el error absoluto, es decir:
-
-$$
+\]</span></p>
+<div id="fig-nonconformity_quantile_comparison" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nonconformity_quantile_comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-nonconformity_quantile_comparison" style="flex-basis: 43.5%;justify-content: flex-start;">
+<div id="fig-nonconformity_quantile_threshold_simetric" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-nonconformity_quantile_threshold_simetric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="resources/cap2/nonconformity_quantile_threshold_simetric.png" class="lightbox" data-gallery="fig-nonconformity_quantile_comparison" title="Figura&nbsp;17&nbsp;(a): Intervalos simétricos"><img src="resources/cap2/nonconformity_quantile_threshold_simetric.png" class="img-fluid figure-img" data-ref-parent="fig-nonconformity_quantile_comparison"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-nonconformity_quantile_threshold_simetric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Intervalos simétricos
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-nonconformity_quantile_comparison" style="flex-basis: 56.5%;justify-content: flex-start;">
+<div id="fig-nonconformity_quantile_threshold_asimetric" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-nonconformity_quantile_threshold_asimetric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="resources/cap2/nonconformity_quantile_threshold_asimetric.png" class="lightbox" data-gallery="fig-nonconformity_quantile_comparison" title="Figura&nbsp;17&nbsp;(b): Intervalos asimétricos"><img src="resources/cap2/nonconformity_quantile_threshold_asimetric.png" class="img-fluid figure-img" data-ref-parent="fig-nonconformity_quantile_comparison"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-nonconformity_quantile_threshold_asimetric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Intervalos asimétricos
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nonconformity_quantile_comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;17: Determinación del umbral de no conformidad para intervalos simétricos y asimétricos. En <a href="@fig-nonconformity_quantile_threshold_simetric">(a)</a>, el error es absoluto, y el umbral se calcula como se ha especificado anteriormente. En <a href="@fig-nonconformity_quantile_threshold_asimetric">(b)</a>, el error tiene signo, y hay dos umbrales de incertidumbre, uno por cada cola, calculado como el cuantil con significación <span class="math inline">\(\alpha/2\)</span> de los errores negativos y de los errores positivos, respectivamente para el umbral inferior y el umbral superior.
+</figcaption>
+</figure>
+</div></li>
+<li><p><strong>Inferencia conformal</strong>: Para cada nueva instancia <span class="math inline">\(x_{n+1}\)</span> se genera una predicción puntual <span class="math inline">\(y_{n+1}\)</span> utilizando el modelo entrenado. Luego, se construye un conjunto o intervalo de predicción <span class="math inline">\(\Gamma(x_{n+1})\)</span> a partir de la predicción puntual y el umbral de no conformidad <span class="math inline">\(\hat{q}_{1-\alpha}\)</span>, tal que se garantiza con nivel de confianza <span class="math inline">\(1-\alpha\)</span> que el verdadero valor <span class="math inline">\(y_{n+1}\)</span> pertenezca al conjunto:</p>
+<p><span class="math display">\[
+y_{n+1} \in \Gamma_{1-\alpha}(x_{n+1})
+\]</span></p>
+<p>La forma de construir <span class="math inline">\(\Gamma(x_{n+1})\)</span> depende de cómo se haya definido la función de no conformidad durante la fase de calibración.</p></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn20"><p><sup>20</sup>&nbsp;En la literatura, a este vector de puntuaciones se le suele denotar como <span class="math inline">\(R\)</span> por <em>residual</em> o <span class="math inline">\(E\)</span> por <em>error</em>.</p></div><div id="fn21"><p><sup>21</sup>&nbsp;Cabe señalar que una técnica será independiente del modelo y del dominio cuando solo tenga en cuenta las salidas del modelo y los valores reales del problema para realizar la CP.</p></div><div id="fn22"><p><sup>22</sup>&nbsp;La corrección <span class="math inline">\((1 + 1/n)\)</span> asegura validez estadística para conjuntos de tamaño finito.</p></div></div><p>Por ejemplo, en la técnica <em>Inductive Conformal Prediction</em> <span class="citation" data-cites="papadopoulos2002">[<a href="#ref-papadopoulos2002" role="doc-biblioref">93</a>]</span> para problemas de regresión, —que describiremos en mayor profundidad en el Capítulo 4—, se utiliza el error absoluto como función de no conformidad:</p>
+<p><span class="math display">\[
 NC(x_i, y_i) = | y_i - \hat{f}(x_i) |
-$$
-
-entonces al imponer la condición $NC(x_{n+1}, y_{n+1}) \le \delta_\alpha$, se obtiene: 
-
-$$
+\]</span></p>
+<p>El umbral de no conformidad se obtiene como el <span class="math inline">\((1 - \alpha)(1 + 1/n)\)</span>-ésimo cuantil de las puntuaciones de no conformidad (véase la <a href="#fig-nonconformity_quantile_threshold_simetric" class="quarto-xref">Figura&nbsp;17 (a)</a>):</p>
+<p><span class="math display">\[
+\delta_\alpha = Quantile_{ \lceil  (1-\alpha) (1 + 1/n)  \rceil } ( \left\{ NC(x_i,y_i) \right\}_{i=1}^n )
+\]</span></p>
+<p>La construcción del intervalo de predicción surge directamente de despejar el valor real <span class="math inline">\(y_{n+1}\)</span> en la expresión que iguala la función de no conformidad, evaluada sobre la nueva instancia, con el umbral de no conformidad. En este caso en el que se emplea el error absoluto, es decir:</p>
+<p><span class="math display">\[
+NC(x_i, y_i) = | y_i - \hat{f}(x_i) |
+\]</span></p>
+<p>entonces al imponer la condición <span class="math inline">\(NC(x_{n+1}, y_{n+1}) \le \delta_\alpha\)</span>, se obtiene:</p>
+<p><span class="math display">\[
 |y_{n+1}-\hat{f}(x_{n+1})| \le \delta_\alpha
-$$
-
-Despejando $y_{n+1}$, se obtiene:
-
-$$
-\hat{f}(x_{n+1}) - \delta_\alpha \le y_{n+1} \le \hat{f}(x_{n+1}) + \delta_\alpha 
-$$
-
-Por tanto, el intervalo de predicción conformal está dado por:
-
-$$
-y_{n+1} \in \left[ \hat{f}(x_{n+1})-\delta_\alpha , \hat{f}(x_{n+1})+\delta_\alpha  \right] 
-$$
-
-Esta expresión determina los límites inferior y superior del intervalo de predicción conformal para dicha instancia.
-
-A continuación se presenta un ejemplo numérico para ilustrar la construcción del intervalo. Supongamos que $x_i$ es un vector de unos determinados indicadores osteológicos de un individuo con edad cronológica conocida $y_i$ (en años). Entrenamos un modelo de regresión $\hat{f}$ en un conjunto de entrenamiento y reservamos un conjunto de calibración de $n$ individuos identificados. Se supone un conjunto de calibración de $n=50$ individuos y $\alpha=0.10$. Calculamos los residuos absolutos $NC(x_i,y_i)$ en calibración y obtenemos su cuantil, $(1-\alpha)(1+1/n)=0.90\times1.02=0.918$ (percentil $91.8$). Si ese cuantil es $\delta_{0.10}=3.3$ años y para un caso nuevo $\hat{f}(x_{n+1})=34.7$ años, entonces:
-
-$$
+\]</span></p>
+<p>Despejando <span class="math inline">\(y_{n+1}\)</span>, se obtiene:</p>
+<p><span class="math display">\[
+\hat{f}(x_{n+1}) - \delta_\alpha \le y_{n+1} \le \hat{f}(x_{n+1}) + \delta_\alpha
+\]</span></p>
+<p>Por tanto, el intervalo de predicción conformal está dado por:</p>
+<p><span class="math display">\[
+y_{n+1} \in \left[ \hat{f}(x_{n+1})-\delta_\alpha , \hat{f}(x_{n+1})+\delta_\alpha  \right]
+\]</span></p>
+<p>Esta expresión determina los límites inferior y superior del intervalo de predicción conformal para dicha instancia.</p>
+<p>A continuación se presenta un ejemplo numérico para ilustrar la construcción del intervalo. Supongamos que <span class="math inline">\(x_i\)</span> es un vector de unos determinados indicadores osteológicos de un individuo con edad cronológica conocida <span class="math inline">\(y_i\)</span> (en años). Entrenamos un modelo de regresión <span class="math inline">\(\hat{f}\)</span> en un conjunto de entrenamiento y reservamos un conjunto de calibración de <span class="math inline">\(n\)</span> individuos identificados. Se supone un conjunto de calibración de <span class="math inline">\(n=50\)</span> individuos y <span class="math inline">\(\alpha=0.10\)</span>. Calculamos los residuos absolutos <span class="math inline">\(NC(x_i,y_i)\)</span> en calibración y obtenemos su cuantil, <span class="math inline">\((1-\alpha)(1+1/n)=0.90\times1.02=0.918\)</span> (percentil <span class="math inline">\(91.8\)</span>). Si ese cuantil es <span class="math inline">\(\delta_{0.10}=3.3\)</span> años y para un caso nuevo <span class="math inline">\(\hat{f}(x_{n+1})=34.7\)</span> años, entonces:</p>
+<p><span class="math display">\[
 y_{n+1} \in \left[ 34.7 - 3.3 , 34.7 + 3.3  \right] = \left[ 31.4 , 38.0 \right] \textnormal{ años}
-$$ -->
+\]</span></p>
 <!-------------------------------------------------------------------------------------------------------------------------->
 <!-------------------------------------------------------------------------------------------------------------------------->
 <!-------------------------------------------------------------------------------------------------------------------------->
@@ -1385,6 +1385,54 @@ Other resources
 </div>
 <div id="ref-angelopoulos2021" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[95] </div><div class="csl-right-inline">Angelopoulos AN, Bates S. A gentle introduction to conformal prediction and distribution-free uncertainty quantification. arXiv preprint arXiv:210707511 2021.</div>
+</div>
+<div id="ref-vovk2005" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[96] </div><div class="csl-right-inline">Vovk V, Gammerman A, Shafer G. Algorithmic learning in a random world. vol. 29. Springer; 2005.</div>
+</div>
+<div id="ref-mapie-docs2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[97] </div><div class="csl-right-inline">Scikit-learn-contrib MAPIE developers. <span>MAPIE: Model-Agnostic Prediction Interval Estimator</span> 2023. <a href="https://mapie.readthedocs.io/en/stable/">https://mapie.readthedocs.io/en/stable/</a>.</div>
+</div>
+<div id="ref-sato2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[98] </div><div class="csl-right-inline">Sato M, Suzuki J, Shindo H, et&nbsp;al. Interpretable Adversarial Perturbation in Input Embedding Space for Text. Proceedings of the 27th International Joint Conference on Artificial Intelligence (IJCAI 2018), Stockholm, Sweden: International Joint Conferences on Artificial Intelligence; 2018, p. 4323-30.</div>
+</div>
+<div id="ref-prinster2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[99] </div><div class="csl-right-inline">Prinster D, Stanton S, Liu A, et&nbsp;al. Conformal validity guarantees exist for any data distribution (and how to find them). arXiv preprint arXiv:240506627 2024.</div>
+</div>
+<div id="ref-foygel2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[100] </div><div class="csl-right-inline">Foygel Barber R, Candes EJ, Ramdas A, et&nbsp;al. The limits of distribution-free conditional predictive inference. Information and Inference: A Journal of the IMA 2021;10:455-82.</div>
+</div>
+<div id="ref-wolpert1997" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[101] </div><div class="csl-right-inline">Wolpert DH, Macready WG. No free lunch theorems for optimization. IEEE Transactions on Evolutionary Computation 1997;1:67-82.</div>
+</div>
+<div id="ref-vovk2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[102] </div><div class="csl-right-inline">Vovk V. Cross-conformal predictors. Annals of Mathematics and Artificial Intelligence 2015;74:9-28.</div>
+</div>
+<div id="ref-barber2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[103] </div><div class="csl-right-inline">Barber RF, Candes EJ, Ramdas A, et&nbsp;al. Predictive inference with the jackknife+. The Annals of Statistics 2021;49:486-507.</div>
+</div>
+<div id="ref-romano2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[104] </div><div class="csl-right-inline">Romano Y, Patterson E, Candès E. Conformalized quantile regression. Advances in Neural Information Processing Systems 2019;32.</div>
+</div>
+<div id="ref-bethell2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[105] </div><div class="csl-right-inline">Bethell D, Gerasimou S, Calinescu R. Robust uncertainty quantification using conformalised Monte Carlo prediction. Proceedings of the AAAI Conference on Artificial Intelligence, vol. 38, 2024, p. 20939-48.</div>
+</div>
+<div id="ref-romano2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[106] </div><div class="csl-right-inline">Romano Y, Barber RF, Sabatti C, et&nbsp;al. With malice toward none: Assessing uncertainty via equalized coverage. Harvard Data Science Review 2020;2:4.</div>
+</div>
+<div id="ref-angelopoulos2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[107] </div><div class="csl-right-inline">Angelopoulos A, Bates S, Malik J, et&nbsp;al. Uncertainty sets for image classifiers using conformal prediction. arXiv preprint arXiv:200914193 2020.</div>
+</div>
+<div id="ref-xu2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[108] </div><div class="csl-right-inline">Xu C, Xie Y. Conformal prediction interval for dynamic time-series. International Conference on Machine Learning, PMLR; 2021, p. 11559-69.</div>
+</div>
+<div id="ref-zaffran2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[109] </div><div class="csl-right-inline">Zaffran M, Féron O, Goude Y, et&nbsp;al. Adaptive conformal predictions for time series. International Conference on Machine Learning, PMLR; 2022, p. 25834-66.</div>
+</div>
+<div id="ref-stankeviciute2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[110] </div><div class="csl-right-inline">Stankeviciute K, M Alaa A, Schaar M van der. Conformal time-series forecasting. Advances in neural information processing systems 2021;34:6216-28.</div>
+</div>
+<div id="ref-laxhammar2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[111] </div><div class="csl-right-inline">Laxhammar R, Falkman G. Inductive conformal anomaly detection for sequential detection of anomalous sub-trajectories. Annals of Mathematics and Artificial Intelligence 2015;74:67-94.</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
