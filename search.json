@@ -11,7 +11,7 @@
     "href": "index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d73796d626f6c733a61737369676e6d656e742d696e64203234203e7d7d-bio",
     "title": "David González Durán",
     "section": " Bio",
-    "text": "Bio\n¡Hola! Soy David, recién graduado por la Universidad de Granada en Ingeniería Informática y ADE, especializado en Data Science y Computer Vision. Con experiencia práctica en el ciclo de vida del dato gracias a prácticas como Junior Data Engineer. Interesado en IA confiable (Trustworthy AI), centrándome en la cuantificación de la incertidumbre y la interpretabilidad, campos en los que sigo profundizando mi formación para garantizar que los sistemas inteligentes sean transparentes, robustos y éticos.\n¡Actualmente estoy buscando trabajo! 😉 Listo para unirme a un equipo tecnológico.\n\n\n\n\n\n\nNotaHaz clic para leer mi trayectoria completa\n\n\n\n\n\nDurante mi carrera universitaria, descubrí mi pasión por la IA, concretamente por el Machine Learning, que permitía obtener algoritmos que iban mucho más allá del código, y que permitía extraer patrones complejos a partir de datos en bruto para transformarlos en conocimiento profundo. Esta pasión me llevó de forma natural hacia la Ciencia de Datos.Disfruto profundizando en conjuntos de datos para descubrir patrones ocultos y creando visualizaciones que nos ayuden a comprender la realidad que subyace a estos.\nMi base técnica en el proceso de vida del dato se consolidó durante mis prácticas extracurriculares en Cívica Software, donde trabajé como Junior Data Engineer en un proyecto para una importante entidad financiera. Allí adquirí una experiencia fundamental en el ecosistema de bases de datos, lo que me permitió comprender el ciclo de vida y procesos ETL.\nMás tarde, y gracias a una de las asignaturas más exigente pero agradecidas, desarrollé un fuerte interés en la Visión por Computador. Este campo me permitió explorar desde la representación y el filtrado de imágenes clásicos hasta la extracción de características artesanales (handcrafted features). Finalmente, me adentré en arquitecturas de Deep Learning, explorando el potencial de las CNNs y Transformers en tareas complejas como detección de objetos y segmentación.\n\n\n\nEsquema simplificado de la arquitectura adaptada de ResNext50 para la estimación de edad (regresión) en mi Proyecto de Fin de Grado. Cabe subrayar que el propósito principal no radicaba en maximizar la precisión puntual de las predicciones, sino en desarrollar un modelo razonablemente ligero sobre el que cuantificar la incertidumbre asociada a dichas estimaciones. Elaboración propia.\n\n\nSin embargo, también comprobé que la IA no es infalible, no solo porque comete errores objetivos, sino porque reproduce imprecisiones y sesgos sistémicos derivados de los conjuntos de datos recopilados por humanos. Como resultado, me he acercado cada vez más al campo de la IA Confiable (Trustworthy AI). Creo que para que la inteligencia artificial sea realmente útil en el mundo real, debe ser transparente y robusta.\nMi enfoque más reciente en cuanto a esto es la Cuantificación de la Incertidumbre, el núcleo de mi Trabajo de Fin de Grado: Cuantificación de la incertidumbre en las predicciones de modelos de machine learning para problemas de estimación del perfil biológico (ver más detalles abajo en Proyectos). Este trabajo integra Conformal Prediction en tareas de estimación biológica, como la estimación de la edad y el sexo a partir de imágenes de imágenes de radiografías maxilofaciales, proporcionando intervalos de predicción (en regresión) y conjuntos de etiquetas (en clasificación) con garantías estadísticas, capturando así la incertidumbre en cada caso.\n\n\n\nDiagrama de un modelo de regresión usando predicción conformal, que, además de devolver una predicción puntual con el valor esperado, obtiene un intervalo de predicción con un 95% de confianza.\n\n\nActualmente, estoy leyendo Interpretable Machine Learning de Christoph Molnar, para tener una visión más completa de cómo abrir la ‘caja negra’ de los algoritmos.\nMás allá de lo académico, siempre he creído en la importancia de participar activamente en la comunidad universitaria. Durante mi grado, tuve el honor de servir durante 2 años como secretario de la Delegación de Estudiantes de Ingenierías Informática y de Telecomunicaciones (DEIIT). Durante esta etapa asumí la responsabilidad de convocar las sesiones plenarias, redacción y publicación de actas, gestión y actualización del censo de miembros, así como ayuda en la organización de eventos en la escuela (mercadillos de BBAA, Día de la Escuela y Hackaton de desarrollo de videojuegos) o simple colaboración (Granabot)."
+    "text": "Bio\n¡Hola! Soy David, recién graduado por la Universidad de Granada en Ingeniería Informática y ADE, especializado en Data Science y Computer Vision. Con experiencia práctica en el ciclo de vida del dato gracias a prácticas como Junior Data Engineer. Interesado en IA confiable (Trustworthy AI), centrándome en la cuantificación de la incertidumbre y la interpretabilidad, campos en los que sigo profundizando mi formación para garantizar que los sistemas inteligentes sean transparentes, robustos y éticos.\n¡Actualmente estoy buscando trabajo! 😉\n\n\n\n\n\n\nNotaHaz clic para leer mi trayectoria completa\n\n\n\n\n\nDurante mi carrera universitaria, descubrí mi pasión por la IA, concretamente por el Machine Learning, que permitía obtener algoritmos que iban mucho más allá del código, y que permitía extraer patrones complejos a partir de datos en bruto para transformarlos en conocimiento profundo. Esta pasión me llevó de forma natural hacia la Ciencia de Datos.Disfruto profundizando en conjuntos de datos para descubrir patrones ocultos y creando visualizaciones que nos ayuden a comprender la realidad que subyace a estos.\nMi base técnica en el proceso de vida del dato se consolidó durante mis prácticas extracurriculares en Cívica Software, donde trabajé como Junior Data Engineer en un proyecto para una importante entidad financiera. Allí adquirí una experiencia fundamental en el ecosistema de bases de datos, lo que me permitió comprender el ciclo de vida y procesos ETL.\nMás tarde, y gracias a una de las asignaturas más exigente pero agradecidas, desarrollé un fuerte interés en la Visión por Computador. Este campo me permitió explorar desde la representación y el filtrado de imágenes clásicos hasta la extracción de características artesanales (handcrafted features). Finalmente, me adentré en arquitecturas de Deep Learning, explorando el potencial de las CNNs y Transformers en tareas complejas como detección de objetos y segmentación.\n\n\n\nEsquema simplificado de la arquitectura adaptada de ResNext50 para la estimación de edad (regresión) en mi Proyecto de Fin de Grado. Cabe subrayar que el propósito principal no radicaba en maximizar la precisión puntual de las predicciones, sino en desarrollar un modelo razonablemente ligero sobre el que cuantificar la incertidumbre asociada a dichas estimaciones. Elaboración propia.\n\n\nSin embargo, también comprobé que la IA no es infalible, no solo porque comete errores objetivos, sino porque reproduce imprecisiones y sesgos sistémicos derivados de los conjuntos de datos recopilados por humanos. Como resultado, me he acercado cada vez más al campo de la IA Confiable (Trustworthy AI). Creo que para que la inteligencia artificial sea realmente útil en el mundo real, debe ser transparente y robusta.\nMi enfoque más reciente en cuanto a esto es la Cuantificación de la Incertidumbre, el núcleo de mi Trabajo de Fin de Grado: Cuantificación de la incertidumbre en las predicciones de modelos de machine learning para problemas de estimación del perfil biológico (ver más detalles abajo en Proyectos). Este trabajo integra Conformal Prediction en tareas de estimación biológica, como la estimación de la edad y el sexo a partir de imágenes de imágenes de radiografías maxilofaciales, proporcionando intervalos de predicción (en regresión) y conjuntos de etiquetas (en clasificación) con garantías estadísticas, capturando así la incertidumbre en cada caso.\n\n\n\nDiagrama de un modelo de regresión usando predicción conformal, que, además de devolver una predicción puntual con el valor esperado, obtiene un intervalo de predicción con un 95% de confianza.\n\n\nActualmente, estoy leyendo Interpretable Machine Learning de Christoph Molnar, para tener una visión más completa de cómo abrir la ‘caja negra’ de los algoritmos.\nMás allá de lo académico, siempre he creído en la importancia de participar activamente en la comunidad universitaria. Durante mi grado, tuve el honor de servir durante 2 años como secretario de la Delegación de Estudiantes de Ingenierías Informática y de Telecomunicaciones (DEIIT). Durante esta etapa asumí la responsabilidad de convocar las sesiones plenarias, redacción y publicación de actas, gestión y actualización del censo de miembros, así como ayuda en la organización de eventos en la escuela (mercadillos de BBAA, Día de la Escuela y Hackaton de desarrollo de videojuegos) o simple colaboración (Granabot)."
   },
   {
     "objectID": "index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d73796d626f6c733a7363686f6f6c2d6f75746c696e652d726f756e646564203234203e7d7d-formación-académica",
@@ -56,146 +56,6 @@
     "text": "Recomendaciones\n\nPablo Mesejo Santiago, Profesor asociado del Departamento de Informática e Inteligencia Artificial de la Universidad de Granada y socio cofundador y director de Inteligencia Artificial de Panacea Cooperative Research.\n\n\n\n  Download reference"
   },
   {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#machine-learning",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#machine-learning",
-    "title": "My Final Degree Project",
-    "section": "2.1 Machine Learning",
-    "text": "2.1 Machine Learning\n\n2.1.1 Regression problems\n\n\n2.1.2 Classification problems"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#deep-learning",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#deep-learning",
-    "title": "My Final Degree Project",
-    "section": "2.2 Deep Learning",
-    "text": "2.2 Deep Learning\n\n2.2.1 The multilayer perceptron\n\n\n2.2.2 Network training and validation\n\n\n2.2.3 Convolutional Neural Networks\n\n\n2.2.4 Transfer Learning"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#uncertainty",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#uncertainty",
-    "title": "My Final Degree Project",
-    "section": "2.3 Uncertainty",
-    "text": "2.3 Uncertainty\n\n2.3.1 Uncertainty in machine learning\n\n\n2.3.2 Uncertainty quantification in machine learning"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#conformal-prediction",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#conformal-prediction",
-    "title": "My Final Degree Project",
-    "section": "2.4 Conformal prediction",
-    "text": "2.4 Conformal prediction\n\n2.4.1 Properties of conformal prediction\n\n\n2.4.2 Conformal algorithm"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#age-estimation-in-forensic-anthropology",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#age-estimation-in-forensic-anthropology",
-    "title": "My Final Degree Project",
-    "section": "3.1 Age estimation in forensic anthropology",
-    "text": "3.1 Age estimation in forensic anthropology"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#age-estimation-in-forensic-anthropology-using-machine-learning",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#age-estimation-in-forensic-anthropology-using-machine-learning",
-    "title": "My Final Degree Project",
-    "section": "3.2 Age estimation in forensic anthropology using machine learning",
-    "text": "3.2 Age estimation in forensic anthropology using machine learning"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#uncertainty-quantification-for-age-estimation",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#uncertainty-quantification-for-age-estimation",
-    "title": "My Final Degree Project",
-    "section": "3.3 Uncertainty quantification for age estimation",
-    "text": "3.3 Uncertainty quantification for age estimation"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#available-datasets",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#available-datasets",
-    "title": "My Final Degree Project",
-    "section": "4.1 Available datasets",
-    "text": "4.1 Available datasets"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#proposed-methods",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#proposed-methods",
-    "title": "My Final Degree Project",
-    "section": "4.2 Proposed methods",
-    "text": "4.2 Proposed methods\n\n4.2.1 Architecture used\n\n\n4.2.2 Quantile regression\n\n\n4.2.3 Conformal prediction methods for regression\n\n\n4.2.4 Probability calibration in classification\n\n\n4.2.5 Conformal prediction methods for classification"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#proposed-problems",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#proposed-problems",
-    "title": "My Final Degree Project",
-    "section": "5.1 Proposed problems",
-    "text": "5.1 Proposed problems"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#experimental-validation-protocol",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#experimental-validation-protocol",
-    "title": "My Final Degree Project",
-    "section": "5.2 Experimental validation protocol",
-    "text": "5.2 Experimental validation protocol"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#data-preprocessing",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#data-preprocessing",
-    "title": "My Final Degree Project",
-    "section": "5.3 Data preprocessing",
-    "text": "5.3 Data preprocessing"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#general-scheme-of-the-experiments-performed",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#general-scheme-of-the-experiments-performed",
-    "title": "My Final Degree Project",
-    "section": "5.4 General scheme of the experiments performed",
-    "text": "5.4 General scheme of the experiments performed\n\n5.4.1 Age estimation problem\n\n\n5.4.2 Legal age estimation problem\n\n\n5.4.3 Age classification problem"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#performance-evaluation",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#performance-evaluation",
-    "title": "My Final Degree Project",
-    "section": "5.5 Performance evaluation",
-    "text": "5.5 Performance evaluation\n\n5.5.1 Metrics for regression\n\n\n5.5.2 Metrics for classification\n\n\n5.5.3 Statistical tests"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#experimentation-for-age-estimation",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#experimentation-for-age-estimation",
-    "title": "My Final Degree Project",
-    "section": "5.6 Experimentation for age estimation",
-    "text": "5.6 Experimentation for age estimation\n\n5.6.1 Model training\n\n\n5.6.2 Results"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#experimentation-for-legal-age-estimation",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#experimentation-for-legal-age-estimation",
-    "title": "My Final Degree Project",
-    "section": "5.7 Experimentation for legal age estimation",
-    "text": "5.7 Experimentation for legal age estimation\n\n5.7.1 Model training\n\n\n5.7.2 Results"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#experimentation-for-age-classification",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#experimentation-for-age-classification",
-    "title": "My Final Degree Project",
-    "section": "5.8 Experimentation for age classification",
-    "text": "5.8 Experimentation for age classification\n\n5.8.1 Model training\n\n\n5.8.2 Results"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#conclusions",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#conclusions",
-    "title": "My Final Degree Project",
-    "section": "6.1 Conclusions",
-    "text": "6.1 Conclusions"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#assessment-of-the-work-performed",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#assessment-of-the-work-performed",
-    "title": "My Final Degree Project",
-    "section": "6.2 Assessment of the work performed",
-    "text": "6.2 Assessment of the work performed"
-  },
-  {
-    "objectID": "projects/tfg-uncertainty-bp-estimation.html#future-work",
-    "href": "projects/tfg-uncertainty-bp-estimation.html#future-work",
-    "title": "My Final Degree Project",
-    "section": "6.3 Future work",
-    "text": "6.3 Future work\n\n\n\n\n\n\n6.3.1 Other resources\nAquí tienes las diapositivas detalladas:\n\n Presentation\n\n\n\n\n\nOther resources\n\n Presentation"
-  },
-  {
     "objectID": "blog/my-first-post.html",
     "href": "blog/my-first-post.html",
     "title": "My First Post",
@@ -214,7 +74,7 @@
     "href": "projects/projects.html",
     "title": "Project",
     "section": "",
-    "text": "No hay resultados\n Volver arriba"
+    "text": "Mi Proyecto de Fin de Grado\n\n\n\n\n\n\n\n\n\n30 ene 2026\n\n\n\n\n\n\nNo hay resultados\n Volver arriba"
   },
   {
     "objectID": "index-en.html",

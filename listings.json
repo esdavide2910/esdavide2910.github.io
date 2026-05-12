@@ -5,6 +5,8 @@
   },
   {
     "listing": "/projects/projects.html",
-    "items": []
+    "items": [
+      "/projects/tfg-uncertainty-bp-estimation/tfg-uncertainty-bp-estimation.html"
+    ]
   }
 ]

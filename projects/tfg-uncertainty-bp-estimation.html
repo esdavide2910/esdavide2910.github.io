@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>My Final Degree Project</title>
+<title>Mi Proyecto de Fin de Grado</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,7 +23,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -286,9 +306,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">En esta página</h2>
    
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="header-section-number">1</span> Introducción</a>
   <ul class="collapse">
-  <li><a href="#problem-description" id="toc-problem-description" class="nav-link" data-scroll-target="#problem-description"><span class="header-section-number">1.1</span> Problem description</a></li>
+  <li><a href="#descripción-del-problema" id="toc-descripción-del-problema" class="nav-link" data-scroll-target="#descripción-del-problema"><span class="header-section-number">1.1</span> Descripción del problema</a></li>
   <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation"><span class="header-section-number">1.2</span> Motivation</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">1.3</span> Objectives</a></li>
   <li><a href="#time-planning" id="toc-time-planning" class="nav-link" data-scroll-target="#time-planning"><span class="header-section-number">1.4</span> Time planning</a></li>
@@ -338,8 +358,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">My Final Degree Project</h1>
-<p class="subtitle lead">Quantification of the uncertainty in machine learning model predictions for biologocal profile estimation problems</p>
+<h1 class="title">Mi Proyecto de Fin de Grado</h1>
+<p class="subtitle lead">Cuantificación de la incertidumbre de las predicciones de modelos de aprendizaje automático en problemas de estimación del perfil biológico</p>
 </div>
 
 
@@ -371,10 +391,26 @@ ul.task-list li input[type="checkbox"] {
 <!-------------------------------------------------------------------------------------------------------------------------->
 <!-------------------------------------------------------------------------------------------------------------------------->
 <!-------------------------------------------------------------------------------------------------------------------------->
-<section id="introduction" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<section id="problem-description" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="problem-description"><span class="header-section-number">1.1</span> Problem description</h2>
+<section id="introducción" class="level1 page-columns page-full" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introducción</h1>
+<p>La antropología es la ciencia que estudia la humanidad en todas sus dimensiones: biológica, cultural, lingüística o arqueológica <span class="citation" data-cites="AAA2022AnthropologyDefinition"><a href="#ref-AAA2022AnthropologyDefinition" role="doc-biblioref">[1]</a></span>, a lo largo del tiempo y en distintas partes del mundo. La antropología biológica o física se centra en el estudio de la anatomía, el crecimiento, la adaptación y la evolución del cuerpo humano . Dentro de este campo, la <strong>antropología forense <abbr title="Antropología Forense">AF</abbr></strong> es el subcampo especializado que aplica métodos y técnicas antropológicas para resolver cuestiones médico-legales <span class="citation" data-cites="nawrocki2006"><a href="#ref-nawrocki2006" role="doc-biblioref">[2]</a></span>, empleando conocimientos de antropología física, aunque a veces también de la arqueología, para la correcta recuperación y análisis de la evidencia forense.Aunque tradicionalmente asociada al estudio de restos humanos esqueletizados o en descomposición, la también contribuye a la estimación del perfil biológico en individuos vivos, especialmente en contextos legales.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-AAA2022AnthropologyDefinition" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">American Anthropological Association, <span>«What is Anthropology?»</span> [En línea]. Disponible en: <a href="https://americananthro.org/learn-teach/what-is-anthropology/">https://americananthro.org/learn-teach/what-is-anthropology/</a></div>
+</div><div id="ref-nawrocki2006" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S. P. Nawrocki, <span>«An Outline Of Forensic Anthropology»</span>. [En línea]. Disponible en: <a href="https://web.archive.org/web/20110615005707/">https://web.archive.org/web/20110615005707/</a></div>
+</div></div><p>Tradicionalmente, los antropólogos forenses han tenido cinco principales objetivos en su trabajo :</p>
+<ul>
+<li><p>Determinar el de un individuo (es decir, sexo, edad, estatura y ascendencia), ya sea en restos esqueletizados donde los tejidos blandos se han deteriorado hasta el punto de que estas características no pueden determinarse mediante inspección visual, o en personas vivas mediante técnicas no invasivas como análisis radiográficos o morfológicos.</p></li>
+<li><p>Identificar la naturaleza de lesiones traumáticas (como heridas de bala, puñaladas o fracturas) en huesos humanos, así como sus causantes, con el objetivo de recopilar información sobre la causa y circunstancias de la muerte.</p></li>
+<li><p>Estimar el intervalo , es decir, el tiempo transcurrido desde la muerte, gracias a su conocimiento sobre los procesos de descomposición corporal.</p></li>
+<li><p>Asistir en la localización, recuperación y conservación de los restos (superficiales o enterrados) aplicando técnicas arqueológicas, garantizando la recolección de toda la evidencia forense relevante.</p></li>
+<li><p>Proporcionar información clave para la de los fallecidos, basándose en las características distintivas de los esqueletos.</p></li>
+</ul>
+<p>Además de estos roles, en la actualidad los antropólogos desempeñan otros trabajos que no están relacionados con el ámbito criminalístico. Entre ellos, uno de sus campos de acción más relevantes es la , como accidentes aéreos, ataques terroristas o desastres naturales, donde los restos suelen estar mutilados o desfigurados.</p>
+<p>Su labor también es fundamental en la , como exterminios, persecuciones políticas y represiones dictatoriales . Casos como la Guerra Civil Española y la Dictadura Franquista , así como las múltiples dictaduras en el Cono Sur de América , han requerido la intervención de equipos forenses para esclarecer la verdad histórica y restituir la identidad de las víctimas a sus familiares, contribuyendo al proceso de memoria, justicia y reparación para las familias afectadas. Esta vinculación con la justicia trasciende lo nacional: la ciencia forense es clave en la . Organizaciones como Médicos por los Derechos Humanos y la ONU financian equipos especializados que documentan estos crímenes, proporcionando pruebas esenciales para tribunales internacionales .</p>
+<p>Y por último, también son fundamentales para , especialmente cuando no existen registros confiables. Esto ocurre, por ejemplo, en casos de solicitudes de asilo, adopciones internacionales o procesos judiciales donde es necesario determinar si una persona es menor o mayor de edad, lo cual puede tener importantes implicaciones legales. Según el tipo de procedimiento, se puede requerir tanto la estimación de la edad mínima como la edad más probable del individuo, con el fin de priorizar la protección de los menores, evitando que queden expuestos a violaciones de sus derechos.</p>
+<section id="descripción-del-problema" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="descripción-del-problema"><span class="header-section-number">1.1</span> Descripción del problema</h2>
 <section id="human-identification-and-biological-profile-estimation" class="level3" data-number="1.1.1">
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="human-identification-and-biological-profile-estimation"><span class="header-section-number">1.1.1</span> Human identification and biological profile estimation</h3>
 </section>
@@ -583,7 +619,8 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><a href="../documents/tfg-uncertainty-age-estimation.pdf"><iconify-icon role="img" inline="" icon="ph:presentation-chart-bold" aria-label="Icon presentation-chart-bold from ph Iconify.design set." title="Icon presentation-chart-bold from ph Iconify.design set."></iconify-icon> Presentation</a></li>
 </ul>
-</div></div></section>
+</div></div>
+</section>
 </section>
 </section>
 
@@ -674,7 +711,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/esdavide2910\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
