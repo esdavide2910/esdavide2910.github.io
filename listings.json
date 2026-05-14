@@ -1,12 +1,12 @@
 [
   {
-    "listing": "/blog/blog.html",
-    "items": []
-  },
-  {
     "listing": "/projects/projects.html",
     "items": [
       "/projects/tfg-uncertainty-bp-estimation/tfg-uncertainty-bp-estimation.html"
     ]
+  },
+  {
+    "listing": "/blog/blog.html",
+    "items": []
   }
 ]
