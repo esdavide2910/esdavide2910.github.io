@@ -1,0 +1,33 @@
+/* 1. Alinea el icono y el bloque de texto en horizontal */
+.portfolio-callout div[class*="callout-title"] {
+    display: flex !important;
+    align-items: center !important; /* Centra verticalmente el texto respecto al icono */
+    gap: 20px !important;           /* Espacio entre el icono y el texto */
+    margin: 0 !important;
+}
+
+/* 2. Configura el bloque de texto para que respete el salto de línea */
+.portfolio-callout .title-block {
+    display: inline-block !important;
+    line-height: 1.3 !important;
+}
+
+/* 3. Estilos del Título (DataViz) */
+.portfolio-callout .title-main {
+    font-size: 1.6rem !important;
+    font-weight: bold !important;
+    color: var(--quarto-body-color) !important;
+}
+
+/* 4. Estilos del Subtítulo */
+.portfolio-callout .title-sub {
+    font-size: 1rem !important;
+    font-weight: normal !important;
+    color: var(--quarto-body-color) !important;
+}
+
+/* Opcional: Centrar la flecha del desplegable de Quarto */
+.portfolio-callout.callout-collapsible > .callout-header::before {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
