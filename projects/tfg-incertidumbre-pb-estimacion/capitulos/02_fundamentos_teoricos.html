@@ -45,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9e40b6f6a80a101a9f96c1f08f313579.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-3808268d090f8e484080b77e239e5b2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-9e40b6f6a80a101a9f96c1f08f313579.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-d1f23247c5d5b8c7fc4552b9e2cbef11.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-b8529b9e97756f148dafaa8e88da3819.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-d1f23247c5d5b8c7fc4552b9e2cbef11.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
@@ -110,10 +110,9 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -317,39 +316,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
-   
-  <ul>
-  <li><a href="#fundamentos-teóricos" id="toc-fundamentos-teóricos" class="nav-link active" data-scroll-target="#fundamentos-teóricos">Fundamentos teóricos</a>
-  <ul class="collapse">
-  <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link" data-scroll-target="#machine-learning">Machine Learning</a>
-  <ul class="collapse">
-  <li><a href="#problemas-de-regresión" id="toc-problemas-de-regresión" class="nav-link" data-scroll-target="#problemas-de-regresión">Problemas de regresión</a></li>
-  <li><a href="#problemas-de-clasificación" id="toc-problemas-de-clasificación" class="nav-link" data-scroll-target="#problemas-de-clasificación">Problemas de clasificación</a></li>
-  </ul></li>
-  <li><a href="#deep-learning" id="toc-deep-learning" class="nav-link" data-scroll-target="#deep-learning">Deep Learning</a>
-  <ul class="collapse">
-  <li><a href="#el-perceptrón-multicapa" id="toc-el-perceptrón-multicapa" class="nav-link" data-scroll-target="#el-perceptrón-multicapa">El perceptrón multicapa</a></li>
-  <li><a href="#entrenamiento-y-validación-de-la-red" id="toc-entrenamiento-y-validación-de-la-red" class="nav-link" data-scroll-target="#entrenamiento-y-validación-de-la-red">Entrenamiento y validación de la red</a></li>
-  <li><a href="#redes-neuronales-convolucionales" id="toc-redes-neuronales-convolucionales" class="nav-link" data-scroll-target="#redes-neuronales-convolucionales">Redes Neuronales Convolucionales</a></li>
-  <li><a href="#transfer-learning" id="toc-transfer-learning" class="nav-link" data-scroll-target="#transfer-learning">Transfer Learning</a></li>
-  </ul></li>
-  <li><a href="#incertidumbre" id="toc-incertidumbre" class="nav-link" data-scroll-target="#incertidumbre">Incertidumbre</a>
-  <ul class="collapse">
-  <li><a href="#incertidumbre-en-machine-learning" id="toc-incertidumbre-en-machine-learning" class="nav-link" data-scroll-target="#incertidumbre-en-machine-learning">Incertidumbre en <em>machine learning</em></a></li>
-  <li><a href="#cuantificación-de-incertidumbre-en-machine-learning" id="toc-cuantificación-de-incertidumbre-en-machine-learning" class="nav-link" data-scroll-target="#cuantificación-de-incertidumbre-en-machine-learning">Cuantificación de incertidumbre en machine learning</a></li>
-  </ul></li>
-  <li><a href="#predicción-conformal" id="toc-predicción-conformal" class="nav-link" data-scroll-target="#predicción-conformal">Predicción conformal</a>
-  <ul class="collapse">
-  <li><a href="#propiedades-de-la-predicción-conformal" id="toc-propiedades-de-la-predicción-conformal" class="nav-link" data-scroll-target="#propiedades-de-la-predicción-conformal">Propiedades de la predicción conformal</a></li>
-  <li><a href="#algoritmo-conformal" id="toc-algoritmo-conformal" class="nav-link" data-scroll-target="#algoritmo-conformal">Algoritmo conformal</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
