@@ -49,6 +49,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/bootstrap/bootstrap-dark-6c031a07138b880a43f41635b24ca7d3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../../site_libs/bootstrap/bootstrap-32b3d778ab1b52cde62e817269b4d299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,6 +80,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../custom.css">
 </head>
@@ -267,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../../projects/projects.html"> 
-<span class="menu-text"><iconify-icon role="img" inline="" icon="ri:folder-5-line" aria-label="Icon folder-5-line from ri Iconify.design set." title="Icon folder-5-line from ri Iconify.design set."></iconify-icon> Projects</span></a>
+<span class="menu-text"><iconify-icon role="img" inline="" icon="ri:folder-5-line" aria-label="Icon folder-5-line from ri Iconify.design set." title="Icon folder-5-line from ri Iconify.design set."></iconify-icon> Proyectos</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -291,21 +323,139 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="estado-del-arte" class="level1">
 <h1>Estado del arte</h1>
-<p>UNDER CONSTRUCTION</p>
 <section id="estimación-de-la-edad-en-antropología-forense" class="level2">
 <h2 class="anchored" data-anchor-id="estimación-de-la-edad-en-antropología-forense">Estimación de la edad en antropología forense</h2>
+<p>En ausencia de documentación escrita confiable y cuando otros métodos como los genéticos o dactilares no son viables, los métodos más precisos para estimar la edad se basan en el análisis del estado de los huesos del cuerpo humano. El número de publicaciones que usan técnicas de antropología para la estimación de edad ha aumentado continuamente en las últimas décadas (véase la <a href="#fig-num_papers_1" class="quarto-xref">Figura&nbsp;1</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>), lo que indica un interés creciente en la antropología forense por métodos más precisos y confiables de estimación de edad.</p>
+<div id="fig-num_papers_1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-scap="Evolución de las publicaciones que usan técnicas de antropología para la estimación de edad.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-num_papers_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap3/num_papers_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Evolución de las publicaciones que usan técnicas de antropología para la estimación de edad. Información recuperada de Scopus."><img src="capitulos/images/cap3/num_papers_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Evolución de las publicaciones que usan técnicas de antropología para la estimación de edad."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-num_papers_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Evolución de las publicaciones que usan técnicas de antropología para la estimación de edad. Información recuperada de Scopus.
+</figcaption>
+</figure>
+</div>
+<p>Los huesos experimentan cambios continuos a lo largo de la vida, y estas transformaciones progresivas permiten determinar la <em>edad biológica</em> de un individuo. Esta edad refleja la etapa de desarrollo en la que se encuentra el esqueleto dentro del proceso de cambios que ocurren desde el nacimiento hasta la vejez <span class="citation" data-cites="byers2023">[@byers2023]</span>. Cabe destacar que la edad biológica no siempre coincide con la edad cronológica —el tiempo transcurrido desde el nacimiento—, pero ambas guardan una correlación significativa, lo que permite aproximaciones razonables en contextos forenses, antropológicos o médicos.</p>
+<p>Las técnicas de estimación de edad presentan diferencias significativas en individuos maduros e inmaduros <span class="citation" data-cites="ubelaker2019">[@ubelaker2019]</span>. La diferencia radica en el grado de desarrollo esquelético y dental: en inmaduros, el esqueleto y la dentición no están completamente formados, por lo que los métodos se basan en patrones de crecimiento y osificación; en contraste, en maduros (con desarrollo completo), las técnicas se enfocan en cambios degenerativos, como el deterioro articular o la pérdida ósea.</p>
+<p>La estimación en cuerpos subadultos (individuos que no han alcanzado la madurez esquelética) se basa en el desarrollo y erupción dental<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="citation" data-cites="cameriere2006">[@cameriere2006]</span>, los tiempo de aparición y cambios en la morfología de centros de osificación<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, y los tiempos de fusión de los centros primarios (también denominados diáfisis) y secundarios (epífisis) <span class="citation" data-cites="scheuer2000 adserias2019">[@scheuer2000;@adserias2019]</span>. Los métodos de mayor precisión se basan en el desarrollo dental, dado que estos, para una determinada edad cronológica, muestran menor variabilidad que el esqueleto <span class="citation" data-cites="bowman1992">[@bowman1992]</span>. En ausencia de estos, se recurre al análisis de la epífisis de diferentes huesos, cuya formación y fusión son clave para la estimación de la edad esquelética <span class="citation" data-cites="adserias2019">[@adserias2019]</span>.</p>
+<p>La valoración en adultos es más compleja, dado que el desarrollo de la dentadura se ha completado, así como el crecimiento del esqueleto ha cesado <span class="citation" data-cites="byers2023">[@byers2023]</span>, por lo que los indicadores se basan más en características del deterioro óseo; pero la variabilidad de estas aumenta con la edad debido al efecto acumulativo de las influencias ambientales<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a><span class="citation" data-cites="ubelaker2018 scheuer2004">[@ubelaker2018;@scheuer2004]</span>. Actualmente, se recomienda un análisis conjunto del proceso degenerativo de sínfisis púbica (propuesto en <span class="citation" data-cites="brooks1990">[@brooks1990]</span>) y de las transparencias en las raíces dentales <span class="citation" data-cites="baccino2014">[@baccino2014]</span>. Cuando este no es posible, pueden emplearse otros métodos <span class="citation" data-cites="garvin2012">[@garvin2012]</span>, como el análisis de la superficie del ilion <span class="citation" data-cites="lovejoy1985">[@lovejoy1985]</span>, el examen del extremo esternal de la cuarta costilla <span class="citation" data-cites="iscan1984">[@iscan1984]</span>, o el estudio de los procesos de obliteración de las suturas craneales <span class="citation" data-cites="meindl1985">[@meindl1985]</span>.</p>
+<p>Sin embargo, cuando la estimación de edad se realiza en personas vivas, no se tiene acceso a sus huesos de forma directa. En estos casos se recurren a otro tipo de métodos como exámenes físicos o toma de imágenes médicas. El Grupo de Estudio para el Diagnóstico Forense de Edad (AGFAD) de la Sociedad Alemana de Medicina Legal<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> ha publicado recomendaciones estandarizadas sobre cómo llevar a cabo evaluaciones de edad en personas vivas. En estas incluyen estudios como <span class="citation" data-cites="schmeling2016">[@schmeling2016]</span>: historial clínico, examen físico, radiografía de una mano, radiografía panorámica maxilofacial y si está indicado, una tomografía computerizado de cortes finos de la epífisis mediales de las clavículas. Se suelen combinar múltiples métodos para una mayor exactitud en la predicción. Dependiendo de los asuntos legales, se requerirá la estimación de la edad mínima del individuo o su edad más probable <span class="citation" data-cites="schmeling2016">[@schmeling2016]</span> (véase un ejemplo en la Figura <span class="math inline">\(\ref{fig:x_ray_images}\)</span>).</p>
+<div id="fig-x_ray_images" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-scap="Hallazgos radiológicos en un posible menor con edad disputada: criterio de edad mínima para la determinación de edad.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-x_ray_images-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap3/X_ray_images.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Hallazgos radiológicos en un posible menor con edad en disputa. Criterio de edad mínima para la determinación de edad. Recuperado de la Figura 1 de . El sujeto masculino afirma tener 17.5 años. Tanto la historia clínica como el examen físico no revelan signos de alteraciones en el desarrollo. Se presentan las siguientes imágenes: una radiografía de la mano izquierda en (a), una radiografía panorámica maxilofacial en (b) y una tomografía computarizada de las epífisis mediales de la clavícula en (c). En la imagen (d) se muestran los rangos de edad estimados según los diferentes indicadores radiológicos. Las edades mínimas asociadas a las etapas de desarrollo observadas son 16.1 años, 17.3 años y 16.4 años, respectivamente. La edad mínima del individuo queda determinada por la mayor de estas estimaciones, es decir, 17.3 años. Esta edad mínima estimada es consistente con la edad declarada por el examinado."><img src="capitulos/images/cap3/X_ray_images.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Hallazgos radiológicos en un posible menor con edad disputada: criterio de edad mínima para la determinación de edad."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-x_ray_images-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Hallazgos radiológicos en un posible menor con edad en disputa. Criterio de edad mínima para la determinación de edad. Recuperado de la Figura 1 de . El sujeto masculino afirma tener 17.5 años. Tanto la historia clínica como el examen físico no revelan signos de alteraciones en el desarrollo. Se presentan las siguientes imágenes: una radiografía de la mano izquierda en (a), una radiografía panorámica maxilofacial en (b) y una tomografía computarizada de las epífisis mediales de la clavícula en (c). En la imagen (d) se muestran los rangos de edad estimados según los diferentes indicadores radiológicos. Las edades mínimas asociadas a las etapas de desarrollo observadas son 16.1 años, 17.3 años y 16.4 años, respectivamente. La edad mínima del individuo queda determinada por la mayor de estas estimaciones, es decir, 17.3 años. Esta edad mínima estimada es consistente con la edad declarada por el examinado.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="estimación-de-la-edad-en-antropología-forense-usando-machine-learning" class="level2">
 <h2 class="anchored" data-anchor-id="estimación-de-la-edad-en-antropología-forense-usando-machine-learning">Estimación de la edad en antropología forense usando <em>machine learning</em></h2>
+<p>En la última década, ha aumentado el uso de técnicas de antropología forense combinadas con métodos de ML para la estimación de la edad, como se ilustra en la <a href="#fig-num_papers_2" class="quarto-xref">Figura&nbsp;3</a><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>.</p>
+<div id="fig-num_papers_2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-scap="Evolución de las publicaciones que usan técnicas de antropología y métodos ML para la estimación de edad.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-num_papers_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap3/num_papers_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;3: Evolución de las publicaciones que usan técnicas de antropología y métodos ML para la estimación de edad. Información recuperada de Scopus."><img src="capitulos/images/cap3/num_papers_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Evolución de las publicaciones que usan técnicas de antropología y métodos ML para la estimación de edad."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-num_papers_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Evolución de las publicaciones que usan técnicas de antropología y métodos ML para la estimación de edad. Información recuperada de Scopus.
+</figcaption>
+</figure>
+</div>
+<p>Los métodos manuales de estimación del PB se basan en la evaluación visual y en el análisis morfométrico de rasgos esqueléticos. Sin embargo, su aplicación demanda conocimiento especializado, pueden presentar ambigüedades en su formulación que den lugar a interpretaciones variables <span class="citation" data-cites="berst2001">[@berst2001]</span>, y están sujetos a posibles errores de medición <span class="citation" data-cites="langley2018">[@langley2018]</span>, sesgando el proceso y reduciendo su fiabilidad. Estas limitaciones han motivado el desarrollo de métodos automatizados basados en ML, que siguen dos enfoques principales.</p>
+<p>El primero consiste en tomar un método clásico de AF y automatizar sus etapas mediante herramientas computacionales. Para ello, el método debe definir:</p>
+<ul>
+<li><p>cómo extraer las características relevantes de las imágenes médicas, mediante técnicas de procesamiento de imágenes o morfometría tradicional; y</p></li>
+<li><p>un modelo de clasificación o regresión que opere sobre estas características predefinidas.</p></li>
+</ul>
+<p>La <a href="#fig-MRI_pipeline" class="quarto-xref">Figura&nbsp;4</a> ilustra un ejemplo de este enfoque. Entre las propuestas destacadas podemos mencionar BoneXpert <span class="citation" data-cites="thodberg2008">[@thodberg2008]</span>, que empleaba técnicas clásicas de ML y demostró robustez en poblaciones diversas, tanto en origen geográfico como en condiciones clínicas de adquisición de imágenes <span class="citation" data-cites="van2009 martin2010 thodberg2010">[@van2009;@martin2010;@thodberg2010]</span>.</p>
+<div id="fig-MRI_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-scap="Procedimiento secuencial clásico de \textit{machine learning} para la extracción de características antropológicas.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-MRI_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap1/MRI_pipeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figura&nbsp;4: Procedimiento secuencial clásico de ML para la extracción de características antropológicas, propuesto en . Las características se extraen manualmente o con herramientas independientes del modelo."><img src="capitulos/images/cap1/MRI_pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Procedimiento secuencial clásico de \textit{machine learning} para la extracción de características antropológicas."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-MRI_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Procedimiento secuencial clásico de ML para la extracción de características antropológicas, propuesto en . Las características se extraen manualmente o con herramientas independientes del modelo.
+</figcaption>
+</figure>
+</div>
+<p>En cambio, el auge del <em>deep learning</em>, impulsó el aprendizaje extremo a extremo (<em>end-to-end learning</em>), donde un único modelo aprende de manera automática tanto la extracción de características como la clasificación/regresión a partir de los datos en bruto (véase la <a href="#fig-end-to-end_model" class="quarto-xref">Figura&nbsp;5</a>). Las redes neuronales convolucionales consiguen eliminar la dependencia de criterios antropológicos preestablecidos, y permiten al modelo extraer por sí mismo las características más relevantes para la tarea en que se entrenan.</p>
+<div id="fig-end-to-end_model" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-scap="Metodología de construcción de un modelo _end-to-end_.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-end-to-end_model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap3/end-to-end_learning.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figura&nbsp;5: Metodología de construcción de un modelo end-to-end. Recuperado de [@venema2022]. La CNN aprende a extraer las características de la manera más conveniente para resolver el problema en el que se le entrena, en este caso estimación de sexo."><img src="capitulos/images/cap3/end-to-end_learning.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Metodología de construcción de un modelo _end-to-end_."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-end-to-end_model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: Metodología de construcción de un modelo <em>end-to-end</em>. Recuperado de <span class="citation" data-cites="venema2022">[@venema2022]</span>. La CNN aprende a extraer las características de la manera más conveniente para resolver el problema en el que se le entrena, en este caso estimación de sexo.
+</figcaption>
+</figure>
+</div>
+<p>Siguiendo este paradigma, se han propuesto numerosos modelos basados en redes convolucionales. Un ejemplo destacado es el propuesto en <span class="citation" data-cites="stern2019">[@stern2019]</span>, el cual, entrenado con resonancias magnéticas 3D de manos, aprende a identificar las características más relevantes para la estimación de edad automáticamente. Este modelo se ha consolidado como estado del arte en su dominio, alcanzando un error absoluto medio de <span class="math inline">\(0.37 \pm 0.51\)</span> años<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. Además, los autores demostraron su adaptabilidad al procesar imágenes 2D de radiografías, logrando también un rendimiento líder en el ámbito de rayos X.</p>
 </section>
 <section id="cuantificación-de-la-incertidumbre-para-la-estimación-de-la-edad" class="level2">
 <h2 class="anchored" data-anchor-id="cuantificación-de-la-incertidumbre-para-la-estimación-de-la-edad">Cuantificación de la incertidumbre para la estimación de la edad</h2>
+<p>La mayoría de trabajos académicos de AF no presentan un enfoque explícito en la cuantificación de incertidumbre de las predicciones, pero sí evalúan la confiabilidad de los métodos propuestos, a través del análisis del error.</p>
+<p>El enfoque principal en la evaluación de estos métodos consiste en comparar la edad cronológica (la <em>ground truth</em>) con la edad biológica (la estimada), las cuales no siempre presentan una correlación directa <span class="citation" data-cites="marquez2015">[@marquez2015]</span>.</p>
+<p>Es por ello que los métodos manuales suelen estimar intervalos de edad o, en casos específicos —especialmente en contextos legales—, valores de edad mínima probable. Esto se debe a la variabilidad biológica entre individuos, influenciada por factores genéticos, ambientales, nutricionales y de salud, que impide establecer una edad cronológica exacta a partir de los indicadores empleados. En general, los intervalos son determinados en base a una población de referencia, y se suele escoger un intervalo que cubra un 95% de los casos esperados <span class="citation" data-cites="garvin2012">[@garvin2012]</span> (véase un ejemplo en la <a href="#fig-range_values_epiphyselial" class="quarto-xref">Figura&nbsp;6</a>).</p>
+<div id="fig-range_values_epiphyselial" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-scap="Cronograma de desarrollo de la unión epifisaria.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-range_values_epiphyselial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap3/range_values_epiphyselial.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figura&nbsp;6: Cronograma de desarrollo de la unión epifisaria. Recuperado de [@byers2023], original de [@buikstra1994]. Este gráfico combina información de diferentes fuentes sobre los rangos de edades en los que ocurre la fusión de diversas epífisis del esqueleto humano, representado con una línea que indica la variabilidad del momento en que puede producirse dicha fusión con un 95% de confianza, permitiendo estimar la edad del individuo a partir del grado de unión observado."><img src="capitulos/images/cap3/range_values_epiphyselial.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Cronograma de desarrollo de la unión epifisaria."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-range_values_epiphyselial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6: Cronograma de desarrollo de la unión epifisaria. Recuperado de <span class="citation" data-cites="byers2023">[@byers2023]</span>, original de <span class="citation" data-cites="buikstra1994">[@buikstra1994]</span>. Este gráfico combina información de diferentes fuentes sobre los rangos de edades en los que ocurre la fusión de diversas epífisis del esqueleto humano, representado con una línea que indica la variabilidad del momento en que puede producirse dicha fusión con un 95% de confianza, permitiendo estimar la edad del individuo a partir del grado de unión observado.
+</figcaption>
+</figure>
+</div>
+<p>Por otro lado, los modelos de ML suelen generar predicciones puntuales (valores únicos) sin proporcionar intervalos de confianza o distribuciones probabilísticas asociadas. De esta forma, la edad biológica se trata como una construcción artificial —cuyos valores son los predichos por el modelo—, que, idealmente, representan las edades cronológicas más probables en un continuo de cambios observado en un dominio concreto, que son generalmente imágenes médicas.</p>
+<p>La métrica más empleada para esta evaluación es el error absoluto medio <span class="math inline">\(\pm\)</span> la desviación estándar. Esta cuantifica el error absoluto promedio entre la edad cronológica y la edad biológica predicha, proporcionando una medida de la precisión del modelo; y la desviación estándar indica la dispersión de estos errores, reflejando la consistencia del modelo en sus predicciones. Otras métricas como el coeficiente de correlación de Pearson (<span class="math inline">\(r\)</span>) o el coeficiente de determinación (<span class="math inline">\(R^2\)</span>) —aunque menos frecuentes— aportan información sobre la relación lineal entre predicciones y valores reales.</p>
+<p>Sin embargo, estas métricas pueden esconder sesgos en ciertos grupos etarios<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>, y un modelo con mal desempeño en la población general, puede arrojar buenos resultados en algunos grupos específicos, o viceversa. Es por ello que el análisis se puede completar empleando las métricas en subpoblaciones específicas, apoyándose en representaciones gráficas, permiten visualizar las relaciones no lineales entre variables, así como identificar patrones, tendencias o valores atípicos. Entre ellas destacan:</p>
+<ul>
+<li><p>Gráficas de dispersión: comparando edad cronológica vs.&nbsp;edad biológica, o mostrando errores en función de las edades cronológica o biológica (véase la <a href="#fig-error_distribution_by_age" class="quarto-xref">Figura&nbsp;7</a>).</p></li>
+<li><p>Histogramas, gráficos de densidad o diagramas de cajas para representar la distribución de errores. En la <a href="#fig-error_study_stern2019" class="quarto-xref">Figura&nbsp;8</a> vemos un ejemplo en el que plasman un histograma escrito como texto.</p></li>
+</ul>
+<div id="fig-error_distribution_by_age" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-scap="Distribución del error por edad real para un modelo de estimación de edad.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-error_distribution_by_age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap3/error_distribution.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figura&nbsp;7: Distribución del error por edad real para el modelo propuesto en [@kim2017]. Recuperado de la Figura 3. Esta visualización permite observar el error en cada instancia predicha para diferentes edades reales."><img src="capitulos/images/cap3/error_distribution.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Distribución del error por edad real para un modelo de estimación de edad."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-error_distribution_by_age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7: Distribución del error por edad real para el modelo propuesto en <span class="citation" data-cites="kim2017">[@kim2017]</span>. Recuperado de la Figura 3. Esta visualización permite observar el error en cada instancia predicha para diferentes edades reales.
+</figcaption>
+</figure>
+</div>
+<div id="fig-error_study_stern2019" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-scap="Estudio del error en métodos propuestos para la estiamción de edad.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-error_study_stern2019-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap3/error_study.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figura&nbsp;8: Estudio del error en los métodos 2D propuestos en [@stern2019]. Recuperado de la Tabla 2. Se observa que se muestra tanto el error absoluto medio \pm desviación estándar como un histograma de errores, que permite ver la distribución general de los errores."><img src="capitulos/images/cap3/error_study.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-scap="Estudio del error en métodos propuestos para la estiamción de edad."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-error_study_stern2019-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8: Estudio del error en los métodos 2D propuestos en <span class="citation" data-cites="stern2019">[@stern2019]</span>. Recuperado de la Tabla 2. Se observa que se muestra tanto el error absoluto medio <span class="math inline">\(\pm\)</span> desviación estándar como un histograma de errores, que permite ver la distribución general de los errores.
+</figcaption>
+</figure>
+</div>
 
 
 </section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas</h2>
+
+<ol>
+<li id="fn1"><p>La <em>query</em> usada ha sido <code>TITLE-ABS-KEY ((age AND (estimation OR assessment) AND (bone OR anthropology OR skeleton)))</code> el día 21 de agosto de 2025.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>La erupción dental es el proceso natural mediante el cual los dientes se desplazan desde el interior del hueso maxilar o mandibular hasta alcanzar su posición definitiva en la boca, atravesando las encías.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>La osificación es el proceso natural mediante el cual el cartílago o tejido conectivo se convierte en hueso. Los centros de osificación son regiones específicas del esqueleto donde comienza el proceso de formación ósea durante el desarrollo embrionario, fetal, infantil y adolescente.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Por ejemplo, artículos como <span class="citation" data-cites="merritt2015 wescott2015">[@merritt2015;@wescott2015]</span> indican que la obesidad puede causar que se sobrestime la edad del cuerpo, mientras que personas con una complexión más ligera o bajo peso corporal tienden a presentar una infraestimación de la edad.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>La Arbeitsgemeinschaft für Forensische Altersdiagnostik (AGFAD) es una organización alemana, compuesta por expertos multidisciplinares. Ha publicado protocolos estandarizados para la estimación de edad en personas vivas, logrando reconocimiento y aplicación a nivel internacional.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p> La <em>query</em> usada ha sido <code>TITLE-ABS-KEY ((age AND estimation AND (bone OR anthropology OR skeleton)) AND ((deep AND learning) OR (artificial AND intelligence)))</code> el día 21 de agosto de 2025.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Esta notación, como veremos a continuación, representa el error absoluto medio y su desviación estándar.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Los grupos etarios son intervalos de edad utilizados para clasificar a la población o a los sujetos de estudio en categorías específicas según su edad cronológica.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -733,6 +883,38 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
