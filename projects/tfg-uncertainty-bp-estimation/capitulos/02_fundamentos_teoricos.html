@@ -791,7 +791,7 @@ y_{n+1} \in \left[ \hat{f}(x_{n+1})-\delta_\alpha , \hat{f}(x_{n+1})+\delta_\alp
 <p>Esta expresión determina los límites inferior y superior del intervalo de predicción conformal para dicha instancia.</p>
 <p>A continuación se presenta un ejemplo numérico para ilustrar la construcción del intervalo. Supongamos que <span class="math inline">\(x_i\)</span> es un vector de unos determinados indicadores osteológicos de un individuo con edad cronológica conocida <span class="math inline">\(y_i\)</span> (en años). Entrenamos un modelo de regresión <span class="math inline">\(\hat{f}\)</span> en un conjunto de entrenamiento y reservamos un conjunto de calibración de <span class="math inline">\(n\)</span> individuos identificados. Se supone un conjunto de calibración de <span class="math inline">\(n=50\)</span> individuos y <span class="math inline">\(\alpha=0.10\)</span>. Calculamos los residuos absolutos <span class="math inline">\(NC(x_i,y_i)\)</span> en calibración y obtenemos su cuantil, <span class="math inline">\((1-\alpha)(1+1/n)=0.90\times1.02=0.918\)</span> (percentil <span class="math inline">\(91.8\)</span>). Si ese cuantil es <span class="math inline">\(\delta_{0.10}=3.3\)</span> años y para un caso nuevo <span class="math inline">\(\hat{f}(x_{n+1})=34.7\)</span> años, entonces:</p>
 <p><span class="math display">\[
-y_{n+1} \in \left[ 34.7 - 3.3 , 34.7 + 3.3  \right] = \left[ 31.4 , 38.0 \right] \textnormal{ años}
+y_{n+1} \in \left[ 34.7 - 3.3 , 34.7 + 3.3  \right] = \left[ 31.4 , 38.0 \right] \text{ años}
 \]</span></p>
 
 
