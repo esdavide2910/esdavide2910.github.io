@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-ES" xml:lang="es-ES"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>introduccion</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../..//images/simplified_signature_white_squared.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-32b3d778ab1b52cde62e817269b4d299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-6c031a07138b880a43f41635b24ca7d3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-32b3d778ab1b52cde62e817269b4d299.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../custom.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../images/simplified_signature_black.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../images/simplified_signature_white.svg" alt="" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="material-symbols:person-outline-rounded" aria-label="Icon person-outline-rounded from material-symbols Iconify.design set." title="Icon person-outline-rounded from material-symbols Iconify.design set."></iconify-icon> Sobre mí</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../projects/projects.html"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="ri:folder-5-line" aria-label="Icon folder-5-line from ri Iconify.design set." title="Icon folder-5-line from ri Iconify.design set."></iconify-icon> Projects</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="introducción" class="level1">
+<h1>Introducción</h1>
+<section id="descripción-del-problema" class="level2">
+<h2 class="anchored" data-anchor-id="descripción-del-problema">Descripción del problema</h2>
+<p>La antropología es la ciencia que estudia la humanidad en todas sus dimensiones: biológica, cultural, lingüística o arqueológica <span class="citation" data-cites="AAA2022AnthropologyDefinition">[@AAA2022AnthropologyDefinition]</span>, a lo largo del tiempo y en distintas partes del mundo. La antropología biológica o física se centra en el estudio de la anatomía, el crecimiento, la adaptación y la evolución del cuerpo humano <span class="citation" data-cites="nawrocki2006">[@nawrocki2006]</span>. Dentro de este campo, la <strong>Antropología Forense (AF)</strong> es el subcampo especializado que aplica métodos y técnicas antropológicas para resolver cuestiones médico-legales <span class="citation" data-cites="nawrocki2006">[@nawrocki2006]</span>, empleando conocimientos de antropología física, aunque a veces también de la arqueología, para la correcta recuperación y análisis de la evidencia forense. Aunque tradicionalmente asociada al estudio de restos humanos esqueletizados o en descomposición, la AF también contribuye a la estimación del perfil biológico en individuos vivos, especialmente en contextos legales.</p>
+<p>Tradicionalmente, los antropólogos forenses han tenido cinco principales objetivos en su trabajo <span class="citation" data-cites="byers2023">[@byers2023]</span>:</p>
+<ul>
+<li><p>Determinar el <strong>perfil biológico</strong> de un individuo (es decir, sexo, edad, estatura y ascendencia), ya sea en restos esqueletizados donde los tejidos blandos se han deteriorado hasta el punto de que estas características no pueden determinarse mediante inspección visual, o en personas vivas mediante técnicas no invasivas como análisis radiográficos o morfológicos.</p></li>
+<li><p>Identificar la naturaleza de lesiones traumáticas (como heridas de bala, puñaladas o fracturas) en huesos humanos, así como sus causantes, con el objetivo de recopilar información sobre la causa y circunstancias de la muerte.</p></li>
+<li><p>Estimar el intervalo <em>post mortem</em>, es decir, el tiempo transcurrido desde la muerte, gracias a su conocimiento sobre los procesos de descomposición corporal.</p></li>
+<li><p>Asistir en la localización, recuperación y conservación de los restos (superficiales o enterrados) aplicando técnicas arqueológicas, garantizando la recolección de toda la evidencia forense relevante.</p></li>
+<li><p>Proporcionar información clave para la <strong>identificación</strong> de los fallecidos, basándose en las características distintivas de los esqueletos.</p></li>
+</ul>
+<p>Además de estos roles, en la actualidad los antropólogos desempeñan otros trabajos que no están relacionados con el ámbito criminalístico. Entre ellos, uno de sus campos de acción más relevantes es la <strong>identificación de víctimas en contextos de catástrofes masivas</strong> <span class="citation" data-cites="deBoer2019 prinz2007 beauthier2009">[@deBoer2019;@prinz2007;@beauthier2009]</span>, como accidentes aéreos, ataques terroristas o desastres naturales, donde los restos suelen estar mutilados o desfigurados.</p>
+<p>Su labor también es fundamental en la <strong>recuperación e identificación de violaciones sistemáticas de derechos humanos</strong>, como exterminios, persecuciones políticas y represiones dictatoriales <span class="citation" data-cites="skinner2003">[@skinner2003]</span>. Casos como la Guerra Civil Española y la Dictadura Franquista <span class="citation" data-cites="sanchisgimeno2024">[@sanchisgimeno2024, @baeta2015]</span>, así como las múltiples dictaduras en el Cono Sur de América <span class="citation" data-cites="ataliva2024">[@ataliva2024]</span>, han requerido la intervención de equipos forenses para esclarecer la verdad histórica y restituir la identidad de las víctimas a sus familiares, contribuyendo al proceso de memoria, justicia y reparación para las familias afectadas. Esta vinculación con la justicia trasciende lo nacional: la ciencia forense es clave en la <strong>investigación de crímenes de guerra contra poblaciones civiles</strong>. Organizaciones como Médicos por los Derechos Humanos y la ONU financian equipos especializados que documentan estos crímenes, proporcionando pruebas esenciales para tribunales internacionales <span class="citation" data-cites="tanaka2020">[@tanaka2020]</span>.</p>
+<p>Y por último, también son fundamentales para <strong>estimar la edad de personas vivas en casos legales</strong>, especialmente cuando no existen registros confiables. Esto ocurre, por ejemplo, en casos de solicitudes de asilo, adopciones internacionales o procesos judiciales donde es necesario determinar si una persona es menor o mayor de edad, lo cual puede tener importantes implicaciones legales. Según el tipo de procedimiento, se puede requerir tanto la estimación de la edad mínima como la edad más probable del individuo, con el fin de priorizar la protección de los menores, evitando que queden expuestos a violaciones de sus derechos.</p>
+<section id="identificación-humana-y-estimación-del-perfil-biológico" class="level3">
+<h3 class="anchored" data-anchor-id="identificación-humana-y-estimación-del-perfil-biológico">Identificación humana y estimación del perfil biológico</h3>
+<p>Como hemos visto, la <strong>identificación humana (ID)</strong> es una de las principales tareas que aborda la AF. Consiste en la determinación y verificación de la identidad de una persona en base a <span class="citation" data-cites="thompson2006">[@thompson2006]</span>: evidencias circunstanciales (hora y lugar del descubrimiento del cuerpo, efectos personales, confirmación visual por parte de familiares y amigos); y evidencias físicas, obtenidas a través de examinación externa de características como el sexo, color de piel, tatuajes, o huellas dactilares, o, cuando estas no estén disponibles, mediante examinación interna con técnicas médico-científicas, donde se aplican técnicas de antropología y genética forense.</p>
+<p>Cabe destacar que, aunque los análisis dactilares y genéticos superan en precisión identificativa a los métodos antropológicos, su aplicabilidad enfrenta limitaciones técnicas significativas que condicionan su uso en ciertos contextos forenses <span class="citation" data-cites="beauthier2009">[@beauthier2009]</span>. Las huellas dactilares requieren de: tejido blando preservado, lo que es común en cadáveres frescos, pero se pierde con la descomposición o la carbonización; y una base de datos que incluya la huella del individuo en vida (registros <em>ante mortem</em>). Por otro lado, en cuanto al análisis genético, este puede verse comprometido por una mala conservación del ADN que puede deberse a su degradación o contaminación. La concentración presente en un cadáver se reduce drásticamente en los primeros 8 meses <em>post mortem</em> <span class="citation" data-cites="higgins2015">[@higgins2015]</span>, y factores como las altas temperaturas, la exposición a humedad ambiental o la presencia de aguas subterráneas y entornos ricos en oxígeno, que fomentan la presencia microbiana, perjudican la conservación del ADN <span class="citation" data-cites="latham2018">[@latham2018]</span>. Y, aún extraída una secuencia válida de ADN, se necesita de muestras con las que compararla, a ser posible de familiares de primer grado, para establecer una identificación concluyente.</p>
+<p>Por tanto, la AF contribuye al problema de identificación humana en dos escenarios <span class="citation" data-cites="swganth2010">[@swganth2010]</span>:</p>
+<ul>
+<li><p>Cuando los otros métodos no son viables, dado que las pruebas no se puedan recoger o no sean válidas, o no haya registros con los que compararlas.</p></li>
+<li><p>Como apoyo a otras técnicas de identificación. Por ejemplo, las técnicas de estimación del perfil biológico pueden reducir el grupo de posibles coincidencias en bases de datos genéticos, facilitando el cotejo de secuencias genéticas y reduciendo el coste del proceso.</p></li>
+</ul>
+<p>La <strong>estimación del PB</strong> es, por tanto, un proceso fundamental de la AF, en el cual se determinan características biológicas clave de un individuo <span class="citation" data-cites="byers2023">[@byers2023]</span>:</p>
+<ul>
+<li><p><strong>sexo</strong>, mediante el análisis morfológico y métrico de rasgos sexuales en el esqueleto, especialmente en la pelvis y el cráneo;</p></li>
+<li><p><strong>edad</strong>, estimada a partir de cambios morfológicos y de desarrollo en el esqueleto, pudiendo referirse tanto a la <strong>edad al momento de la muerte</strong> en restos óseos, como a la <strong>edad cronológica</strong> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> en personas vivas en contextos forenses o humanitarios;</p></li>
+</ul>
+<ul>
+<li><p><strong>estatura</strong>, mediante la estimación de la talla a partir de longitudes óseas, particularmente de los huesos largos; y</p></li>
+<li><p><strong>ascendencia o afinidad poblacional</strong>, analizando variaciones craneométricas y morfológicas asociadas a poblaciones o grupos geográficos (actualmente en revisión <span class="citation" data-cites="ross2021a ross2021b flouri2022">[@ross2021a;@ross2021b;@flouri2022]</span>).</p></li>
+</ul>
+<p>En los problemas de ID, cuando estas características biológicas coinciden con los registros <em>ante mortem</em>, se fortalece la hipótesis de identificación; en cambio, si existen una o más discrepancias —especialmente de alguna característica firme como múltiples epífisis no fusionadas, que no pueden ocurrir en un adulto mayor—, el individuo es excluido como posible coincidencia <span class="citation" data-cites="byers2023">[@byers2023]</span>. En la <a href="#fig-SFI_pipeline" class="quarto-xref">Figura&nbsp;1</a> podemos observar que la estimación del PB es uno de los primeros pasos en el proceso de ID forense.</p>
+<div id="fig-SFI_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-SFI_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap1/SFI_pipeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Procedimiento secuencial para la identificación forense basada en el esqueleto humano (skeleton-based forensic identification) @mesejo2020."><img src="capitulos/images/cap1/SFI_pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SFI_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Procedimiento secuencial para la identificación forense basada en el esqueleto humano (<em>skeleton-based forensic identification</em>) <span class="citation" data-cites="mesejo2020">@mesejo2020</span>.
+</figcaption>
+</figure>
+</div>
+<p>La estimación del PB en restos humanos es una tarea compleja, especialmente cuando se estima la edad en el momento de la muerte, ya que hay diferentes métodos a aplicar dependiendo de la fase de desarrollo del individuo. Las variaciones en la morfología de los huesos son bien conocidas, pero estas no siempre ocurren al mismo tiempo en diferentes individuos, ya que no están expuestos a las mismos condiciones genéticas y del entorno.</p>
+<p>Además, como se ha mencionado anteriormente, la estimación de edad también se realiza sobre personas vivas en casos legales donde la edad es un factor determinante <span class="citation" data-cites="schmeling2016">[@schmeling2016]</span>, por ejemplo, con menores migrantes no acompañados. En estos casos no se tiene acceso a los huesos de la persona de forma directa, por lo que el análisis se realiza sobre imágenes médicas.</p>
+</section>
+</section>
+<section id="motivación" class="level2">
+<h2 class="anchored" data-anchor-id="motivación">Motivación</h2>
+<p>Los métodos de estimación del PB se basan en la evaluación visual y en el análisis morfométrico de rasgos esqueléticos, que requieren de conocimiento especializado. Sin embargo, su aplicación puede presentar ambigüedades en su formulación que den lugar a interpretaciones variables —muchas veces fruto de sesgos cognitivos <span class="citation" data-cites="nakhaeizadeh2014 cooper2019">[@nakhaeizadeh2014; @cooper2019]</span>— y están sujetos a posibles errores de medición <span class="citation" data-cites="langley2018">[@langley2018]</span>. Además, la gran variabilidad genética y ambiental entre individuos, que afecta la morfología del esqueleto y genera diferencias significativas entre poblaciones de distintas regiones <span class="citation" data-cites="ubelaker2017">[@ubelaker2017]</span>, hace que muchos de estos métodos —basados en muestras de referencia limitadas o no representativas de la diversidad humana global— pierdan precisión. Esto puede introducir sesgos al estimar el PB de individuos de grupos poco estudiados o con características atípicas.</p>
+<p>Frente a estas limitaciones, recientes avances en IA y ML han demostrado el potencial de mejorar la exactitud y objetividad de estimación del PB, tanto para la estimación de sexo <span class="citation" data-cites="curate2017 darmawan2015 pinto2016 venema2022 park2024">[@curate2017;@darmawan2015;@pinto2016;@venema2022;@park2024]</span> como de edad <span class="citation" data-cites="kim2017 larson2018 lee2017 imaizumi2021 stepanovsky2024 park2024">[@kim2017;@larson2018;@lee2017;@imaizumi2021;@stepanovsky2024;@park2024]</span>. Sin embargo, aún mejorando la exactitud de las predicciones, la variabilidad biológica inherente al desarrollo esquelético humano continúa representando un desafío para la interpretación de estas. No todas las predicciones tienen el mismo nivel de confianza o fiabilidad, y los modelos no incluyen información sobre esta incertidumbre en sus predicciones. Ya en <span class="citation" data-cites="ferrante2009">[@ferrante2009]</span> se introducía no solo la necesidad de identificar el método adecuado para estimar la edad a partir de los elementos disponibles, sino también de evaluar su confiabilidad.</p>
+<ul>
+<li>En los últimos años, ha aumentado significativamente el número de cadáveres hallados en el territorio español, como podemos apreciar en la <a href="#fig-evolucion_hallazgosID_cadaveres" class="quarto-xref">Figura&nbsp;2</a>. En 2024 se ha alcanzado una cifra record, —en gran parte debido a las inundaciones de la DANA Valencia del mismo año—, de 531 cadáveres en 2024, de los cuales se pudo identificar a 323.</li>
+</ul>
+<div id="fig-evolucion_hallazgosID_cadaveres" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-evolucion_hallazgosID_cadaveres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap1/hallazgos_cadaveres.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Evolución de hallazgos/identificación de cadáveres en España (2010-2024) @interior2025desaparecidos."><img src="capitulos/images/cap1/hallazgos_cadaveres.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-evolucion_hallazgosID_cadaveres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Evolución de hallazgos/identificación de cadáveres en España (2010-2024) <span class="citation" data-cites="interior2025desaparecidos">@interior2025desaparecidos</span>.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>En 2020, de las 2.457 fosas totales documentadas de la Guerra Civil y el franquismo, aún 1.221 seguían sin ser intervenidas y se estimaba que “con una intervención oficial del Estado podrían recuperarse unos 20 a 25.000 individuos” e identificar “entre 5 y 7.000 de ellos”, estimándose necesario contar con unos 40-50 profesionales de la antropología forense <span class="citation" data-cites="etxeberria2020">[@etxeberria2020]</span>.</p></li>
+<li><p>En España, se ha registrado en la última década (2013-2023) un aumento significativo en la llegada de Menores Extranjeros No Acompañados <span class="citation" data-cites="fge2024 fge2019 fge2016 fge2013">[@fge2024;@fge2019;@fge2016;@fge2013]</span>, que ha disparado consigo el número de diligencias abiertas para la determinación de su edad, como se ve reflejado en la <a href="#fig-evolucion_DPDE" class="quarto-xref">Figura&nbsp;3</a>.</p></li>
+</ul>
+<div id="fig-evolucion_DPDE" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-evolucion_DPDE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap1/dpde_España.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;3: Evolución del número de diligencias preprocesales de determinación de edad abiertas en España (2011-2023). Elaboración propia a partir de [@fge2013; @fge2016; @fge2019; @fge2024]."><img src="capitulos/images/cap1/dpde_España.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-evolucion_DPDE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Evolución del número de diligencias preprocesales de determinación de edad abiertas en España (2011-2023). Elaboración propia a partir de <span class="citation" data-cites="fge2013 fge2016 fge2019 fge2024">[@fge2013; @fge2016; @fge2019; @fge2024]</span>.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>La relevancia de la ciencia forense en la identificación de víctimas y la protección de la dignidad humana ha convertido su aplicación en un pilar fundamental de los derechos humanos y la justicia internacional, naciendo así la <strong>acción forense humanitaria</strong> <span class="citation" data-cites="cordner2017">[@cordner2017]</span>. Esta disciplina emplea la ciencia forense con un propósito exclusivamente humanitario, con los objetivos de: identificar a las personas fallecidas, gestionar dignamente sus restos y aliviar el sufrimiento de sus familias en situaciones de conflicto, migración y desastres naturales <span class="citation" data-cites="tidballbinz2021">[@tidballbinz2021]</span>.</li>
+</ul>
+</section>
+<section id="objetivos" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos">Objetivos</h2>
+<p>La <strong>predicción conformal</strong> emerge como un marco teórico robusto para generar intervalos de predicción con garantías estadísticas sólidas, independientemente de la distribución subyacente de los datos. A diferencia de los enfoques tradicionales, este método no solo ofrece predicciones puntuales sino que cuantifica la incertidumbre asociada a cada estimación mediante intervalos o conjuntos de predicción que reflejan la confiabilidad de la predicción.</p>
+<p>Este Trabajo de Fin de Grado tiene un doble objetivo:</p>
+<ul>
+<li><p>Defender la cuantificación de incertidumbre como herramienta esencial en ML, ofrecer un panorama de métodos destacados, analizando superficialmente sus ventajas y limitaciones, y centrarnos en la predicción conformal y sus técnicas más populares.</p></li>
+<li><p>Aplicar la predicción conformal a un contexto práctico como es el problema de estimación del PB, centrándose en la estimación de edad y de sexo a partir de datos biológicos e imágenes médicas. De esta forma, podremos incorporar la incertidumbre propia del problema a resolver y del modelo entrenado para él, para, en aquellos casos más confusos, devolver conjuntos de predicciones con más de una etiqueta predicha (p.ej., {masculino, femenino}) en problemas de clasificación, o intervalos de predicción más amplios (p.ej., edad<span class="math inline">\(\in\)</span>[16,20]) en problemas de regresión, en ambos casos para un nivel de confianza determinado.</p>
+<p>Podemos dividir este objetivo a su vez en los siguientes:</p>
+<ul>
+<li><p>Estudiar de forma exhaustiva la bibliografía sobre predicción conformal y algunas de sus técnicas, así como de la estimación de sexo y edad.</p></li>
+<li><p>Implementar, entrenar y validar modelos de regresión —en problemas de estimación de edad— y clasificación —tanto en problema de estimación de sexo como edad legal— a los que aplicar la inferencia conformal, y comparar aproximaciones heurísticas de cuantificación de incertidumbre con los métodos conformales.</p></li>
+<li><p>Realizar una primera aproximación a un marco interpretable y con garantías estadísticas para la estimación del perfil biológico (véase un ejemplo práctico en la <a href="#fig-example_intervalic_estimation" class="quarto-xref">Figura&nbsp;4</a>), donde la incertidumbre cuantificada pueda integrarse en informes periciales bajo estándares jurídicos.</p></li>
+</ul></li>
+</ul>
+<div id="fig-example_intervalic_estimation" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-example_intervalic_estimation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="capitulos/images/cap1/example_intervalic_estimation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figura&nbsp;4: Diagrama de modelo de regresión que usa predicción conformal, el cual, además de proporcionar una estimación puntual del valor esperado, entrega un intervalo de predicción con un nivel de confianza del 95%. Esta salida se lee de la siguiente manera: “la edad esperada del individuo es de 16.1 años y, con una confianza del 95%, la edad real del individuo está entre los 14.3 y los 17.6 años”."><img src="capitulos/images/cap1/example_intervalic_estimation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example_intervalic_estimation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Diagrama de modelo de regresión que usa predicción conformal, el cual, además de proporcionar una estimación puntual del valor esperado, entrega un intervalo de predicción con un nivel de confianza del 95%. Esta salida se lee de la siguiente manera: “la edad esperada del individuo es de 16.1 años y, con una confianza del 95%, la edad real del individuo está entre los 14.3 y los 17.6 años”.
+</figcaption>
+</figure>
+</div>
+<p>En resumen, este trabajo pretende explorar la integración de marcos probabilísticos en la práctica forense que capturen la incertidumbre de los problemas, y facilitar el uso de la inferencia conformal en ellos. Este enfoque proporciona estimaciones calibradas de incertidumbre, con garantías estadísticas de contener el valor real en un conjunto o intervalo de predicción, útiles para la toma de decisiones fundamentadas en contextos prácticos donde la interpretabilidad y robustez son críticas.</p>
+
+
+</section>
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas</h2>
+
+<ol>
+<li id="fn1"><p>La edad cronológica es la edad real de una persona desde su nacimiento, mientras que la edad biológica o fisiológica refleja la condición fisiológica del cuerpo <span class="citation" data-cites="marcante2025">[@marcante2025]</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/esdavide2910\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Powered by <a href="https://quarto.org" target="_blank" rel="noopener noreferrer"><iconify-icon role="img" inline="" icon="simple-icons:quarto" aria-label="Quarto Logo" title="Quarto Logo"></iconify-icon> Quarto</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+<p>© 2026 <a href="https://esdavide2910.github.io/" target="_blank" rel="noopener noreferrer">David González Durán</a>.</p>
+</div>
+    <div class="nav-footer-right">
+<p>License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>.</p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

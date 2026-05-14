@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="David González Durán">
 
 <title>Mi Proyecto de Fin de Grado</title>
 <style>
@@ -65,9 +66,9 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f6ea444ce597183e9b82980c8ada37ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-fc3a022fbf2e655aeee8d24b739db249.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-f6ea444ce597183e9b82980c8ada37ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-2d10c02ca905c6cd853c78f86e73ee56.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-20b8d368be5620f07cb3e10ba4e56d20.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-2d10c02ca905c6cd853c78f86e73ee56.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
@@ -378,8 +379,9 @@ window.Quarto = {
   <li><a href="#estimación-de-la-edad-en-antropología-forense-usando-machine-learning" id="toc-estimación-de-la-edad-en-antropología-forense-usando-machine-learning" class="nav-link" data-scroll-target="#estimación-de-la-edad-en-antropología-forense-usando-machine-learning"><span class="header-section-number">3.2</span> Estimación de la edad en antropología forense usando <em>machine learning</em></a></li>
   <li><a href="#cuantificación-de-la-incertidumbre-para-la-estimación-de-la-edad" id="toc-cuantificación-de-la-incertidumbre-para-la-estimación-de-la-edad" class="nav-link" data-scroll-target="#cuantificación-de-la-incertidumbre-para-la-estimación-de-la-edad"><span class="header-section-number">3.3</span> Cuantificación de la incertidumbre para la estimación de la edad</a></li>
   </ul></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="tfg-uncertainty-bp-estimation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -399,6 +401,12 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>David González Durán </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
@@ -421,18 +429,12 @@ window.Quarto = {
 </header>
 
 
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
 <section id="resumen" class="level1 unnumbered">
 <h1 class="unnumbered">Resumen</h1>
 <p>La estimación del perfil biológico es una de las principales tareas de la Antropología Forense, empleada en procesos de identificación humana y en procesos legales en los que se requiere conocer la edad de personas vivas. Durante la última década, se han logrado avances significativos en la aplicación de técnicas de Machine Learning para este propósito, con el objetivo de reducir la subjetividad y posibilitar un estudio más riguroso y controlado de las capacidades de los métodos de estimación del perfil biológico, gracias a un entorno de variables más estandarizado y medible. Sin embargo, estos modelos suelen proporcionar únicamente una predicción puntual (como una edad concreta o una probabilidad de clase), obviando por completo la cuantificación de la incertidumbre inherente a la predicción. Esta limitación es crítica en un contexto forense, donde la fiabilidad de una estimación puede variar enormemente entre casos debido a factores como la calidad de la muestra, la variabilidad biológica intrínseca del individuo o las propias limitaciones del modelo entrenado.</p>
 <p>Este trabajo propone la integración de la predicción conformal en el flujo de trabajo de estimación del perfil biológico. Este marco no se plantea como un sustituto de la predicción puntual, sino como un complemento esencial que la enriquece, generando intervalos de predicción (para regresión) y conjuntos de predicción (para clasificación) con garantías estadísticas sólidas de cobertura, válidas para cualquier distribución de los datos. Así, en lugar de simplemente afirmar que cierto individuo tiene “20 años” de edad esperada (más técnicamente conocida como edad biológica), el modelo podría también indicar una edad en el intevalo <span class="math inline">\([18, 22]\)</span> años con un 95% de confianza, o en un problema de clasificación de sexo, devolver el conjunto <span class="math inline">\(\left\{masculino, femenino\right\}\)</span> en casos ambiguos, reflejando de manera transparente y rigurosa la incertidumbre del modelo.</p>
 <p>Para demostrar su utilidad —y costes— con una aplicación práctica, se emplea un conjunto de imágenes de radiografías maxilofaciales de individuos entre los 14 y los 25 años de 12 países distintos alrededor del globo. Se utiliza un modelo de red neuronal convolucional para resolver distintos problemas que predicen edades (en regresión y clasificación) y sexo (clasificación) de los individuos a partir de estas y se aplican técnicas de predicción conformal, generando intervalos de predicción calibrados para la edad y conjuntos de etiquetas para el sexo. Los resultados se evalúan empíricamente para verificar el cumplimiento de las garantías de cobertura marginal (por ejemplo, un 95%), al tiempo que se analizan propiedades cruciales como el tamaño promedio de los intervalos o conjuntos, y la adaptatividad (la correlación entre el tamaño del conjunto/intervalo y la dificultad de la predicción en esa instancia).</p>
 <p><strong>Palabras claves:</strong> aprendizaje automático, cuantificación de incertidumbre, predicción conformal, estimación del perfil biológico, estimación de edad, antropología forense.</p>
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
 </section>
 <section id="introducción" class="level1 page-columns page-full" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introducción</h1>
@@ -449,7 +451,7 @@ window.Quarto = {
 </ul>
 <p>Además de estos roles, en la actualidad los antropólogos desempeñan otros trabajos que no están relacionados con el ámbito criminalístico. Entre ellos, uno de sus campos de acción más relevantes es la <strong>identificación de víctimas en contextos de catástrofes masivas</strong> <span class="citation" data-cites="deBoer2019 prinz2007 beauthier2009">[<a href="#ref-deBoer2019" role="doc-biblioref">4</a>–<a href="#ref-beauthier2009" role="doc-biblioref">6</a>]</span>, como accidentes aéreos, ataques terroristas o desastres naturales, donde los restos suelen estar mutilados o desfigurados.</p>
 <p>Su labor también es fundamental en la <strong>recuperación e identificación de violaciones sistemáticas de derechos humanos</strong>, como exterminios, persecuciones políticas y represiones dictatoriales <span class="citation" data-cites="skinner2003">[<a href="#ref-skinner2003" role="doc-biblioref">7</a>]</span>. Casos como la Guerra Civil Española y la Dictadura Franquista <span class="citation" data-cites="sanchisgimeno2024">[<a href="#ref-baeta2015" role="doc-biblioref">9</a>]</span>, así como las múltiples dictaduras en el Cono Sur de América <span class="citation" data-cites="ataliva2024">[<a href="#ref-ataliva2024" role="doc-biblioref">10</a>]</span>, han requerido la intervención de equipos forenses para esclarecer la verdad histórica y restituir la identidad de las víctimas a sus familiares, contribuyendo al proceso de memoria, justicia y reparación para las familias afectadas. Esta vinculación con la justicia trasciende lo nacional: la ciencia forense es clave en la <strong>investigación de crímenes de guerra contra poblaciones civiles</strong>. Organizaciones como Médicos por los Derechos Humanos y la ONU financian equipos especializados que documentan estos crímenes, proporcionando pruebas esenciales para tribunales internacionales <span class="citation" data-cites="tanaka2020">[<a href="#ref-tanaka2020" role="doc-biblioref">11</a>]</span>.</p>
-<p>Y por último, también son fundamentales para <strong>estimar la edad de personas vivas en casos legales</strong>, especialmente cuando no existen registros confiables. Esto ocurre, por ejemplo, en casos de solicitudes de asilo, adopciones internacionales o procesos judiciales donde es necesario determinar si una persona es menor o mayor de edad, lo cual puede tener importantes implicaciones legales. Según el tipo de procedimiento, se puede requerir tanto la estimación de la edad mínima como la edad más probable del individuo, con el fin de priorizar la protección de los menores, evitando que queden expuestos a violaciones de sus derechos. <!-- [@deBoer2019;@beauthier2009;@skinner2003;@sanchisgimeno2024] --></p>
+<p>Y por último, también son fundamentales para <strong>estimar la edad de personas vivas en casos legales</strong>, especialmente cuando no existen registros confiables. Esto ocurre, por ejemplo, en casos de solicitudes de asilo, adopciones internacionales o procesos judiciales donde es necesario determinar si una persona es menor o mayor de edad, lo cual puede tener importantes implicaciones legales. Según el tipo de procedimiento, se puede requerir tanto la estimación de la edad mínima como la edad más probable del individuo, con el fin de priorizar la protección de los menores, evitando que queden expuestos a violaciones de sus derechos.</p>
 <section id="identificación-humana-y-estimación-del-perfil-biológico" class="level3 page-columns page-full" data-number="1.1.1">
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="identificación-humana-y-estimación-del-perfil-biológico"><span class="header-section-number">1.1.1</span> Identificación humana y estimación del perfil biológico</h3>
 <p>Como hemos visto, la <strong>identificación humana (ID)</strong> es una de las principales tareas que aborda la AF. Consiste en la determinación y verificación de la identidad de una persona en base a <span class="citation" data-cites="thompson2006">[<a href="#ref-thompson2006" role="doc-biblioref">12</a>]</span>: evidencias circunstanciales (hora y lugar del descubrimiento del cuerpo, efectos personales, confirmación visual por parte de familiares y amigos); y evidencias físicas, obtenidas a través de examinación externa de características como el sexo, color de piel, tatuajes, o huellas dactilares, o, cuando estas no estén disponibles, mediante examinación interna con técnicas médico-científicas, donde se aplican técnicas de antropología y genética forense.</p>
@@ -472,7 +474,7 @@ window.Quarto = {
 <div id="fig-SFI_pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SFI_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap1/SFI_pipeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Procedimiento secuencial para la identificación forense basada en el esqueleto humano (skeleton-based forensic identification) @mesejo2020."><img src="resources/cap1/SFI_pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap1/SFI_pipeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Procedimiento secuencial para la identificación forense basada en el esqueleto humano (skeleton-based forensic identification) @mesejo2020."><img src="capitulos/images/cap1/SFI_pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SFI_pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Procedimiento secuencial para la identificación forense basada en el esqueleto humano (<em>skeleton-based forensic identification</em>) <span class="citation" data-cites="mesejo2020">[<a href="#ref-mesejo2020" role="doc-biblioref">20</a>]</span>.
@@ -493,7 +495,7 @@ Figura&nbsp;1: Procedimiento secuencial para la identificación forense basada e
 <div id="fig-evolucion_hallazgosID_cadaveres" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-evolucion_hallazgosID_cadaveres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap1/hallazgos_cadaveres.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Evolución de hallazgos/identificación de cadáveres en España (2010-2024) @interior2025desaparecidos."><img src="resources/cap1/hallazgos_cadaveres.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap1/hallazgos_cadaveres.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figura&nbsp;2: Evolución de hallazgos/identificación de cadáveres en España (2010-2024) @interior2025desaparecidos."><img src="capitulos/images/cap1/hallazgos_cadaveres.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-evolucion_hallazgosID_cadaveres-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2: Evolución de hallazgos/identificación de cadáveres en España (2010-2024) <span class="citation" data-cites="interior2025desaparecidos">[<a href="#ref-interior2025desaparecidos" role="doc-biblioref">37</a>]</span>.
@@ -507,7 +509,7 @@ Figura&nbsp;2: Evolución de hallazgos/identificación de cadáveres en España 
 <div id="fig-evolucion_DPDE" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-evolucion_DPDE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap1/dpde_España.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;3: Evolución del número de diligencias preprocesales de determinación de edad abiertas en España (2011-2023). Elaboración propia a partir de [@fge2013; @fge2016; @fge2019; @fge2024]."><img src="resources/cap1/dpde_España.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap1/dpde_España.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figura&nbsp;3: Evolución del número de diligencias preprocesales de determinación de edad abiertas en España (2011-2023). Elaboración propia a partir de [@fge2013; @fge2016; @fge2019; @fge2024]."><img src="capitulos/images/cap1/dpde_España.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-evolucion_DPDE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;3: Evolución del número de diligencias preprocesales de determinación de edad abiertas en España (2011-2023). Elaboración propia a partir de <span class="citation" data-cites="fge2013 fge2016 fge2019 fge2024">[<a href="#ref-fge2024" role="doc-biblioref">39</a>–<a href="#ref-fge2013" role="doc-biblioref">42</a>]</span>.
@@ -535,7 +537,7 @@ Figura&nbsp;3: Evolución del número de diligencias preprocesales de determinac
 <div id="fig-example_intervalic_estimation" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-example_intervalic_estimation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap1/example_intervalic_estimation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figura&nbsp;4: Diagrama de modelo de regresión que usa predicción conformal, el cual, además de proporcionar una estimación puntual del valor esperado, entrega un intervalo de predicción con un nivel de confianza del 95%. Esta salida se lee de la siguiente manera: “la edad esperada del individuo es de 16.1 años y, con una confianza del 95%, la edad real del individuo está entre los 14.3 y los 17.6 años”."><img src="resources/cap1/example_intervalic_estimation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap1/example_intervalic_estimation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figura&nbsp;4: Diagrama de modelo de regresión que usa predicción conformal, el cual, además de proporcionar una estimación puntual del valor esperado, entrega un intervalo de predicción con un nivel de confianza del 95%. Esta salida se lee de la siguiente manera: “la edad esperada del individuo es de 16.1 años y, con una confianza del 95%, la edad real del individuo está entre los 14.3 y los 17.6 años”."><img src="capitulos/images/cap1/example_intervalic_estimation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example_intervalic_estimation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4: Diagrama de modelo de regresión que usa predicción conformal, el cual, además de proporcionar una estimación puntual del valor esperado, entrega un intervalo de predicción con un nivel de confianza del 95%. Esta salida se lee de la siguiente manera: “la edad esperada del individuo es de 16.1 años y, con una confianza del 95%, la edad real del individuo está entre los 14.3 y los 17.6 años”.
@@ -543,9 +545,6 @@ Figura&nbsp;4: Diagrama de modelo de regresión que usa predicción conformal, e
 </figure>
 </div>
 <p>En resumen, este trabajo pretende explorar la integración de marcos probabilísticos en la práctica forense que capturen la incertidumbre de los problemas, y facilitar el uso de la inferencia conformal en ellos. Este enfoque proporciona estimaciones calibradas de incertidumbre, con garantías estadísticas de contener el valor real en un conjunto o intervalo de predicción, útiles para la toma de decisiones fundamentadas en contextos prácticos donde la interpretabilidad y robustez son críticas.</p>
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
 </section>
 </section>
 <section id="fundamentos-teóricos" class="level1 page-columns page-full" data-number="2">
@@ -616,7 +615,7 @@ y = f \left( \sum_{i=1}^n{w_ix_i+b} \right)
 <div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;El sesgo se considera un peso, puesto que, en la implementación, es un peso más conectado a una unidad de sesgo con valor constante unitario (1).</p></div></div><div id="fig-neuron_MLP" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-neuron_MLP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/Neuron_perceptron.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figura&nbsp;5: Esquema gráfico del funcionamiento de una unidad artificial de un perceptrón multicapa. Adaptado de [@codeworld2022understandingMLDL]."><img src="resources/cap2/Neuron_perceptron.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap2/Neuron_perceptron.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figura&nbsp;5: Esquema gráfico del funcionamiento de una unidad artificial de un perceptrón multicapa. Adaptado de [@codeworld2022understandingMLDL]."><img src="capitulos/images/cap2/Neuron_perceptron.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-neuron_MLP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5: Esquema gráfico del funcionamiento de una unidad artificial de un perceptrón multicapa. Adaptado de <span class="citation" data-cites="codeworld2022understandingMLDL">[<a href="#ref-codeworld2022understandingMLDL" role="doc-biblioref">59</a>]</span>.
@@ -636,7 +635,7 @@ Figura&nbsp;5: Esquema gráfico del funcionamiento de una unidad artificial de u
 <div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;La activación <em>softmax</em> no se aplica sobre la salida de una única unidad, sino que se aplica sobre un vector de salidas de múltiples unidades, transformándolas en una distribución de probabilidad, donde cada valor representa la probabilidad de pertenecer a una clase distinta y la suma de todas las salidas es igual a 1.</p></div></div><div id="fig-neural_network" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-neural_network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/neural_network.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figura&nbsp;6: Arquitectura simplificada de un MLP. Recuperado de [@bre2017]."><img src="resources/cap2/neural_network.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap2/neural_network.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figura&nbsp;6: Arquitectura simplificada de un MLP. Recuperado de [@bre2017]."><img src="capitulos/images/cap2/neural_network.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-neural_network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;6: Arquitectura simplificada de un MLP. Recuperado de <span class="citation" data-cites="bre2017">[<a href="#ref-bre2017" role="doc-biblioref">61</a>]</span>.
@@ -646,7 +645,7 @@ Figura&nbsp;6: Arquitectura simplificada de un MLP. Recuperado de <span class="c
 <div id="fig-activation_func_classification" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-activation_func_classification-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/ActivationFuncClassification.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figura&nbsp;7: Esquema gráfico del funcionamiento de una unidad artificial de un perceptrón multicapa. Adaptado de [@codeworld2022understandingMLDL]."><img src="resources/cap2/ActivationFuncClassification.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap2/ActivationFuncClassification.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figura&nbsp;7: Esquema gráfico del funcionamiento de una unidad artificial de un perceptrón multicapa. Adaptado de [@codeworld2022understandingMLDL]."><img src="capitulos/images/cap2/ActivationFuncClassification.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-activation_func_classification-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7: Esquema gráfico del funcionamiento de una unidad artificial de un perceptrón multicapa. Adaptado de <span class="citation" data-cites="codeworld2022understandingMLDL">[<a href="#ref-codeworld2022understandingMLDL" role="doc-biblioref">59</a>]</span>.
@@ -699,7 +698,7 @@ Figura&nbsp;7: Esquema gráfico del funcionamiento de una unidad artificial de u
 <div id="fig-conv_op" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-conv_op-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/convolution_operation.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figura&nbsp;8: Esquema gráfico de la aplicación de un filtro convolucional de 3×3 sobre una región de una imagen. Adaptado de [@nvidia2025convolutionoperation]."><img src="resources/cap2/convolution_operation.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap2/convolution_operation.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figura&nbsp;8: Esquema gráfico de la aplicación de un filtro convolucional de 3×3 sobre una región de una imagen. Adaptado de [@nvidia2025convolutionoperation]."><img src="capitulos/images/cap2/convolution_operation.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-conv_op-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;8: Esquema gráfico de la aplicación de un filtro convolucional de 3×3 sobre una región de una imagen. Adaptado de <span class="citation" data-cites="nvidia2025convolutionoperation">[<a href="#ref-nvidia2025convolutionoperation" role="doc-biblioref">66</a>]</span>.
@@ -722,7 +721,7 @@ Figura&nbsp;8: Esquema gráfico de la aplicación de un filtro convolucional de 
 <div id="fig-max_pooling" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-max_pooling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/max_pooling.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figura&nbsp;9: Esquema gráfico de aplicación de max pooling con un filtro 2×2 y stride de 1. Recuperado de la Figura 14.12 de [@murphy2022]."><img src="resources/cap2/max_pooling.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap2/max_pooling.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figura&nbsp;9: Esquema gráfico de aplicación de max pooling con un filtro 2×2 y stride de 1. Recuperado de la Figura 14.12 de [@murphy2022]."><img src="capitulos/images/cap2/max_pooling.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-max_pooling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;9: Esquema gráfico de aplicación de <em>max pooling</em> con un filtro 2×2 y <em>stride</em> de 1. Recuperado de la Figura 14.12 de <span class="citation" data-cites="murphy2022">[<a href="#ref-murphy2022" role="doc-biblioref">58</a>]</span>.
@@ -741,7 +740,7 @@ Figura&nbsp;9: Esquema gráfico de aplicación de <em>max pooling</em> con un fi
 <div id="fig-stride_example" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-stride_example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/Example-of-a-square-image-convolution-with-zero-padding-While-training-a-CNN-there-are.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figura&nbsp;10: Esquema gráfico de aplicación de un filtro convolucional de 3x3 con zero-padding de 1 y stride de 2. Recuperado de la Figura 3 de [@kiourt2020deep].El zero-padding consiste en agregar filas y columnas de ceros alrededor de la imagen, de forma que los bordes puedan ser procesados por el filtro sin reducir excesivamente el tamaño del feature map resultante. Esto permite que la convolución considere todas las regiones de la imagen, incluyendo los bordes, y facilita la preservación de la información espacial. Con un stride de 2, el filtro se desplaza de dos en dos píxeles, realizando simultáneamente la extracción de características y el subsampling, lo que genera una reducción controlada del tamaño de salida."><img src="resources/cap2/Example-of-a-square-image-convolution-with-zero-padding-While-training-a-CNN-there-are.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap2/Example-of-a-square-image-convolution-with-zero-padding-While-training-a-CNN-there-are.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figura&nbsp;10: Esquema gráfico de aplicación de un filtro convolucional de 3x3 con zero-padding de 1 y stride de 2. Recuperado de la Figura 3 de [@kiourt2020deep].El zero-padding consiste en agregar filas y columnas de ceros alrededor de la imagen, de forma que los bordes puedan ser procesados por el filtro sin reducir excesivamente el tamaño del feature map resultante. Esto permite que la convolución considere todas las regiones de la imagen, incluyendo los bordes, y facilita la preservación de la información espacial. Con un stride de 2, el filtro se desplaza de dos en dos píxeles, realizando simultáneamente la extracción de características y el subsampling, lo que genera una reducción controlada del tamaño de salida."><img src="capitulos/images/cap2/Example-of-a-square-image-convolution-with-zero-padding-While-training-a-CNN-there-are.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stride_example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;10: Esquema gráfico de aplicación de un filtro convolucional de 3x3 con <em>zero-padding</em> de 1 y <em>stride</em> de 2. Recuperado de la Figura 3 de <span class="citation" data-cites="kiourt2020deep">[<a href="#ref-kiourt2020deep" role="doc-biblioref">67</a>]</span>.El <em>zero-padding</em> consiste en agregar filas y columnas de ceros alrededor de la imagen, de forma que los bordes puedan ser procesados por el filtro sin reducir excesivamente el tamaño del <em>feature map</em> resultante. Esto permite que la convolución considere todas las regiones de la imagen, incluyendo los bordes, y facilita la preservación de la información espacial. Con un <em>stride</em> de 2, el filtro se desplaza de dos en dos píxeles, realizando simultáneamente la extracción de características y el <em>subsampling</em>, lo que genera una reducción controlada del tamaño de salida.
@@ -765,7 +764,7 @@ Figura&nbsp;10: Esquema gráfico de aplicación de un filtro convolucional de 3x
 <div id="fig-CNN_complete" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-CNN_complete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/CNN_complete.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figura&nbsp;11: Diagrama de la arquitectura de la red neuronal convolucional “AlexNet”, diseñada para resolver un problema de clasificación con 1000 clases. Recuperado de la Figura 5.39 de [@szeliski2010]. Esta arquitectura presenta una serie de capas convolucionales con funciones de activación no lineales ReLU y max pooling, que formarían el backbone y una serie de capas FC (classifier), con una capa final softmax, que alimenta una función de pérdida de entropía cruzada multiclase."><img src="resources/cap2/CNN_complete.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap2/CNN_complete.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figura&nbsp;11: Diagrama de la arquitectura de la red neuronal convolucional “AlexNet”, diseñada para resolver un problema de clasificación con 1000 clases. Recuperado de la Figura 5.39 de [@szeliski2010]. Esta arquitectura presenta una serie de capas convolucionales con funciones de activación no lineales ReLU y max pooling, que formarían el backbone y una serie de capas FC (classifier), con una capa final softmax, que alimenta una función de pérdida de entropía cruzada multiclase."><img src="capitulos/images/cap2/CNN_complete.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CNN_complete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11: Diagrama de la arquitectura de la red neuronal convolucional “AlexNet”, diseñada para resolver un problema de clasificación con 1000 clases. Recuperado de la Figura 5.39 de <span class="citation" data-cites="szeliski2010">[<a href="#ref-szeliski2010" role="doc-biblioref">62</a>]</span>. Esta arquitectura presenta una serie de capas convolucionales con funciones de activación no lineales ReLU y <em>max pooling</em>, que formarían el <em>backbone</em> y una serie de capas FC (<em>classifier</em>), con una capa final <em>softmax</em>, que alimenta una función de pérdida de entropía cruzada multiclase.
@@ -790,7 +789,7 @@ Figura&nbsp;11: Diagrama de la arquitectura de la red neuronal convolucional “
 <div id="fig-net_deactivate_dropout" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-net_deactivate_dropout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/net_without_dropout.png" class="lightbox" data-gallery="fig-net_with_dropout" title="Figura&nbsp;12&nbsp;(a): Dropout desactivado"><img src="resources/cap2/net_without_dropout.png" class="img-fluid figure-img" data-ref-parent="fig-net_with_dropout"></a>
+<a href="capitulos/images/cap2/net_without_dropout.png" class="lightbox" data-gallery="fig-net_with_dropout" title="Figura&nbsp;12&nbsp;(a): Dropout desactivado"><img src="capitulos/images/cap2/net_without_dropout.png" class="img-fluid figure-img" data-ref-parent="fig-net_with_dropout"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-net_deactivate_dropout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Dropout desactivado
@@ -802,7 +801,7 @@ Figura&nbsp;11: Diagrama de la arquitectura de la red neuronal convolucional “
 <div id="fig-net_activate_dropout" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-net_activate_dropout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/net_with_dropout.png" class="lightbox" data-gallery="fig-net_with_dropout" title="Figura&nbsp;12&nbsp;(b): Dropout activado (p=0.5)"><img src="resources/cap2/net_with_dropout.png" class="img-fluid figure-img" data-ref-parent="fig-net_with_dropout"></a>
+<a href="capitulos/images/cap2/net_with_dropout.png" class="lightbox" data-gallery="fig-net_with_dropout" title="Figura&nbsp;12&nbsp;(b): Dropout activado (p=0.5)"><img src="capitulos/images/cap2/net_with_dropout.png" class="img-fluid figure-img" data-ref-parent="fig-net_with_dropout"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-net_activate_dropout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Dropout activado (<span class="math inline">\(p=0.5\)</span>)
@@ -829,7 +828,7 @@ Figura&nbsp;12: Esquema gráfico del funcionamiento de neuronas con <em>dropout<
 <div id="fig-fine_tunning" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fine_tunning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/fine-tunning.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figura&nbsp;13: Diagrama del proceso de fine-tuning de un modelo de red neuronal en una nueva tarea.Recuperado de la Figura 19.2 de [@murphy2022]. La capa final de salida es entrenada desde cero para la nueva tarea. El resto de capas son inicializadas con los pesos previos."><img src="resources/cap2/fine-tunning.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap2/fine-tunning.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figura&nbsp;13: Diagrama del proceso de fine-tuning de un modelo de red neuronal en una nueva tarea.Recuperado de la Figura 19.2 de [@murphy2022]. La capa final de salida es entrenada desde cero para la nueva tarea. El resto de capas son inicializadas con los pesos previos."><img src="capitulos/images/cap2/fine-tunning.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fine_tunning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;13: Diagrama del proceso de <em>fine-tuning</em> de un modelo de red neuronal en una nueva tarea.Recuperado de la Figura 19.2 de <span class="citation" data-cites="murphy2022">[<a href="#ref-murphy2022" role="doc-biblioref">58</a>]</span>. La capa final de salida es entrenada desde cero para la nueva tarea. El resto de capas son inicializadas con los pesos previos.
@@ -887,7 +886,7 @@ Figura&nbsp;13: Diagrama del proceso de <em>fine-tuning</em> de un modelo de red
 <div id="fig-educational_visual" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-educational_visual-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/educational_visual.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figura&nbsp;14: Ejemplo de predicción conformal en problemas de regresión (arriba) y clasificación (abajo). Recuperado de [@mapie-docs2023]. MAPIE es una biblioteca de Python para la cuantificación de incertidumbre, principalmente con técnicas de CP."><img src="resources/cap2/educational_visual.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap2/educational_visual.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figura&nbsp;14: Ejemplo de predicción conformal en problemas de regresión (arriba) y clasificación (abajo). Recuperado de [@mapie-docs2023]. MAPIE es una biblioteca de Python para la cuantificación de incertidumbre, principalmente con técnicas de CP."><img src="capitulos/images/cap2/educational_visual.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-educational_visual-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;14: Ejemplo de predicción conformal en problemas de regresión (arriba) y clasificación (abajo). Recuperado de <span class="citation" data-cites="mapie-docs2023">[<a href="#ref-mapie-docs2023" role="doc-biblioref">97</a>]</span>. MAPIE es una biblioteca de Python para la cuantificación de incertidumbre, principalmente con técnicas de CP.
@@ -898,7 +897,7 @@ Figura&nbsp;14: Ejemplo de predicción conformal en problemas de regresión (arr
 <div id="fig-adversarial_example" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-adversarial_example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/adversarial_example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figura&nbsp;15: Ejemplo adversario mal clasificado por un modelo de ML entrenado con datos textuales. Adaptado de la Figura 2 de [@hullermeier2021], original de [@sato2018]. Se observa que el cambio de una sola palabra —y aparentemente sin mucha relevancia— (destacada en negrita) basta para cambiar la predicción de “sentimiento negativo” a “sentimiento positivo”. Con la CP se busca que predicciones no solo proporcionen una etiqueta puntual, sino un conjunto de posibles etiquetas que capture de manera robusta la incertidumbre asociada al ejemplo de entrada."><img src="resources/cap2/adversarial_example.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap2/adversarial_example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figura&nbsp;15: Ejemplo adversario mal clasificado por un modelo de ML entrenado con datos textuales. Adaptado de la Figura 2 de [@hullermeier2021], original de [@sato2018]. Se observa que el cambio de una sola palabra —y aparentemente sin mucha relevancia— (destacada en negrita) basta para cambiar la predicción de “sentimiento negativo” a “sentimiento positivo”. Con la CP se busca que predicciones no solo proporcionen una etiqueta puntual, sino un conjunto de posibles etiquetas que capture de manera robusta la incertidumbre asociada al ejemplo de entrada."><img src="capitulos/images/cap2/adversarial_example.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-adversarial_example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;15: Ejemplo adversario mal clasificado por un modelo de ML entrenado con datos textuales. Adaptado de la Figura 2 de <span class="citation" data-cites="hullermeier2021">[<a href="#ref-hullermeier2021" role="doc-biblioref">77</a>]</span>, original de <span class="citation" data-cites="sato2018">[<a href="#ref-sato2018" role="doc-biblioref">98</a>]</span>. Se observa que el cambio de una sola palabra —y aparentemente sin mucha relevancia— (destacada en negrita) basta para cambiar la predicción de “sentimiento negativo” a “sentimiento positivo”. Con la CP se busca que predicciones no solo proporcionen una etiqueta puntual, sino un conjunto de posibles etiquetas que capture de manera robusta la incertidumbre asociada al ejemplo de entrada.
@@ -915,7 +914,7 @@ P(Y_{n+1} \in \hat{C_\alpha}(X_{n+1})) \ge 1 - \alpha
 <div id="fig-coverage" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-coverage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/coverage_types.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figura&nbsp;16: Esquema gráfico de conjuntos de predicción bajo distintas nociones de cobertura: sin cobertura garantizada, con cobertura marginal y con cobertura condicional. Recuperado de [@angelopoulos2021]. En la parte inferior de la figura se muestra la amplitud de los intervalos de predicción (en línea amarilla) generados en un problema de regresión. En la parte superior, las instancias se dividen en dos grupos; los valores reales contenidos en los intervalos se representan en verde, mientras que los no contenidos aparecen en rojo. La primera columna ilustra un caso con intervalos de predicción demasiado estrechos, lo que resulta en una baja cobertura: la mayoría de los valores reales quedan fuera del intervalo. En la segunda columna, los intervalos son más amplios y permiten capturar una mayor proporción de los valores reales, alcanzando una cobertura marginal del 90% en el conjunto total. Sin embargo, esta cobertura no se distribuye equitativamente: el error se concentra en una región específica dentro de uno de los grupos, lo que indica ausencia de cobertura condicional. Finalmente, en la tercera columna, los intervalos se ajustan a la distribución de las predicciones, logrando cobertura marginal como condicional del 90%, con un error repartido de manera uniforme entre regiones y grupos, reflejando una calibración más precisa y equitativa del modelo."><img src="resources/cap2/coverage_types.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="capitulos/images/cap2/coverage_types.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figura&nbsp;16: Esquema gráfico de conjuntos de predicción bajo distintas nociones de cobertura: sin cobertura garantizada, con cobertura marginal y con cobertura condicional. Recuperado de [@angelopoulos2021]. En la parte inferior de la figura se muestra la amplitud de los intervalos de predicción (en línea amarilla) generados en un problema de regresión. En la parte superior, las instancias se dividen en dos grupos; los valores reales contenidos en los intervalos se representan en verde, mientras que los no contenidos aparecen en rojo. La primera columna ilustra un caso con intervalos de predicción demasiado estrechos, lo que resulta en una baja cobertura: la mayoría de los valores reales quedan fuera del intervalo. En la segunda columna, los intervalos son más amplios y permiten capturar una mayor proporción de los valores reales, alcanzando una cobertura marginal del 90% en el conjunto total. Sin embargo, esta cobertura no se distribuye equitativamente: el error se concentra en una región específica dentro de uno de los grupos, lo que indica ausencia de cobertura condicional. Finalmente, en la tercera columna, los intervalos se ajustan a la distribución de las predicciones, logrando cobertura marginal como condicional del 90%, con un error repartido de manera uniforme entre regiones y grupos, reflejando una calibración más precisa y equitativa del modelo."><img src="capitulos/images/cap2/coverage_types.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-coverage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;16: Esquema gráfico de conjuntos de predicción bajo distintas nociones de cobertura: sin cobertura garantizada, con cobertura marginal y con cobertura condicional. Recuperado de <span class="citation" data-cites="angelopoulos2021">[<a href="#ref-angelopoulos2021" role="doc-biblioref">95</a>]</span>. En la parte inferior de la figura se muestra la amplitud de los intervalos de predicción (en línea amarilla) generados en un problema de regresión. En la parte superior, las instancias se dividen en dos grupos; los valores reales contenidos en los intervalos se representan en verde, mientras que los no contenidos aparecen en rojo. La primera columna ilustra un caso con intervalos de predicción demasiado estrechos, lo que resulta en una baja cobertura: la mayoría de los valores reales quedan fuera del intervalo. En la segunda columna, los intervalos son más amplios y permiten capturar una mayor proporción de los valores reales, alcanzando una cobertura marginal del 90% en el conjunto total. Sin embargo, esta cobertura no se distribuye equitativamente: el error se concentra en una región específica dentro de uno de los grupos, lo que indica ausencia de cobertura condicional. Finalmente, en la tercera columna, los intervalos se ajustan a la distribución de las predicciones, logrando cobertura marginal como condicional del 90%, con un error repartido de manera uniforme entre regiones y grupos, reflejando una calibración más precisa y equitativa del modelo.
@@ -958,7 +957,7 @@ R = \left\{ NC(x_i,y_i) \right\}_{i=1}^n
 <div id="fig-nonconformity_quantile_threshold_simetric" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-nonconformity_quantile_threshold_simetric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/nonconformity_quantile_threshold_simetric.png" class="lightbox" data-gallery="fig-nonconformity_quantile_comparison" title="Figura&nbsp;17&nbsp;(a): Intervalos simétricos"><img src="resources/cap2/nonconformity_quantile_threshold_simetric.png" class="img-fluid figure-img" data-ref-parent="fig-nonconformity_quantile_comparison"></a>
+<a href="capitulos/images/cap2/nonconformity_quantile_threshold_simetric.png" class="lightbox" data-gallery="fig-nonconformity_quantile_comparison" title="Figura&nbsp;17&nbsp;(a): Intervalos simétricos"><img src="capitulos/images/cap2/nonconformity_quantile_threshold_simetric.png" class="img-fluid figure-img" data-ref-parent="fig-nonconformity_quantile_comparison"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-nonconformity_quantile_threshold_simetric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Intervalos simétricos
@@ -970,7 +969,7 @@ R = \left\{ NC(x_i,y_i) \right\}_{i=1}^n
 <div id="fig-nonconformity_quantile_threshold_asimetric" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-nonconformity_quantile_threshold_asimetric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="resources/cap2/nonconformity_quantile_threshold_asimetric.png" class="lightbox" data-gallery="fig-nonconformity_quantile_comparison" title="Figura&nbsp;17&nbsp;(b): Intervalos asimétricos"><img src="resources/cap2/nonconformity_quantile_threshold_asimetric.png" class="img-fluid figure-img" data-ref-parent="fig-nonconformity_quantile_comparison"></a>
+<a href="capitulos/images/cap2/nonconformity_quantile_threshold_asimetric.png" class="lightbox" data-gallery="fig-nonconformity_quantile_comparison" title="Figura&nbsp;17&nbsp;(b): Intervalos asimétricos"><img src="capitulos/images/cap2/nonconformity_quantile_threshold_asimetric.png" class="img-fluid figure-img" data-ref-parent="fig-nonconformity_quantile_comparison"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-nonconformity_quantile_threshold_asimetric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Intervalos asimétricos
@@ -1020,9 +1019,6 @@ y_{n+1} \in \left[ \hat{f}(x_{n+1})-\delta_\alpha , \hat{f}(x_{n+1})+\delta_\alp
 <p><span class="math display">\[
 y_{n+1} \in \left[ 34.7 - 3.3 , 34.7 + 3.3  \right] = \left[ 31.4 , 38.0 \right] \textnormal{ años}
 \]</span></p>
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
 </section>
 </section>
 </section>
@@ -1036,111 +1032,12 @@ y_{n+1} \in \left[ 34.7 - 3.3 , 34.7 + 3.3  \right] = \left[ 31.4 , 38.0 \right]
 <h2 data-number="3.2" class="anchored" data-anchor-id="estimación-de-la-edad-en-antropología-forense-usando-machine-learning"><span class="header-section-number">3.2</span> Estimación de la edad en antropología forense usando <em>machine learning</em></h2>
 </section>
 <section id="cuantificación-de-la-incertidumbre-para-la-estimación-de-la-edad" class="level2" data-number="3.3">
-
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-- # Materials and methods
-
-## Available datasets
-
-## Proposed methods
-
-### Architecture used
-
-### Quantile regression
-
-### Conformal prediction methods for regression
-
-### Probability calibration in classification
-
-### Conformal prediction methods for classification -->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-- # Experimentation
-
-## Proposed problems
-
-## Experimental validation protocol
-
-## Data preprocessing
-
-## General scheme of the experiments performed
-
-### Age estimation problem
-
-### Legal age estimation problem
-
-### Age classification problem
-
-## Performance evaluation
-
-### Metrics for regression
-
-### Metrics for classification
-
-### Statistical tests
-
-## Experimentation for age estimation
-
-### Model training
-
-### Results
-
-## Experimentation for legal age estimation
-
-### Model training
-
-### Results
-
-## Experimentation for age classification
-
-### Model training
-
-### Results -->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-- # Conclusions and future work
-
-## Conclusions
-
-## Assessment of the work performed
-
-## Future work -->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-------------------------------------------------------------------------------------------------------------------------->
-<!-- ### Other resources
-Aquí tienes las diapositivas detalladas:
-
-- [ Presentation ](/documents/tfg-uncertainty-age-estimation.pdf)
-
-
-::: {.column-margin}
-Other resources
-
-- [ Presentation ](/documents/tfg-uncertainty-age-estimation.pdf)
-
-:::
-
-
-
-### References
-
-::: {#refs}
-::: -->
-
-
-
+<h2 data-number="3.3" class="anchored" data-anchor-id="cuantificación-de-la-incertidumbre-para-la-estimación-de-la-edad"><span class="header-section-number">3.3</span> Cuantificación de la incertidumbre para la estimación de la edad</h2>
 </section>
 </section>
-
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">3.3 Cuantificación de la incertidumbre para la estimación de la edad</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<section id="referencias" class="level1 unnumbered">
+<h1 class="unnumbered">Referencias</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-AAA2022AnthropologyDefinition" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">American Anthropological Association. What is Anthropology? 2022. <a href="https://americananthro.org/learn-teach/what-is-anthropology/">https://americananthro.org/learn-teach/what-is-anthropology/</a>.</div>
 </div>
@@ -1474,7 +1371,13 @@ Other resources
 <div id="ref-laxhammar2015" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[111] </div><div class="csl-right-inline">Laxhammar R, Falkman G. Inductive conformal anomaly detection for sequential detection of anomalous sub-trajectories. Annals of Mathematics and Artificial Intelligence 2015;74:67-94.</div>
 </div>
-</div></section></div></main> <!-- /main -->
+</div>
+
+
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Volver arriba</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
